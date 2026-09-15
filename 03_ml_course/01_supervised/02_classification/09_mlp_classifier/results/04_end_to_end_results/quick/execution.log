@@ -1,0 +1,12 @@
+# mlp classifier
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 319; untouched test rows: 81. 5 folds selected parameter 0.01 using macro F1.
+
+Holdout macro F1: 0.934264. Bootstrap 95% percentile interval [0.871224, 0.986466]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":319,"n_test":81,"cv_score":0.96336860301927307,"accuracy":0.93827160493827155,"macro_f1":0.93426391819509824,"baseline_macro_f1":0.38636363636363635,"roc_auc":0.99542483660130721,"log_loss":0.13413200294312488,"bootstrap_ci95":[0.87122416534181246,0.98646616541353382]}

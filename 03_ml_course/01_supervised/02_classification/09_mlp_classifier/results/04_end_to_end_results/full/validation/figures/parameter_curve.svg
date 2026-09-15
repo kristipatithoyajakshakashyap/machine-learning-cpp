@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Training-only cross-validation</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="294.752" x2="616" y2="294.752" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="227.371" x2="616" y2="227.371" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="159.989" x2="616" y2="159.989" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="92.6078" x2="616" y2="92.6078" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="144.848" y1="36" x2="144.848" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="256.364" y1="36" x2="256.364" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="367.879" y1="36" x2="367.879" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="479.394" y1="36" x2="479.394" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="298.252" text-anchor="end" font-size="10" fill="#333333">0.94</text>
+  <text x="58" y="230.871" text-anchor="end" font-size="10" fill="#333333">0.95</text>
+  <text x="58" y="163.489" text-anchor="end" font-size="10" fill="#333333">0.96</text>
+  <text x="58" y="96.1078" text-anchor="end" font-size="10" fill="#333333">0.97</text>
+  <text x="144.848" y="364" text-anchor="middle" font-size="10" fill="#333333">0.002</text>
+  <text x="256.364" y="364" text-anchor="middle" font-size="10" fill="#333333">0.004</text>
+  <text x="367.879" y="364" text-anchor="middle" font-size="10" fill="#333333">0.006</text>
+  <text x="479.394" y="364" text-anchor="middle" font-size="10" fill="#333333">0.008</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">0.01</text>
+  <polyline points="89.0909,333.818 312.121,50.1818 590.909,83.3199" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+</svg>
