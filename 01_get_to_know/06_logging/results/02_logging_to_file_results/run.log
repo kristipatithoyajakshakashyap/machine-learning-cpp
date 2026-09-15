@@ -1,0 +1,5 @@
+2026-09-10 14:30:05  [INFO ] starting backup
+2026-09-10 14:30:05  [INFO ] copying 3 files
+2026-09-10 14:30:05  [ERROR] could not connect to server
+2026-09-10 14:30:05  [WARN ] retry scheduled
+2026-09-10 14:30:05  [INFO ] finished

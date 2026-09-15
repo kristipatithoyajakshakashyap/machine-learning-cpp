@@ -1,0 +1,4 @@
+[2026-09-10 14:30:05] [INFO ] loading config.json
+[2026-09-10 14:30:05] [WARN ] config.json missing, using defaults
+[2026-09-10 14:30:05] [ERROR] service.unavailable after 3 tries
+[2026-09-10 14:30:05] [ERROR] aborting job step 2

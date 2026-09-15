@@ -1,0 +1,5 @@
+# 06_logging - Recording what your program does
+add_lesson_executable(conc_logging_basics 01_logging_basics.cpp)
+add_lesson_executable(conc_logging_to_file 02_logging_to_file.cpp)
+add_lesson_executable(conc_multichannel_logger 03_multichannel_logger.cpp)
+add_lesson_executable(conc_reusable_logger 04_reusable_logger.cpp)
