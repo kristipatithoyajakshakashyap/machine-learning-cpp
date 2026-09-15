@@ -20,22 +20,22 @@ succeeds before anything else.
 
 ## Modules
 
-| Module | Topic | What you will master | Writes files? |
-|--------|-------|----------------------|---------------|
-| [00_setup](00_setup/README.md) | Toolchain | Compiling C++, first program, working with CMake | no |
-| [01_basics](01_basics/README.md) | Language core | Types, operators, control flow, loops, functions, scope, strings, user input | no |
-| [02_memory_management](02_memory_management/README.md) | Memory | Arrays, vectors, pointers, references, new/delete, smart pointers | no |
-| [03_oop](03_oop/README.md) | Object oriented | Classes, constructors, encapsulation, inheritance, polymorphism, operators, Rule of Five | no |
-| [04_error_handling](04_error_handling/README.md) | Robustness | Exceptions, custom exception types, `noexcept`, status-vs-exception patterns | no |
-| [05_file_handling](05_file_handling/README.md) | I/O | Text, binary, CSV parsing, `std::filesystem` | yes |
-| [06_logging](06_logging/README.md) | Observability | Log levels, timestamps, file logging, a reusable `Logger` class | yes |
-| [07_stl_core](07_stl_core/README.md) | Standard library | Containers, iterators, algorithms, `<random>`, `<chrono>`, `<regex>` | no |
-| [08_templates_generics](08_templates_generics/README.md) | Generics | Function/class templates, specialization, variadics, type traits | no |
-| [09_advanced_language](09_advanced_language/README.md) | Modern C++ | Lambdas, move semantics, `auto`/`decltype`, `constexpr`, `optional`/`variant`, threads, callbacks | no |
-| [10_project_structure](10_project_structure/README.md) | Architecture | Header/source split, include guards, header-only `Matrix<T>`, static libraries in CMake | no |
-| [11_capstone](11_capstone/README.md) | Graduation | Statistics, CSV dataset reader, normalization, logger integration, a test harness | yes |
-| [12_debugging_and_testing](12_debugging_and_testing/README.md) | Correctness | Contracts, sanitizer/debugger recipe, a ~40-line test framework (CTest `c12_*`) | no |
-| [13_numerical_computing](13_numerical_computing/README.md) | Numerics | Catastrophic cancellation, compensated summation, tolerances (CTest `c13_precision`) | yes |
+| Module | Topic | What you will master |
+|--------|-------|----------------------|
+| [00_setup](00_setup/README.md) | Toolchain | Compiling C++, first program, working with CMake |
+| [01_basics](01_basics/README.md) | Language core | Types, operators, control flow, loops, functions, scope, strings, user input |
+| [02_memory_management](02_memory_management/README.md) | Memory | Arrays, vectors, pointers, references, new/delete, smart pointers |
+| [03_oop](03_oop/README.md) | Object oriented | Classes, constructors, encapsulation, inheritance, polymorphism, operators, Rule of Five |
+| [04_error_handling](04_error_handling/README.md) | Robustness | Exceptions, custom exception types, `noexcept`, status-vs-exception patterns |
+| [05_file_handling](05_file_handling/README.md) | I/O | Text, binary, CSV parsing, `std::filesystem` |
+| [06_logging](06_logging/README.md) | Observability | Log levels, timestamps, file logging, a reusable `Logger` class |
+| [07_stl_core](07_stl_core/README.md) | Standard library | Containers, iterators, algorithms, `<random>`, `<chrono>`, `<regex>` |
+| [08_templates_generics](08_templates_generics/README.md) | Generics | Function/class templates, specialization, variadics, type traits |
+| [09_advanced_language](09_advanced_language/README.md) | Modern C++ | Lambdas, move semantics, `auto`/`decltype`, `constexpr`, `optional`/`variant`, threads, callbacks |
+| [10_project_structure](10_project_structure/README.md) | Architecture | Header/source split, include guards, header-only `Matrix<T>`, static libraries in CMake |
+| [11_capstone](11_capstone/README.md) | Graduation | Statistics, CSV dataset reader, normalization, logger integration, a test harness |
+| [12_debugging_and_testing](12_debugging_and_testing/README.md) | Correctness | Contracts, sanitizer/debugger recipe, a ~40-line test framework (CTest `c12_*`) |
+| [13_numerical_computing](13_numerical_computing/README.md) | Numerics | Catastrophic cancellation, compensated summation, tolerances (CTest `c13_precision`) |
 
 Each module README lists every lesson with its file, build target, what it
 teaches and what it writes.
