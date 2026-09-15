@@ -1,0 +1,5 @@
+# 04_error_handling - Handling failures gracefully
+add_lesson_executable(conc_exceptions 01_exceptions.cpp)
+add_lesson_executable(conc_custom_exceptions 02_custom_exceptions.cpp)
+add_lesson_executable(conc_noexcept 03_noexcept.cpp)
+add_lesson_executable(conc_failures_and_status 04_failures_and_status.cpp)
