@@ -1,0 +1,4 @@
+line one
+second line
+third and final
+appended line
