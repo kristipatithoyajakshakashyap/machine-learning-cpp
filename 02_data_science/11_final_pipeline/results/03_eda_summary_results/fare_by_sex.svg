@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Training fare by sex</text>
+<text x="367" y="384" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c"></text>
+<text x="52" y="202" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">fare</text>
+<line x1="62" y1="343.071" x2="672" y2="343.071" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="347.071" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0</text>
+<line x1="62" y1="232.93" x2="672" y2="232.93" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="236.93" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">200</text>
+<line x1="62" y1="122.789" x2="672" y2="122.789" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="126.789" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">400</text>
+<line x1="62" y1="44" x2="62" y2="360" stroke="#5a5a5a" stroke-width="1"/>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#5a5a5a" stroke-width="1.5"/>
+<rect x="138.25" y="328.004" width="152.5" height="10.725" fill="#7899bd"/>
+<line x1="138.25" y1="328.004" x2="290.75" y2="328.004" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="138.25" y1="338.729" x2="290.75" y2="338.729" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="136.25" y1="336.738" x2="292.75" y2="336.738" stroke="#4c78a8" stroke-width="2.2"/>
+<line x1="214.5" y1="311.916" x2="214.5" y2="338.729" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="210.5" y1="311.916" x2="218.5" y2="311.916" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="214.5" y1="328.004" x2="214.5" y2="343.071" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="210.5" y1="343.071" x2="218.5" y2="343.071" stroke="#4c78a8" stroke-width="1.4"/>
+<circle cx="214.5" cy="297.819" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="308.939" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="309.382" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="308.18" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="300.509" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="206.76" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="302.595" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="300.509" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="299.455" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="304.77" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="293.508" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="299.208" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="259.612" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="304.77" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="258.559" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="306.394" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="268.377" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="226.597" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="302.595" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="198.236" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="297.992" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="294.001" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="292.914" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="220.936" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="284.463" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="282.007" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="217.772" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="300.816" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="302.595" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="280.69" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="269.47" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="302.595" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="60.9286" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="311.681" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="282.007" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="60.9286" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="299.648" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="303.971" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="299.455" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="276.987" r="2.8" fill="#4c78a8"/>
+<circle cx="214.5" cy="304.77" r="2.8" fill="#4c78a8"/>
+<text x="214.5" y="376" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">male</text>
+<rect x="443.25" y="314.51" width="152.5" height="22.7786" fill="#f7a351"/>
+<line x1="443.25" y1="314.51" x2="595.75" y2="314.51" stroke="#f58518" stroke-width="1.4"/>
+<line x1="443.25" y1="337.289" x2="595.75" y2="337.289" stroke="#f58518" stroke-width="1.4"/>
+<line x1="441.25" y1="331.465" x2="597.75" y2="331.465" stroke="#f58518" stroke-width="2.2"/>
+<line x1="519.5" y1="280.343" x2="519.5" y2="337.289" stroke="#f58518" stroke-width="1.4"/>
+<line x1="515.5" y1="280.343" x2="523.5" y2="280.343" stroke="#f58518" stroke-width="1.4"/>
+<line x1="519.5" y1="314.51" x2="519.5" y2="339.093" stroke="#f58518" stroke-width="1.4"/>
+<line x1="515.5" y1="339.093" x2="523.5" y2="339.093" stroke="#f58518" stroke-width="1.4"/>
+<circle cx="519.5" cy="60.9286" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="258.559" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="268.377" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="259.612" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="206.76" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="252.278" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="269.001" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="269.47" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="269.001" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="198.236" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="217.772" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="276.987" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="259.612" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="258.559" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="226.687" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="217.772" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="217.772" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="198.58" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="276.987" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="226.687" r="2.8" fill="#f58518"/>
+<circle cx="519.5" cy="252.278" r="2.8" fill="#f58518"/>
+<text x="519.5" y="376" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">female</text>
+</svg>
