@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Training-only cross-validation</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.553" x2="616" y2="333.553" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="293.699" x2="616" y2="293.699" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="253.845" x2="616" y2="253.845" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="213.991" x2="616" y2="213.991" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="174.137" x2="616" y2="174.137" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="134.283" x2="616" y2="134.283" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="94.4288" x2="616" y2="94.4288" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="54.5748" x2="616" y2="54.5748" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="89.0909" y1="36" x2="89.0909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="151.818" y1="36" x2="151.818" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="214.545" y1="36" x2="214.545" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="277.273" y1="36" x2="277.273" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="340" y1="36" x2="340" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="402.727" y1="36" x2="402.727" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="465.455" y1="36" x2="465.455" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="528.182" y1="36" x2="528.182" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.053" text-anchor="end" font-size="10" fill="#333333">0.972</text>
+  <text x="58" y="297.199" text-anchor="end" font-size="10" fill="#333333">0.974</text>
+  <text x="58" y="257.345" text-anchor="end" font-size="10" fill="#333333">0.976</text>
+  <text x="58" y="217.491" text-anchor="end" font-size="10" fill="#333333">0.978</text>
+  <text x="58" y="177.637" text-anchor="end" font-size="10" fill="#333333">0.98</text>
+  <text x="58" y="137.783" text-anchor="end" font-size="10" fill="#333333">0.982</text>
+  <text x="58" y="97.9288" text-anchor="end" font-size="10" fill="#333333">0.984</text>
+  <text x="58" y="58.0748" text-anchor="end" font-size="10" fill="#333333">0.986</text>
+  <text x="89.0909" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="151.818" y="364" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <text x="214.545" y="364" text-anchor="middle" font-size="10" fill="#333333">2</text>
+  <text x="277.273" y="364" text-anchor="middle" font-size="10" fill="#333333">3</text>
+  <text x="340" y="364" text-anchor="middle" font-size="10" fill="#333333">4</text>
+  <text x="402.727" y="364" text-anchor="middle" font-size="10" fill="#333333">5</text>
+  <text x="465.455" y="364" text-anchor="middle" font-size="10" fill="#333333">6</text>
+  <text x="528.182" y="364" text-anchor="middle" font-size="10" fill="#333333">7</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">8</text>
+  <polyline points="89.0909,186.087 151.818,186.087 214.545,186.087 277.273,333.818 340,50.1818 402.727,50.1818 465.455,333.818 528.182,197.913 590.909,197.913" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+</svg>

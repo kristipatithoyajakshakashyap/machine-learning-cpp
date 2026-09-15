@@ -1,0 +1,12 @@
+# Header-only module: TunedForest wraps the shared forest from ml_tree_models.
+set(ML_MODULE_LIB ml_tree_models)
+set(ML_MODULE_RESULTS ${CMAKE_CURRENT_SOURCE_DIR}/results)
+add_lesson_executable(hps_theory 01_theory.cpp)
+add_lesson_executable(hps_math_intuition 02_math_intuition.cpp)
+add_lesson_executable(hps_implementation 03_implementation.cpp)
+add_lesson_executable(hps_end_to_end 04_end_to_end.cpp)
+add_lesson_executable(hps_predict predict.cpp)
+add_lesson_executable(hps_tests tests/model_test.cpp)
+add_test(NAME hps_numerical COMMAND hps_tests)
+add_test(NAME hps_workflow COMMAND hps_end_to_end --quick)
+set_tests_properties(hps_workflow PROPERTIES LABELS "integration")
