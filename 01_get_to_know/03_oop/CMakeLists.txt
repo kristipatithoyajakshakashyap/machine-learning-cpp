@@ -1,0 +1,8 @@
+# 03_oop - Object oriented programming
+add_lesson_executable(conc_classes_objects 01_classes_objects.cpp)
+add_lesson_executable(conc_constructors 02_constructors.cpp)
+add_lesson_executable(conc_encapsulation 03_encapsulation.cpp)
+add_lesson_executable(conc_inheritance 04_inheritance.cpp)
+add_lesson_executable(conc_polymorphism 05_polymorphism.cpp)
+add_lesson_executable(conc_operator_overloading 06_operator_overloading.cpp)
+add_lesson_executable(conc_rule_of_five 07_rule_of_five.cpp)
