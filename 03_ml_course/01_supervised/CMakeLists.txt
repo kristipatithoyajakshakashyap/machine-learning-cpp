@@ -1,0 +1,4 @@
+add_subdirectory(01_regression)
+add_subdirectory(02_classification)
+add_subdirectory(03_model_diagnostics)
+add_subdirectory(04_ensembles)
