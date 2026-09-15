@@ -1,0 +1,28 @@
+# Generated build output (any CMake binary dir)
+build/
+build_*/
+out/
+cmake-build-*/
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.exe
+*.a
+*.lib
+*.dll
+*.pdb
+
+# Editor and tool caches
+.vscode/
+.vs/
+.idea/
+.cache/
+.ruff_cache/
+__pycache__/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Keep lesson results (results/**) committed: they are the course's reference outputs.

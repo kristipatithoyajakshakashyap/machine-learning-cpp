@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "configurePresets": [{"name": "course", "generator": "MinGW Makefiles", "binaryDir": "${sourceDir}/build", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release", "BUILD_TESTING": "ON"}}],
+  "buildPresets": [{"name": "course", "configurePreset": "course", "jobs": 2}],
+  "testPresets": [{"name": "course", "configurePreset": "course", "output": {"outputOnFailure": true}}]
+}
