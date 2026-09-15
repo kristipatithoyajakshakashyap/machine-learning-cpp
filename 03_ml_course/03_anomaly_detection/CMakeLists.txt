@@ -1,0 +1,3 @@
+add_subdirectory(01_isolation_forest)
+add_subdirectory(02_local_outlier_factor)
+add_subdirectory(03_one_class_svm)
