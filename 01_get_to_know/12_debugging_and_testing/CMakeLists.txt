@@ -1,0 +1,8 @@
+add_lesson_executable(c12_contracts 01_contracts.cpp)
+add_lesson_executable(c12_sanitizers 02_sanitizers_and_debugger.cpp)
+add_lesson_executable(c12_test_harness 03_test_harness.cpp)
+if(BUILD_TESTING)
+add_test(NAME c12_contracts COMMAND c12_contracts)
+add_test(NAME c12_sanitizers COMMAND c12_sanitizers)
+add_test(NAME c12_test_harness COMMAND c12_test_harness)
+endif()
