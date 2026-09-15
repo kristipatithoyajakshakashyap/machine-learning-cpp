@@ -1,0 +1,12 @@
+# Header-only module: GaussianProcess lives entirely in Model.hpp.
+set(ML_MODULE_LIB ml_core)
+set(ML_MODULE_RESULTS ${CMAKE_CURRENT_SOURCE_DIR}/results)
+add_lesson_executable(gp_theory 01_theory.cpp)
+add_lesson_executable(gp_math_intuition 02_math_intuition.cpp)
+add_lesson_executable(gp_implementation 03_implementation.cpp)
+add_lesson_executable(gp_end_to_end 04_end_to_end.cpp)
+add_lesson_executable(gp_predict predict.cpp)
+add_lesson_executable(gp_tests tests/model_test.cpp)
+add_test(NAME gp_numerical COMMAND gp_tests)
+add_test(NAME gp_workflow COMMAND gp_end_to_end --quick)
+set_tests_properties(gp_workflow PROPERTIES LABELS "integration")

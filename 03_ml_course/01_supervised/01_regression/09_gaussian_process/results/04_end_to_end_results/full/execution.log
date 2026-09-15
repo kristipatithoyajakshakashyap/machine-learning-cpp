@@ -1,0 +1,12 @@
+# end_to_end
+
+Full supplied dataset run.
+
+Training rows: 240; untouched test rows: 60. 5 folds selected parameter 10 using negative RMSE.
+
+Holdout RMSE: 52.1249. Bootstrap 95% percentile interval [41.5838, 62.3418]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":240,"n_test":60,"cv_score":-55.15731715080917,"rmse":52.12485085109796,"mae":40.100075171962196,"r2":0.56212846091519642,"baseline_rmse":78.822716097053316,"bootstrap_ci95":[41.583840195616162,62.34184362223867]}
