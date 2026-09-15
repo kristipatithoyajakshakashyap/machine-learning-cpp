@@ -1,0 +1,3 @@
+# Implementation
+
+Canonical models live in the first three modules. Workflow.hpp owns timestamp-disjoint 60/20/20 partitions, validation RMSE selection, refit on train+validation, full-catalog top-ten ranking, EDA, metrics, predictions and model reload. Original user/item IDs index learned state; unknown IDs use documented fallbacks. The archive includes the seen-item history, so inference can exclude prior interactions without rereading training data. Item-CF uses dense pair accumulators during fitting and sparse retained neighbors for prediction. MF uses seed 42, 16 factors and 30 training epochs.
