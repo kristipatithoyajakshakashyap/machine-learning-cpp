@@ -1,0 +1,11 @@
+algorithm,k,silhouette
+kmeans,2,0.53065
+ward,2,0.53065
+kmeans,3,0.444287
+ward,3,0.450775
+kmeans,4,0.398266
+ward,4,0.414731
+kmeans,5,0.37594
+ward,5,0.35989
+kmeans,6,0.366974
+ward,6,0.333342

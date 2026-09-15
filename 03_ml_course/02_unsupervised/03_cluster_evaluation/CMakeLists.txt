@@ -1,0 +1,6 @@
+set(ML_MODULE_LIB "ml_kmeans;ml_aggl")
+set(ML_MODULE_RESULTS ${CMAKE_CURRENT_SOURCE_DIR}/results)
+add_lesson_executable(uce_theory 01_theory.cpp)
+add_lesson_executable(uce_math_intuition 02_math_intuition.cpp)
+add_lesson_executable(uce_implementation 03_implementation.cpp)
+add_lesson_executable(uce_end_to_end 04_end_to_end.cpp)
