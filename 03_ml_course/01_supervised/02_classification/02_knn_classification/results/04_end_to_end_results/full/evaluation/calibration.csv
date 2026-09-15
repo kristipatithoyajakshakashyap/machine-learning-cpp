@@ -1,0 +1,5 @@
+bin,count,mean_probability,positive_fraction
+0,69,0,0.0289855
+3,8,0.333333,0.5
+6,6,0.666667,0.833333
+9,32,1,1
