@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="400" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Top mean TF-IDF terms: ham</text>
+  <rect x="64" y="36" width="672" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.818" x2="736" y2="333.818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="288.676" x2="736" y2="288.676" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="243.533" x2="736" y2="243.533" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="198.39" x2="736" y2="198.39" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="153.248" x2="736" y2="153.248" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="108.105" x2="736" y2="108.105" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="62.9626" x2="736" y2="62.9626" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="736" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.318" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="292.176" text-anchor="end" font-size="10" fill="#333333">0.01</text>
+  <text x="58" y="247.033" text-anchor="end" font-size="10" fill="#333333">0.02</text>
+  <text x="58" y="201.89" text-anchor="end" font-size="10" fill="#333333">0.03</text>
+  <text x="58" y="156.748" text-anchor="end" font-size="10" fill="#333333">0.04</text>
+  <text x="58" y="111.605" text-anchor="end" font-size="10" fill="#333333">0.05</text>
+  <text x="58" y="66.4626" text-anchor="end" font-size="10" fill="#333333">0.06</text>
+  <text x="86.4" y="364" text-anchor="middle" font-size="10" fill="#333333">i</text>
+  <text x="400" y="390" text-anchor="middle" font-size="12" fill="#111111">term</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">mean TF-IDF</text>
+  <rect x="74.08" y="50.1818" width="24.64" height="283.636" fill="#1f77b4" opacity="0.8"/>
+  <rect x="118.88" y="107.115" width="24.64" height="226.703" fill="#1f77b4" opacity="0.8"/>
+  <rect x="163.68" y="172.806" width="24.64" height="161.012" fill="#1f77b4" opacity="0.8"/>
+  <rect x="208.48" y="199.606" width="24.64" height="134.212" fill="#1f77b4" opacity="0.8"/>
+  <rect x="253.28" y="200.166" width="24.64" height="133.653" fill="#1f77b4" opacity="0.8"/>
+  <rect x="298.08" y="215.777" width="24.64" height="118.041" fill="#1f77b4" opacity="0.8"/>
+  <rect x="342.88" y="217.757" width="24.64" height="116.061" fill="#1f77b4" opacity="0.8"/>
+  <rect x="387.68" y="219.805" width="24.64" height="114.013" fill="#1f77b4" opacity="0.8"/>
+  <rect x="432.48" y="227.757" width="24.64" height="106.061" fill="#1f77b4" opacity="0.8"/>
+  <rect x="477.28" y="231.12" width="24.64" height="102.698" fill="#1f77b4" opacity="0.8"/>
+  <rect x="522.08" y="231.493" width="24.64" height="102.325" fill="#1f77b4" opacity="0.8"/>
+  <rect x="566.88" y="235.712" width="24.64" height="98.1057" fill="#1f77b4" opacity="0.8"/>
+  <rect x="611.68" y="242.042" width="24.64" height="91.7762" fill="#1f77b4" opacity="0.8"/>
+  <rect x="656.48" y="245.868" width="24.64" height="87.9505" fill="#1f77b4" opacity="0.8"/>
+  <rect x="701.28" y="254.267" width="24.64" height="79.5509" fill="#1f77b4" opacity="0.8"/>
+</svg>

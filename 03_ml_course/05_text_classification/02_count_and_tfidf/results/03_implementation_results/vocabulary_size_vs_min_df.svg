@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Vocabulary size vs min_df</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="337.864" x2="616" y2="337.864" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="272.071" x2="616" y2="272.071" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="206.277" x2="616" y2="206.277" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="140.484" x2="616" y2="140.484" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="74.6899" x2="616" y2="74.6899" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="84.022" y1="36" x2="84.022" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="185.399" y1="36" x2="185.399" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="286.777" y1="36" x2="286.777" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="388.154" y1="36" x2="388.154" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="489.532" y1="36" x2="489.532" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="341.364" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="275.571" text-anchor="end" font-size="10" fill="#333333">2000</text>
+  <text x="58" y="209.777" text-anchor="end" font-size="10" fill="#333333">4000</text>
+  <text x="58" y="143.984" text-anchor="end" font-size="10" fill="#333333">6000</text>
+  <text x="58" y="78.1899" text-anchor="end" font-size="10" fill="#333333">8000</text>
+  <text x="84.022" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="185.399" y="364" text-anchor="middle" font-size="10" fill="#333333">20</text>
+  <text x="286.777" y="364" text-anchor="middle" font-size="10" fill="#333333">40</text>
+  <text x="388.154" y="364" text-anchor="middle" font-size="10" fill="#333333">60</text>
+  <text x="489.532" y="364" text-anchor="middle" font-size="10" fill="#333333">80</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">100</text>
+  <text x="340" y="390" text-anchor="middle" font-size="12" fill="#111111">min_df</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">terms kept</text>
+  <polyline points="89.0909,50.1818 94.1598,211.672 99.2287,252.925 109.366,282.006 134.711,305.955 185.399,319.541 337.466,330.134 590.909,333.818" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="489" y="44" width="115" height="32" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="501" y1="59" x2="521" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="527" y="63" font-size="11" fill="#111111">vocabulary</text>
+</svg>
