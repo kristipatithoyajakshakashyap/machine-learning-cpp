@@ -1,0 +1,8 @@
+add_subdirectory(01_kmeans)
+add_subdirectory(02_agglomerative)
+add_subdirectory(03_cluster_evaluation)
+add_subdirectory(04_dbscan)
+add_subdirectory(05_gaussian_mixture)
+add_subdirectory(06_pca)
+add_subdirectory(07_tsne)
+add_subdirectory(tests)
