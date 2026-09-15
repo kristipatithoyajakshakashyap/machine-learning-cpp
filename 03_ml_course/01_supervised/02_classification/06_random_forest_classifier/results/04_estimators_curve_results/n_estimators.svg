@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="0 0 600 380">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="320" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">random forest: trees vs accuracy (breast cancer)</text>
+  <rect x="64" y="36" width="512" height="292" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="318.267" x2="576" y2="318.267" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="284.642" x2="576" y2="284.642" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="251.018" x2="576" y2="251.018" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="217.394" x2="576" y2="217.394" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="183.77" x2="576" y2="183.77" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="150.145" x2="576" y2="150.145" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="116.521" x2="576" y2="116.521" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="82.897" x2="576" y2="82.897" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="49.2727" x2="576" y2="49.2727" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="84.9338" y1="36" x2="84.9338" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="201.882" y1="36" x2="201.882" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="318.831" y1="36" x2="318.831" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="435.779" y1="36" x2="435.779" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="552.727" y1="36" x2="552.727" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="328" x2="576" y2="328" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="328" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="321.767" text-anchor="end" font-size="10" fill="#333333">0.92</text>
+  <text x="58" y="288.142" text-anchor="end" font-size="10" fill="#333333">0.93</text>
+  <text x="58" y="254.518" text-anchor="end" font-size="10" fill="#333333">0.94</text>
+  <text x="58" y="220.894" text-anchor="end" font-size="10" fill="#333333">0.95</text>
+  <text x="58" y="187.27" text-anchor="end" font-size="10" fill="#333333">0.96</text>
+  <text x="58" y="153.645" text-anchor="end" font-size="10" fill="#333333">0.97</text>
+  <text x="58" y="120.021" text-anchor="end" font-size="10" fill="#333333">0.98</text>
+  <text x="58" y="86.397" text-anchor="end" font-size="10" fill="#333333">0.99</text>
+  <text x="58" y="52.7727" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="84.9338" y="344" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="201.882" y="344" text-anchor="middle" font-size="10" fill="#333333">50</text>
+  <text x="318.831" y="344" text-anchor="middle" font-size="10" fill="#333333">100</text>
+  <text x="435.779" y="344" text-anchor="middle" font-size="10" fill="#333333">150</text>
+  <text x="552.727" y="344" text-anchor="middle" font-size="10" fill="#333333">200</text>
+  <text x="320" y="370" text-anchor="middle" font-size="12" fill="#111111">n_trees</text>
+  <text x="16" y="182" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 182)">accuracy</text>
+  <polyline points="87.2727,137.952 96.6286,78.8325 108.323,56.6627 143.408,56.6627 201.882,49.2727 318.831,49.2727 552.727,49.2727" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="87.2727,314.727 96.6286,314.727 108.323,196.747 143.408,226.242 201.882,167.253 318.831,167.253 552.727,137.758" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="481.5" y="272" width="82.5" height="48" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="493.5" y1="287" x2="513.5" y2="287" stroke="#1f77b4" stroke-width="2"/>
+  <text x="519.5" y="291" font-size="11" fill="#111111">train</text>
+  <line x1="493.5" y1="303" x2="513.5" y2="303" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="519.5" y="307" font-size="11" fill="#111111">test</text>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Holdout reliability diagram</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.818" x2="616" y2="333.818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="277.091" x2="616" y2="277.091" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="220.364" x2="616" y2="220.364" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="163.636" x2="616" y2="163.636" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="106.909" x2="616" y2="106.909" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="50.1818" x2="616" y2="50.1818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="76.6323" y1="36" x2="76.6323" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="182.378" y1="36" x2="182.378" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="288.124" y1="36" x2="288.124" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="393.87" y1="36" x2="393.87" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="499.615" y1="36" x2="499.615" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="605.361" y1="36" x2="605.361" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.318" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="280.591" text-anchor="end" font-size="10" fill="#333333">0.2</text>
+  <text x="58" y="223.864" text-anchor="end" font-size="10" fill="#333333">0.4</text>
+  <text x="58" y="167.136" text-anchor="end" font-size="10" fill="#333333">0.6</text>
+  <text x="58" y="110.409" text-anchor="end" font-size="10" fill="#333333">0.8</text>
+  <text x="58" y="53.6818" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="76.6323" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="182.378" y="364" text-anchor="middle" font-size="10" fill="#333333">0.2</text>
+  <text x="288.124" y="364" text-anchor="middle" font-size="10" fill="#333333">0.4</text>
+  <text x="393.87" y="364" text-anchor="middle" font-size="10" fill="#333333">0.6</text>
+  <text x="499.615" y="364" text-anchor="middle" font-size="10" fill="#333333">0.8</text>
+  <text x="605.361" y="364" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <polyline points="89.0909,324.814 152.053,333.818 205.252,144.727 256.198,333.818 312.507,192 374.966,50.1818 422.763,192 481.058,97.4545 526.812,50.1818 590.909,50.1818" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+</svg>
