@@ -1,0 +1,4 @@
+add_subdirectory(01_popularity_baseline)
+add_subdirectory(02_item_based_collaborative_filtering)
+add_subdirectory(03_matrix_factorization)
+add_subdirectory(04_recommender_evaluation)
