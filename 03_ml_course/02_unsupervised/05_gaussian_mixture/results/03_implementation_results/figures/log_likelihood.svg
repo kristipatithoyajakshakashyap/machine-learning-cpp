@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">EM log-likelihood per iteration (k = 3)</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="338.291" x2="616" y2="338.291" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="286.361" x2="616" y2="286.361" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="234.431" x2="616" y2="234.431" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="182.502" x2="616" y2="182.502" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="130.572" x2="616" y2="130.572" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="78.6422" x2="616" y2="78.6422" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="76.2238" y1="36" x2="76.2238" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="204.895" y1="36" x2="204.895" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="333.566" y1="36" x2="333.566" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="462.238" y1="36" x2="462.238" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="341.791" text-anchor="end" font-size="10" fill="#333333">-710.6</text>
+  <text x="58" y="289.861" text-anchor="end" font-size="10" fill="#333333">-710.4</text>
+  <text x="58" y="237.931" text-anchor="end" font-size="10" fill="#333333">-710.2</text>
+  <text x="58" y="186.002" text-anchor="end" font-size="10" fill="#333333">-710</text>
+  <text x="58" y="134.072" text-anchor="end" font-size="10" fill="#333333">-709.8</text>
+  <text x="58" y="82.1422" text-anchor="end" font-size="10" fill="#333333">-709.6</text>
+  <text x="76.2238" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="204.895" y="364" text-anchor="middle" font-size="10" fill="#333333">10</text>
+  <text x="333.566" y="364" text-anchor="middle" font-size="10" fill="#333333">20</text>
+  <text x="462.238" y="364" text-anchor="middle" font-size="10" fill="#333333">30</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">40</text>
+  <text x="340" y="390" text-anchor="middle" font-size="12" fill="#111111">iteration</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">log-likelihood</text>
+  <polyline points="89.0909,333.818 101.958,132.986 114.825,103.263 127.692,88.0783 140.559,78.7913 153.427,72.3647 166.294,67.609 179.161,63.9849 192.028,61.1998 204.895,59.063 217.762,57.4327 230.629,56.1955 243.497,55.2596 256.364,54.5508 269.231,54.0103 282.098,53.5928 294.965,53.2641 307.832,52.9986 320.699,52.778 333.566,52.5889 346.434,52.4219 359.301,52.2703 372.168,52.1297 385.035,51.9967 397.902,51.8692 410.769,51.7458 423.636,51.6253 436.503,51.5071 449.371,51.3907 462.238,51.2758 475.105,51.1622 487.972,51.0497 500.839,50.9382 513.706,50.8276 526.573,50.7179 539.441,50.6091 552.308,50.5011 565.175,50.3939 578.042,50.2875 590.909,50.1818" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="463" y="308" width="141" height="32" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="475" y1="323" x2="495" y2="323" stroke="#1f77b4" stroke-width="2"/>
+  <text x="501" y="327" font-size="11" fill="#111111">log-likelihood</text>
+</svg>
