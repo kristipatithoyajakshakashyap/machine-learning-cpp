@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Holdout confusion matrix</text>
+  <line x1="70" y1="350" x2="564" y2="350" stroke="#111111" stroke-width="1"/>
+  <line x1="70" y1="42" x2="70" y2="350" stroke="#111111" stroke-width="1"/>
+  <rect x="70" y="42" width="246.5" height="153.5" fill="#0d3399"/>
+  <rect x="317" y="42" width="246.5" height="153.5" fill="#66001a"/>
+  <rect x="70" y="196" width="246.5" height="153.5" fill="#6f041c"/>
+  <rect x="317" y="196" width="246.5" height="153.5" fill="#dbe8fa"/>
+  <text x="193.5" y="122.6" text-anchor="middle" font-size="10" fill="#111111">50</text>
+  <text x="440.5" y="122.6" text-anchor="middle" font-size="10" fill="#111111">1</text>
+  <text x="193.5" y="276.6" text-anchor="middle" font-size="10" fill="#111111">2</text>
+  <text x="440.5" y="276.6" text-anchor="middle" font-size="10" fill="#111111">28</text>
+  <text x="193.5" y="368" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <text x="440.5" y="368" text-anchor="middle" font-size="10" fill="#333333">2</text>
+  <text x="64" y="122.5" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="64" y="276.5" text-anchor="end" font-size="10" fill="#333333">2</text>
+  <rect x="578" y="342.3" width="14" height="7.7" fill="#66001a"/>
+  <rect x="578" y="334.6" width="14" height="7.7" fill="#71051c"/>
+  <rect x="578" y="326.9" width="14" height="7.7" fill="#7d0a1f"/>
+  <rect x="578" y="319.2" width="14" height="7.7" fill="#880f21"/>
+  <rect x="578" y="311.5" width="14" height="7.7" fill="#941424"/>
+  <rect x="578" y="303.8" width="14" height="7.7" fill="#9f1a26"/>
+  <rect x="578" y="296.1" width="14" height="7.7" fill="#ab1f29"/>
+  <rect x="578" y="288.4" width="14" height="7.7" fill="#b6242b"/>
+  <rect x="578" y="280.7" width="14" height="7.7" fill="#c2292e"/>
+  <rect x="578" y="273" width="14" height="7.7" fill="#cd2e30"/>
+  <rect x="578" y="265.3" width="14" height="7.7" fill="#d93333"/>
+  <rect x="578" y="257.6" width="14" height="7.7" fill="#dd4747"/>
+  <rect x="578" y="249.9" width="14" height="7.7" fill="#e05c5c"/>
+  <rect x="578" y="242.2" width="14" height="7.7" fill="#e47070"/>
+  <rect x="578" y="234.5" width="14" height="7.7" fill="#e88585"/>
+  <rect x="578" y="226.8" width="14" height="7.7" fill="#ec9999"/>
+  <rect x="578" y="219.1" width="14" height="7.7" fill="#f0adad"/>
+  <rect x="578" y="211.4" width="14" height="7.7" fill="#f4c2c2"/>
+  <rect x="578" y="203.7" width="14" height="7.7" fill="#f7d6d6"/>
+  <rect x="578" y="196" width="14" height="7.7" fill="#fbebeb"/>
+  <rect x="578" y="188.3" width="14" height="7.7" fill="#ffffff"/>
+  <rect x="578" y="180.6" width="14" height="7.7" fill="#edf4fc"/>
+  <rect x="578" y="172.9" width="14" height="7.7" fill="#dbe8fa"/>
+  <rect x="578" y="165.2" width="14" height="7.7" fill="#c9ddf7"/>
+  <rect x="578" y="157.5" width="14" height="7.7" fill="#b8d1f5"/>
+  <rect x="578" y="149.8" width="14" height="7.7" fill="#a6c6f2"/>
+  <rect x="578" y="142.1" width="14" height="7.7" fill="#94baf0"/>
+  <rect x="578" y="134.4" width="14" height="7.7" fill="#82afed"/>
+  <rect x="578" y="126.7" width="14" height="7.7" fill="#70a3eb"/>
+  <rect x="578" y="119" width="14" height="7.7" fill="#5e98e8"/>
+  <rect x="578" y="111.3" width="14" height="7.7" fill="#4d8ce6"/>
+  <rect x="578" y="103.6" width="14" height="7.7" fill="#4683de"/>
+  <rect x="578" y="95.9" width="14" height="7.7" fill="#407ad6"/>
+  <rect x="578" y="88.2" width="14" height="7.7" fill="#3971cf"/>
+  <rect x="578" y="80.5" width="14" height="7.7" fill="#3369c7"/>
+  <rect x="578" y="72.8" width="14" height="7.7" fill="#2d60bf"/>
+  <rect x="578" y="65.1" width="14" height="7.7" fill="#2657b8"/>
+  <rect x="578" y="57.4" width="14" height="7.7" fill="#204eb0"/>
+  <rect x="578" y="49.7" width="14" height="7.7" fill="#1a45a8"/>
+  <rect x="578" y="42" width="14" height="7.7" fill="#133ca1"/>
+  <text x="585" y="368" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <text x="585" y="45" text-anchor="middle" font-size="10" fill="#333333">50</text>
+</svg>
