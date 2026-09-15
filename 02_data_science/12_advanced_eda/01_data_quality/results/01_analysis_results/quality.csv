@@ -1,0 +1,13 @@
+feature,type,missing,missing_fraction
+PassengerId,numeric,0,0
+Survived,numeric,0,0
+Pclass,numeric,0,0
+Name,categorical,0,0
+Sex,categorical,0,0
+Age,numeric,142,0.199438202247191
+SibSp,numeric,0,0
+Parch,numeric,0,0
+Ticket,categorical,0,0
+Fare,numeric,0,0
+Cabin,categorical,549,0.7710674157303371
+Embarked,categorical,1,0.0014044943820224719
