@@ -1,0 +1,12 @@
+# adaboost classifier
+
+Full supplied dataset run.
+
+Training rows: 454; untouched test rows: 115. 5 folds selected parameter 100 using macro F1.
+
+Holdout macro F1: 0.943144. Bootstrap 95% percentile interval [0.89632, 0.981048]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":454,"n_test":115,"cv_score":0.97128522476498669,"accuracy":0.94782608695652171,"macro_f1":0.94314436387607126,"baseline_macro_f1":0.38502673796791442,"roc_auc":0.98998708010335912,"log_loss":0.25034410495956461,"bootstrap_ci95":[0.89631997377264161,0.98104812129202368]}

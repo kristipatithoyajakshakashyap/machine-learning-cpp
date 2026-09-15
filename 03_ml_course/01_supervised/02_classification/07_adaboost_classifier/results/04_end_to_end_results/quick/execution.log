@@ -1,0 +1,12 @@
+# adaboost classifier
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 319; untouched test rows: 81. 5 folds selected parameter 100 using macro F1.
+
+Holdout macro F1: 0.973143. Bootstrap 95% percentile interval [0.929894, 1]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":319,"n_test":81,"cv_score":0.96346950892214234,"accuracy":0.97530864197530864,"macro_f1":0.97314323607427056,"baseline_macro_f1":0.38636363636363635,"roc_auc":0.99084967320261441,"log_loss":0.21506630332610785,"bootstrap_ci95":[0.92989440886273156,1]}
