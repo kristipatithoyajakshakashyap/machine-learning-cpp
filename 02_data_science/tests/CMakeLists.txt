@@ -1,0 +1,11 @@
+add_executable(dsts_regression_tests regression.cpp)
+target_link_libraries(dsts_regression_tests PRIVATE dsts)
+target_compile_definitions(dsts_regression_tests PRIVATE DATA_DIR="${DATA_DIR}" RUN_OUTPUT_DIR="${CMAKE_CURRENT_SOURCE_DIR}/results/regression_results")
+add_test(NAME dsts_regression COMMAND dsts_regression_tests)
+if(DS_BUILD_LESSONS)
+  add_test(NAME dsts_capstone COMMAND s11_05_eval)
+  set(CAPSTONE_RESULTS "${CMAKE_CURRENT_SOURCE_DIR}/../11_final_pipeline/results/05_eval_model_results")
+  add_test(NAME dsts_capstone_reload COMMAND s11_predict
+    "${CAPSTONE_RESULTS}/model_state.txt" "${CAPSTONE_RESULTS}/test_features.csv" "${CAPSTONE_RESULTS}/predictions.csv")
+  set_tests_properties(dsts_capstone_reload PROPERTIES DEPENDS dsts_capstone)
+endif()
