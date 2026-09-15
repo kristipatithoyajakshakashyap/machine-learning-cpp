@@ -1,0 +1,6 @@
+# 02_memory_management - Memory, pointers, smart pointers
+add_lesson_executable(conc_arrays_vectors 01_arrays_vectors.cpp)
+add_lesson_executable(conc_pointers 02_pointers.cpp)
+add_lesson_executable(conc_references 03_references.cpp)
+add_lesson_executable(conc_dynamic_memory 04_dynamic_memory.cpp)
+add_lesson_executable(conc_smart_pointers 05_smart_pointers.cpp)
