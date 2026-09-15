@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Training-only cross-validation</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="314.97" x2="616" y2="314.97" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="273.961" x2="616" y2="273.961" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="232.952" x2="616" y2="232.952" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="191.943" x2="616" y2="191.943" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="150.934" x2="616" y2="150.934" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="109.925" x2="616" y2="109.925" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="68.9162" x2="616" y2="68.9162" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="89.0909" y1="36" x2="89.0909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="151.818" y1="36" x2="151.818" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="214.545" y1="36" x2="214.545" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="277.273" y1="36" x2="277.273" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="340" y1="36" x2="340" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="402.727" y1="36" x2="402.727" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="465.455" y1="36" x2="465.455" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="528.182" y1="36" x2="528.182" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="318.47" text-anchor="end" font-size="10" fill="#333333">-77000</text>
+  <text x="58" y="277.461" text-anchor="end" font-size="10" fill="#333333">-76000</text>
+  <text x="58" y="236.452" text-anchor="end" font-size="10" fill="#333333">-75000</text>
+  <text x="58" y="195.443" text-anchor="end" font-size="10" fill="#333333">-74000</text>
+  <text x="58" y="154.434" text-anchor="end" font-size="10" fill="#333333">-73000</text>
+  <text x="58" y="113.425" text-anchor="end" font-size="10" fill="#333333">-72000</text>
+  <text x="58" y="72.4162" text-anchor="end" font-size="10" fill="#333333">-71000</text>
+  <text x="89.0909" y="364" text-anchor="middle" font-size="10" fill="#333333">4</text>
+  <text x="151.818" y="364" text-anchor="middle" font-size="10" fill="#333333">5</text>
+  <text x="214.545" y="364" text-anchor="middle" font-size="10" fill="#333333">6</text>
+  <text x="277.273" y="364" text-anchor="middle" font-size="10" fill="#333333">7</text>
+  <text x="340" y="364" text-anchor="middle" font-size="10" fill="#333333">8</text>
+  <text x="402.727" y="364" text-anchor="middle" font-size="10" fill="#333333">9</text>
+  <text x="465.455" y="364" text-anchor="middle" font-size="10" fill="#333333">10</text>
+  <text x="528.182" y="364" text-anchor="middle" font-size="10" fill="#333333">11</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">12</text>
+  <polyline points="89.0909,333.818 340,120.855 590.909,50.1818" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+</svg>
