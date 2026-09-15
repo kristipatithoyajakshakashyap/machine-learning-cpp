@@ -1,0 +1,9 @@
+cluster,feature,mean_original_units
+0,bill_length_mm,41.9096
+0,bill_depth_mm,18.3694
+0,flipper_length_mm,191.776
+0,body_mass_g,3710.73
+1,bill_length_mm,47.5049
+1,bill_depth_mm,14.9821
+1,flipper_length_mm,217.187
+1,body_mass_g,5076.02
