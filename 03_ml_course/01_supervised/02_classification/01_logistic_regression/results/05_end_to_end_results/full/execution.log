@@ -1,0 +1,12 @@
+# logistic regression
+
+Full supplied dataset run.
+
+Training rows: 454; untouched test rows: 115. 5 folds selected parameter 100 using macro F1.
+
+Holdout macro F1: 0.952357. Bootstrap 95% percentile interval [0.905241, 0.990471]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":454,"n_test":115,"cv_score":0.98096171145796718,"accuracy":0.95652173913043481,"macro_f1":0.95235727897920297,"baseline_macro_f1":0.38502673796791442,"roc_auc":0.99127906976744184,"log_loss":0.1318074447703792,"bootstrap_ci95":[0.90524060646011861,0.99047145579584051]}
