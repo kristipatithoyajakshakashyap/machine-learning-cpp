@@ -1,0 +1,1 @@
+{"algorithm":"t-SNE","seed":42,"perplexity_grid":[5,15,30],"selection":"trustworthiness k=10","fingerprint":"fnv1a64:8fcb435a5a533520"}
