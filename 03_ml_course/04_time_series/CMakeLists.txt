@@ -1,0 +1,5 @@
+add_subdirectory(01_forecasting_baselines)
+add_subdirectory(02_lag_feature_regression)
+add_subdirectory(03_rolling_origin_evaluation)
+add_subdirectory(04_exponential_smoothing)
+add_subdirectory(05_arima)
