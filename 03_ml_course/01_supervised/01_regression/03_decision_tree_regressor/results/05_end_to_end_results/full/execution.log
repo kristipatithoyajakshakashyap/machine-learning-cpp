@@ -1,0 +1,12 @@
+# decision tree regressor
+
+Full supplied dataset run.
+
+Training rows: 16512; untouched test rows: 4128. 5 folds selected parameter 10 using negative RMSE.
+
+Holdout RMSE: 60349.4. Bootstrap 95% percentile interval [57917.4, 62876]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":16512,"n_test":4128,"cv_score":-61928.193805160678,"rmse":60349.375235366737,"mae":39636.744901597944,"r2":0.72987087827338903,"baseline_rmse":116119.01171301052,"bootstrap_ci95":[57917.356727805898,62875.995661765308]}

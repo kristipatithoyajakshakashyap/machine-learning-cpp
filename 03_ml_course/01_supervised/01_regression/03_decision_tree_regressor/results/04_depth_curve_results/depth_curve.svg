@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="0 0 600 380">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="320" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">decision tree depth vs R2 (california, 4000 rows)</text>
+  <rect x="64" y="36" width="512" height="292" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="323.54" x2="576" y2="323.54" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="276.531" x2="576" y2="276.531" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="229.523" x2="576" y2="229.523" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="182.515" x2="576" y2="182.515" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="135.507" x2="576" y2="135.507" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="88.4983" x2="576" y2="88.4983" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="41.49" x2="576" y2="41.49" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="118.303" y1="36" x2="118.303" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="180.364" y1="36" x2="180.364" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="242.424" y1="36" x2="242.424" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="304.485" y1="36" x2="304.485" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="366.545" y1="36" x2="366.545" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="428.606" y1="36" x2="428.606" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="490.667" y1="36" x2="490.667" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="552.727" y1="36" x2="552.727" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="328" x2="576" y2="328" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="328" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="327.04" text-anchor="end" font-size="10" fill="#333333">0.3</text>
+  <text x="58" y="280.031" text-anchor="end" font-size="10" fill="#333333">0.4</text>
+  <text x="58" y="233.023" text-anchor="end" font-size="10" fill="#333333">0.5</text>
+  <text x="58" y="186.015" text-anchor="end" font-size="10" fill="#333333">0.6</text>
+  <text x="58" y="139.007" text-anchor="end" font-size="10" fill="#333333">0.7</text>
+  <text x="58" y="91.9983" text-anchor="end" font-size="10" fill="#333333">0.8</text>
+  <text x="58" y="44.99" text-anchor="end" font-size="10" fill="#333333">0.9</text>
+  <text x="118.303" y="344" text-anchor="middle" font-size="10" fill="#333333">2</text>
+  <text x="180.364" y="344" text-anchor="middle" font-size="10" fill="#333333">4</text>
+  <text x="242.424" y="344" text-anchor="middle" font-size="10" fill="#333333">6</text>
+  <text x="304.485" y="344" text-anchor="middle" font-size="10" fill="#333333">8</text>
+  <text x="366.545" y="344" text-anchor="middle" font-size="10" fill="#333333">10</text>
+  <text x="428.606" y="344" text-anchor="middle" font-size="10" fill="#333333">12</text>
+  <text x="490.667" y="344" text-anchor="middle" font-size="10" fill="#333333">14</text>
+  <text x="552.727" y="344" text-anchor="middle" font-size="10" fill="#333333">16</text>
+  <text x="320" y="370" text-anchor="middle" font-size="12" fill="#111111">max_depth</text>
+  <text x="16" y="182" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 182)">R2</text>
+  <polyline points="87.2727,308.502 118.303,247.357 149.333,220.653 180.364,193.223 211.394,169.103 242.424,147.708 273.455,118.247 304.485,94.9743 335.515,76.1172 366.545,65.748 397.576,58.3006 428.606,53.2956 459.636,50.7697 490.667,49.7411 521.697,49.3968 552.727,49.2727" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="87.2727,314.727 118.303,235.939 149.333,211.72 180.364,191.485 211.394,179.595 242.424,167.758 273.455,163.544 304.485,149.539 335.515,146.157 366.545,139.557 397.576,142.725 428.606,142.54 459.636,144.386 490.667,146.609 521.697,147.74 552.727,147.197" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="76" y="44" width="82.5" height="48" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="88" y1="59" x2="108" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="114" y="63" font-size="11" fill="#111111">train</text>
+  <line x1="88" y1="75" x2="108" y2="75" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="114" y="79" font-size="11" fill="#111111">test</text>
+</svg>

@@ -1,0 +1,12 @@
+# decision tree regressor
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 320; untouched test rows: 80. 5 folds selected parameter 3 using negative RMSE.
+
+Holdout RMSE: 107954. Bootstrap 95% percentile interval [87485.1, 127961]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":320,"n_test":80,"cv_score":-83511.394517479217,"rmse":107953.79525598294,"mae":79525.444652347913,"r2":0.19753526868972937,"baseline_rmse":120895.6632059918,"bootstrap_ci95":[87485.100253263197,127960.83329082964]}
