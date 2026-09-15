@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Training Pearson correlation</text>
+<rect x="70" y="52" width="63.2" height="63.2" fill="#4c78a8"/>
+<text x="101.6" y="87.6" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">1</text>
+<rect x="133.2" y="52" width="63.2" height="63.2" fill="#f4c0c0"/>
+<text x="164.8" y="87.6" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.37</text>
+<rect x="196.4" y="52" width="63.2" height="63.2" fill="#eaeff5"/>
+<text x="228" y="87.6" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.11</text>
+<rect x="259.6" y="52" width="63.2" height="63.2" fill="#f9fafc"/>
+<text x="291.2" y="87.6" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.03</text>
+<rect x="322.8" y="52" width="63.2" height="63.2" fill="#f0a6a5"/>
+<text x="354.4" y="87.6" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.53</text>
+<rect x="70" y="115.2" width="63.2" height="63.2" fill="#f4c0c0"/>
+<text x="101.6" y="150.8" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.37</text>
+<rect x="133.2" y="115.2" width="63.2" height="63.2" fill="#4c78a8"/>
+<text x="164.8" y="150.8" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">1</text>
+<rect x="196.4" y="115.2" width="63.2" height="63.2" fill="#f6c7c6"/>
+<text x="228" y="150.8" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.33</text>
+<rect x="259.6" y="115.2" width="63.2" height="63.2" fill="#f8d9d9"/>
+<text x="291.2" y="150.8" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.22</text>
+<rect x="322.8" y="115.2" width="63.2" height="63.2" fill="#edf1f6"/>
+<text x="354.4" y="150.8" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.1</text>
+<rect x="70" y="178.4" width="63.2" height="63.2" fill="#eaeff5"/>
+<text x="101.6" y="214" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.11</text>
+<rect x="133.2" y="178.4" width="63.2" height="63.2" fill="#f6c7c6"/>
+<text x="164.8" y="214" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.33</text>
+<rect x="196.4" y="178.4" width="63.2" height="63.2" fill="#4c78a8"/>
+<text x="228" y="214" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">1</text>
+<rect x="259.6" y="178.4" width="63.2" height="63.2" fill="#b4c7db"/>
+<text x="291.2" y="214" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.41</text>
+<rect x="322.8" y="178.4" width="63.2" height="63.2" fill="#e7edf3"/>
+<text x="354.4" y="214" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.13</text>
+<rect x="70" y="241.6" width="63.2" height="63.2" fill="#f9fafc"/>
+<text x="101.6" y="277.2" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.03</text>
+<rect x="133.2" y="241.6" width="63.2" height="63.2" fill="#f8d9d9"/>
+<text x="164.8" y="277.2" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.22</text>
+<rect x="196.4" y="241.6" width="63.2" height="63.2" fill="#b4c7db"/>
+<text x="228" y="277.2" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.41</text>
+<rect x="259.6" y="241.6" width="63.2" height="63.2" fill="#4c78a8"/>
+<text x="291.2" y="277.2" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">1</text>
+<rect x="322.8" y="241.6" width="63.2" height="63.2" fill="#d9e2ec"/>
+<text x="354.4" y="277.2" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.21</text>
+<rect x="70" y="304.8" width="63.2" height="63.2" fill="#f0a6a5"/>
+<text x="101.6" y="340.4" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">-0.53</text>
+<rect x="133.2" y="304.8" width="63.2" height="63.2" fill="#edf1f6"/>
+<text x="164.8" y="340.4" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.1</text>
+<rect x="196.4" y="304.8" width="63.2" height="63.2" fill="#e7edf3"/>
+<text x="228" y="340.4" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.13</text>
+<rect x="259.6" y="304.8" width="63.2" height="63.2" fill="#d9e2ec"/>
+<text x="291.2" y="340.4" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">0.21</text>
+<rect x="322.8" y="304.8" width="63.2" height="63.2" fill="#4c78a8"/>
+<text x="354.4" y="340.4" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#282828">1</text>
+<text x="64" y="87.6" font-size="10" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">Pclass</text>
+<text x="101.6" y="384" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Pclass</text>
+<text x="64" y="150.8" font-size="10" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">Age</text>
+<text x="164.8" y="384" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Age</text>
+<text x="64" y="214" font-size="10" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">SibSp</text>
+<text x="228" y="384" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">SibSp</text>
+<text x="64" y="277.2" font-size="10" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">Parch</text>
+<text x="291.2" y="384" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Parch</text>
+<text x="64" y="340.4" font-size="10" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">Fare</text>
+<text x="354.4" y="384" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Fare</text>
+</svg>
