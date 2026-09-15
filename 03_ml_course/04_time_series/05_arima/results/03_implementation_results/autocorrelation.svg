@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Sample autocorrelation</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="311.008" x2="616" y2="311.008" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="265.57" x2="616" y2="265.57" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="220.131" x2="616" y2="220.131" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="174.693" x2="616" y2="174.693" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="129.255" x2="616" y2="129.255" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="83.8168" x2="616" y2="83.8168" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="38.3786" x2="616" y2="38.3786" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="67.2727" y1="36" x2="67.2727" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="176.364" y1="36" x2="176.364" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="285.455" y1="36" x2="285.455" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="394.545" y1="36" x2="394.545" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="503.636" y1="36" x2="503.636" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="612.727" y1="36" x2="612.727" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="314.508" text-anchor="end" font-size="10" fill="#333333">-0.2</text>
+  <text x="58" y="269.07" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="223.631" text-anchor="end" font-size="10" fill="#333333">0.2</text>
+  <text x="58" y="178.193" text-anchor="end" font-size="10" fill="#333333">0.4</text>
+  <text x="58" y="132.755" text-anchor="end" font-size="10" fill="#333333">0.6</text>
+  <text x="58" y="87.3168" text-anchor="end" font-size="10" fill="#333333">0.8</text>
+  <text x="58" y="41.8786" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="67.2727" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="176.364" y="364" text-anchor="middle" font-size="10" fill="#333333">5</text>
+  <text x="285.455" y="364" text-anchor="middle" font-size="10" fill="#333333">10</text>
+  <text x="394.545" y="364" text-anchor="middle" font-size="10" fill="#333333">15</text>
+  <text x="503.636" y="364" text-anchor="middle" font-size="10" fill="#333333">20</text>
+  <text x="612.727" y="364" text-anchor="middle" font-size="10" fill="#333333">25</text>
+  <polyline points="89.0909,50.1818 110.909,66.6469 132.727,82.2989 154.545,94.5799 176.364,103.408 198.182,110.686 220,114.964 241.818,116.621 263.636,113.136 285.455,105.918 307.273,96.7122 329.091,92.8147 350.909,103.66 372.727,118.726 394.545,132.453 416.364,143.351 438.182,152.032 460,159.077 481.818,163.363 503.636,165.236 525.455,161.693 547.273,155.954 569.091,148.083 590.909,144.661" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,196.764 110.909,288.777 132.727,320.385 154.545,333.818 176.364,286.942 198.182,283.391 220,286.554 241.818,332.546 263.636,309.14 285.455,289.406 307.273,201.29 329.091,77.1879 350.909,200.934 372.727,289.595 394.545,316.036 416.364,318.068 438.182,279.719 460,280.606 481.818,286.108 503.636,333.07 525.455,302.541 547.273,284.425 569.091,207.52 590.909,106.289" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="482.5" y="44" width="121.5" height="48" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="494.5" y1="59" x2="514.5" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="520.5" y="63" font-size="11" fill="#111111">raw</text>
+  <line x1="494.5" y1="75" x2="514.5" y2="75" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="520.5" y="79" font-size="11" fill="#111111">differenced</text>
+</svg>

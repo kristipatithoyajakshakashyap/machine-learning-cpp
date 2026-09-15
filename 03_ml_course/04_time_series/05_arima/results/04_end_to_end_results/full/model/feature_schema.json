@@ -1,0 +1,1 @@
+{"features":["univariate_history"],"model":"ARIMA","forecast_horizon":1,"season_length":12}
