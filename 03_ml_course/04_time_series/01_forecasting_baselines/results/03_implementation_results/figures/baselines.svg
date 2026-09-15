@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">AirPassengers holdout: baselines versus actual</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="289.235" x2="616" y2="289.235" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="214.995" x2="616" y2="214.995" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="140.755" x2="616" y2="140.755" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="66.5147" x2="616" y2="66.5147" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="89.0909" y1="36" x2="89.0909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="178.701" y1="36" x2="178.701" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="268.312" y1="36" x2="268.312" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="357.922" y1="36" x2="357.922" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="447.532" y1="36" x2="447.532" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="537.143" y1="36" x2="537.143" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="292.735" text-anchor="end" font-size="10" fill="#333333">300</text>
+  <text x="58" y="218.495" text-anchor="end" font-size="10" fill="#333333">400</text>
+  <text x="58" y="144.255" text-anchor="end" font-size="10" fill="#333333">500</text>
+  <text x="58" y="70.0147" text-anchor="end" font-size="10" fill="#333333">600</text>
+  <text x="89.0909" y="364" text-anchor="middle" font-size="10" fill="#333333">115</text>
+  <text x="178.701" y="364" text-anchor="middle" font-size="10" fill="#333333">120</text>
+  <text x="268.312" y="364" text-anchor="middle" font-size="10" fill="#333333">125</text>
+  <text x="357.922" y="364" text-anchor="middle" font-size="10" fill="#333333">130</text>
+  <text x="447.532" y="364" text-anchor="middle" font-size="10" fill="#333333">135</text>
+  <text x="537.143" y="364" text-anchor="middle" font-size="10" fill="#333333">140</text>
+  <text x="340" y="390" text-anchor="middle" font-size="12" fill="#111111">month index</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">passengers (thousands)</text>
+  <polyline points="89.0909,137.043 107.013,212.025 124.935,245.434 142.857,281.811 160.779,261.766 178.701,244.691 196.623,258.054 214.545,210.541 232.468,217.965 250.39,200.147 268.312,161.542 286.234,105.12 304.156,96.9532 322.078,168.224 340,209.798 357.922,243.206 375.844,211.283 393.766,202.374 411.688,221.677 429.61,200.889 447.532,169.709 465.455,161.542 483.377,114.771 501.299,50.1818 519.221,62.0603 537.143,134.816 555.065,169.709 572.987,222.419 590.909,191.238" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,147.437 107.013,137.043 124.935,212.025 142.857,245.434 160.779,281.811 178.701,261.766 196.623,244.691 214.545,258.054 232.468,210.541 250.39,217.965 268.312,200.147 286.234,161.542 304.156,105.12 322.078,96.9532 340,168.224 357.922,209.798 375.844,243.206 393.766,211.283 411.688,202.374 429.61,221.677 447.532,200.889 465.455,169.709 483.377,161.542 501.299,114.771 519.221,50.1818 537.143,62.0603 555.065,134.816 572.987,169.709 590.909,222.419" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,165.254 107.013,212.025 124.935,254.342 142.857,285.523 160.779,262.509 178.701,259.539 196.623,275.872 214.545,243.206 232.468,253.6 250.39,242.464 268.312,189.011 286.234,147.437 304.156,137.043 322.078,212.025 340,245.434 357.922,281.811 375.844,261.766 393.766,244.691 411.688,258.054 429.61,210.541 447.532,217.965 465.455,200.147 483.377,161.542 501.299,105.12 519.221,96.9532 537.143,168.224 555.065,209.798 572.987,243.206 590.909,211.283" fill="none" stroke="#2ca02c" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,333.818 107.013,332.122 124.935,331.095 142.857,330.369 160.779,329.961 178.701,329.393 196.623,328.693 214.545,328.114 232.468,327.158 250.39,326.278 268.312,325.269 286.234,323.969 304.156,322.246 322.078,320.486 340,319.305 357.922,318.463 375.844,317.889 393.766,317.081 411.688,316.219 429.61,315.513 447.532,314.664 465.455,313.598 483.377,312.488 501.299,311.055 519.221,309.179 537.143,307.414 555.065,306.189 572.987,305.228 590.909,304.649" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="76" y="44" width="141" height="80" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="88" y1="59" x2="108" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="114" y="63" font-size="11" fill="#111111">actual</text>
+  <line x1="88" y1="75" x2="108" y2="75" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="114" y="79" font-size="11" fill="#111111">naive</text>
+  <line x1="88" y1="91" x2="108" y2="91" stroke="#2ca02c" stroke-width="2"/>
+  <text x="114" y="95" font-size="11" fill="#111111">seasonal naive</text>
+  <line x1="88" y1="107" x2="108" y2="107" stroke="#d62728" stroke-width="2"/>
+  <text x="114" y="111" font-size="11" fill="#111111">mean</text>
+</svg>
