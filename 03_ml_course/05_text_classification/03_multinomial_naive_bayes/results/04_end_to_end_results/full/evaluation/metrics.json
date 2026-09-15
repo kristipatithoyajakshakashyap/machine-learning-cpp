@@ -1,0 +1,1 @@
+{"accuracy":0.989372,"precision":0.96875,"recall":0.946565,"f1":0.957529,"roc_auc":0.978661,"log_loss":0.0950461,"ham_baseline_accuracy":0.87343,"tp":124,"fp":4,"tn":900,"fn":7}

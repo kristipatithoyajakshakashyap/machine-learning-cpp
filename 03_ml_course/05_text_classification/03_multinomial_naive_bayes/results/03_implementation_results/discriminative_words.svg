@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="400" viewBox="0 0 820 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="430" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Naive Bayes log-odds spam vs ham (top |log-odds| words)</text>
+  <rect x="64" y="36" width="732" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.818" x2="796" y2="333.818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="283.231" x2="796" y2="283.231" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="232.643" x2="796" y2="232.643" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="182.056" x2="796" y2="182.056" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="131.469" x2="796" y2="131.469" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="80.8812" x2="796" y2="80.8812" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="796" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.318" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="286.731" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="58" y="236.143" text-anchor="end" font-size="10" fill="#333333">2</text>
+  <text x="58" y="185.556" text-anchor="end" font-size="10" fill="#333333">3</text>
+  <text x="58" y="134.969" text-anchor="end" font-size="10" fill="#333333">4</text>
+  <text x="58" y="84.3812" text-anchor="end" font-size="10" fill="#333333">5</text>
+  <text x="82.3" y="364" text-anchor="middle" font-size="10" fill="#333333">claim</text>
+  <text x="430" y="390" text-anchor="middle" font-size="12" fill="#111111">term</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">log P(w|spam) - log P(w|ham)</text>
+  <rect x="72.235" y="50.1818" width="20.13" height="283.636" fill="#1f77b4" opacity="0.8"/>
+  <rect x="108.835" y="59.405" width="20.13" height="274.413" fill="#1f77b4" opacity="0.8"/>
+  <rect x="145.435" y="70.6932" width="20.13" height="263.125" fill="#1f77b4" opacity="0.8"/>
+  <rect x="182.035" y="82.7164" width="20.13" height="251.102" fill="#1f77b4" opacity="0.8"/>
+  <rect x="218.635" y="87.9094" width="20.13" height="245.909" fill="#1f77b4" opacity="0.8"/>
+  <rect x="255.235" y="93.6972" width="20.13" height="240.121" fill="#1f77b4" opacity="0.8"/>
+  <rect x="291.835" y="96.0505" width="20.13" height="237.768" fill="#1f77b4" opacity="0.8"/>
+  <rect x="328.435" y="100.234" width="20.13" height="233.585" fill="#1f77b4" opacity="0.8"/>
+  <rect x="365.035" y="103.849" width="20.13" height="229.97" fill="#1f77b4" opacity="0.8"/>
+  <rect x="401.635" y="105.758" width="20.13" height="228.06" fill="#1f77b4" opacity="0.8"/>
+  <rect x="438.235" y="107.742" width="20.13" height="226.076" fill="#1f77b4" opacity="0.8"/>
+  <rect x="474.835" y="109.807" width="20.13" height="224.011" fill="#1f77b4" opacity="0.8"/>
+  <rect x="511.435" y="110.872" width="20.13" height="222.946" fill="#1f77b4" opacity="0.8"/>
+  <rect x="548.035" y="111.96" width="20.13" height="221.858" fill="#1f77b4" opacity="0.8"/>
+  <rect x="584.635" y="111.96" width="20.13" height="221.858" fill="#1f77b4" opacity="0.8"/>
+  <rect x="621.235" y="114.209" width="20.13" height="219.61" fill="#1f77b4" opacity="0.8"/>
+  <rect x="657.835" y="114.209" width="20.13" height="219.61" fill="#1f77b4" opacity="0.8"/>
+  <rect x="694.435" y="114.209" width="20.13" height="219.61" fill="#1f77b4" opacity="0.8"/>
+  <rect x="731.035" y="119.03" width="20.13" height="214.788" fill="#1f77b4" opacity="0.8"/>
+  <rect x="767.635" y="122.974" width="20.13" height="210.844" fill="#1f77b4" opacity="0.8"/>
+</svg>
