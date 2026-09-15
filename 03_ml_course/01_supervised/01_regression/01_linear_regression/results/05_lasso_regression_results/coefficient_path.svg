@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">lasso coefficient path (diabetes)</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="332.161" x2="616" y2="332.161" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="265.117" x2="616" y2="265.117" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="198.072" x2="616" y2="198.072" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="131.027" x2="616" y2="131.027" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="63.9825" x2="616" y2="63.9825" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="89.0909" y1="36" x2="89.0909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="214.545" y1="36" x2="214.545" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="340" y1="36" x2="340" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="465.455" y1="36" x2="465.455" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="335.661" text-anchor="end" font-size="10" fill="#333333">-20</text>
+  <text x="58" y="268.617" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="201.572" text-anchor="end" font-size="10" fill="#333333">20</text>
+  <text x="58" y="134.527" text-anchor="end" font-size="10" fill="#333333">40</text>
+  <text x="58" y="67.4825" text-anchor="end" font-size="10" fill="#333333">60</text>
+  <text x="89.0909" y="364" text-anchor="middle" font-size="10" fill="#333333">-1</text>
+  <text x="214.545" y="364" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="340" y="364" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <text x="465.455" y="364" text-anchor="middle" font-size="10" fill="#333333">2</text>
+  <text x="590.909" y="364" text-anchor="middle" font-size="10" fill="#333333">3</text>
+  <text x="340" y="390" text-anchor="middle" font-size="12" fill="#111111">log10(lambda)</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">coefficient</text>
+  <polyline points="89.0909,264.935 148.948,264.936 214.545,264.936 274.402,264.983 340,265.117 399.857,265.117 465.455,265.117 525.312,265.117 590.909,265.117" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,333.818 148.948,330.397 214.545,319.844 274.402,288.392 340,265.117 399.857,265.117 465.455,265.117 525.312,265.117 590.909,265.117" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,243.897 148.948,243.745 214.545,243.262 274.402,242.299 340,243.2 399.857,246.711 465.455,259.132 525.312,265.117 590.909,265.117" fill="none" stroke="#2ca02c" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,261.312 148.948,261.315 214.545,261.289 274.402,261.302 340,261.326 399.857,261.026 465.455,260.057 525.312,261.631 590.909,265.117" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,267.852 148.948,267.054 214.545,265.03 274.402,261.032 340,261.247 399.857,262.099 465.455,264.518 525.312,264.688 590.909,265.117" fill="none" stroke="#9467bd" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,263.146 148.948,263.848 214.545,265.759 274.402,269.543 340,269.266 399.857,268.196 465.455,265.117 525.312,265.117 590.909,265.117" fill="none" stroke="#8c564b" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,264.764 148.948,265.693 214.545,267.66 274.402,271.372 340,270.872 399.857,270.229 465.455,268.412 525.312,265.612 590.909,265.117" fill="none" stroke="#e377c2" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,262.193 148.948,265.117 214.545,265.117 274.402,265.117 340,265.117 399.857,265.117 465.455,265.117 525.312,265.117 590.909,265.117" fill="none" stroke="#7f7f7f" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,50.1818 148.948,72.8126 214.545,138.154 274.402,265.117 340,265.117 399.857,265.117 465.455,265.117 525.312,265.117 590.909,265.117" fill="none" stroke="#bcbd22" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,264.426 148.948,264.406 214.545,264.359 274.402,264.321 340,264.37 399.857,264.269 465.455,264.038 525.312,265.117 590.909,265.117" fill="none" stroke="#17becf" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="534.5" y="44" width="69.5" height="176" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="546.5" y1="59" x2="566.5" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="572.5" y="63" font-size="11" fill="#111111">w1</text>
+  <line x1="546.5" y1="75" x2="566.5" y2="75" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="572.5" y="79" font-size="11" fill="#111111">w2</text>
+  <line x1="546.5" y1="91" x2="566.5" y2="91" stroke="#2ca02c" stroke-width="2"/>
+  <text x="572.5" y="95" font-size="11" fill="#111111">w3</text>
+  <line x1="546.5" y1="107" x2="566.5" y2="107" stroke="#d62728" stroke-width="2"/>
+  <text x="572.5" y="111" font-size="11" fill="#111111">w4</text>
+  <line x1="546.5" y1="123" x2="566.5" y2="123" stroke="#9467bd" stroke-width="2"/>
+  <text x="572.5" y="127" font-size="11" fill="#111111">w5</text>
+  <line x1="546.5" y1="139" x2="566.5" y2="139" stroke="#8c564b" stroke-width="2"/>
+  <text x="572.5" y="143" font-size="11" fill="#111111">w6</text>
+  <line x1="546.5" y1="155" x2="566.5" y2="155" stroke="#e377c2" stroke-width="2"/>
+  <text x="572.5" y="159" font-size="11" fill="#111111">w7</text>
+  <line x1="546.5" y1="171" x2="566.5" y2="171" stroke="#7f7f7f" stroke-width="2"/>
+  <text x="572.5" y="175" font-size="11" fill="#111111">w8</text>
+  <line x1="546.5" y1="187" x2="566.5" y2="187" stroke="#bcbd22" stroke-width="2"/>
+  <text x="572.5" y="191" font-size="11" fill="#111111">w9</text>
+  <line x1="546.5" y1="203" x2="566.5" y2="203" stroke="#17becf" stroke-width="2"/>
+  <text x="572.5" y="207" font-size="11" fill="#111111">w10</text>
+</svg>
