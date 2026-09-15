@@ -1,0 +1,5 @@
+[2026-09-10 14:30:05] [INFO ] pipeline: read dataset.csv, 4 rows
+[2026-09-10 14:30:05] [INFO ] pipeline: mean height = 171.25
+[2026-09-10 14:30:05] [WARN ] pipeline: weight span is 22 (narrow)
+[2026-09-10 14:30:05] [ERROR] pipeline: step 3 has no data
+[2026-09-10 14:30:05] [INFO ] pipeline: finished (log in capstone.log)

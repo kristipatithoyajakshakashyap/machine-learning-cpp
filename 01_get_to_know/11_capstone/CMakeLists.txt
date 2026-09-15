@@ -1,0 +1,6 @@
+# 11_capstone - The graduation project
+add_lesson_executable(conc_stats_calculator 01_stats_calculator.cpp)
+add_lesson_executable(conc_csv_dataset_reader 02_csv_dataset_reader.cpp)
+add_lesson_executable(conc_dataset_normalizer 03_dataset_normalizer.cpp)
+add_lesson_executable(conc_logger_integration 04_logger_integration.cpp)
+add_lesson_executable(conc_projects_tests 05_projects_tests.cpp)
