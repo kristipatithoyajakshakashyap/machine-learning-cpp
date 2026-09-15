@@ -1,0 +1,4 @@
+add_subdirectory(01_text_preprocessing)
+add_subdirectory(02_count_and_tfidf)
+add_subdirectory(03_multinomial_naive_bayes)
+add_subdirectory(04_linear_text_classifier)
