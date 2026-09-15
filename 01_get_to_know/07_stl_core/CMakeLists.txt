@@ -1,0 +1,11 @@
+# 07_stl_core - The standard library in everyday use
+add_lesson_executable(conc_containers_overview 01_containers_overview.cpp)
+add_lesson_executable(conc_vector_and_list 02_vector_and_list.cpp)
+add_lesson_executable(conc_stack_and_queue 03_stack_and_queue.cpp)
+add_lesson_executable(conc_set_and_map 04_set_and_map.cpp)
+add_lesson_executable(conc_iterators 05_iterators.cpp)
+add_lesson_executable(conc_algorithms 06_algorithms.cpp)
+add_lesson_executable(conc_array_string_view 07_array_and_string_view.cpp)
+
+add_lesson_executable(conc_random_and_chrono 08_random_and_chrono.cpp)
+add_lesson_executable(conc_regex 09_regex.cpp)
