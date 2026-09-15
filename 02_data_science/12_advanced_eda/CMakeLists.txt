@@ -1,0 +1,8 @@
+add_subdirectory(01_data_quality)
+add_subdirectory(02_missingness_analysis)
+add_subdirectory(03_outliers_and_distributions)
+add_subdirectory(04_categorical_relationships)
+add_subdirectory(05_multivariate_analysis)
+add_subdirectory(06_target_relationships)
+add_subdirectory(07_temporal_and_geographic_analysis)
+add_subdirectory(08_eda_report)

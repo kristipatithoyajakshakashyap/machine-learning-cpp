@@ -1,0 +1,7 @@
+add_subdirectory(01_vectors_and_matrices)
+add_subdirectory(02_linear_algebra)
+add_subdirectory(03_probability)
+add_subdirectory(04_statistics)
+add_subdirectory(05_derivatives_and_gradients)
+add_subdirectory(06_optimization)
+add_subdirectory(07_eigen_svd)
