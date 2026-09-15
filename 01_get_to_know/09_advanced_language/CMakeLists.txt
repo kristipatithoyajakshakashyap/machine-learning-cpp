@@ -1,0 +1,11 @@
+# 09_advanced_language - Taking C++ further
+add_lesson_executable(conc_lambdas 01_lambdas.cpp)
+add_lesson_executable(conc_move_semantics 02_move_semantics.cpp)
+add_lesson_executable(conc_auto_decltype 03_auto_and_decltype.cpp)
+add_lesson_executable(conc_const_correctness 04_const_correctness.cpp)
+add_lesson_executable(conc_optional_variant 05_optional_and_variant.cpp)
+add_lesson_executable(conc_multithreading 06_multithreading.cpp)
+add_lesson_executable(conc_namespaces 07_namespaces.cpp)
+add_lesson_executable(conc_constexpr_enum_class 08_constexpr_and_enum_class.cpp)
+add_lesson_executable(conc_mutex_atomic_async 09_mutex_atomic_async.cpp)
+add_lesson_executable(conc_function_callbacks 10_function_and_callbacks.cpp)
