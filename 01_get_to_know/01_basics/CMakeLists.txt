@@ -1,0 +1,9 @@
+# 01_basics - Language core
+add_lesson_executable(conc_variables_types 01_variables_types.cpp)
+add_lesson_executable(conc_operators 02_operators.cpp)
+add_lesson_executable(conc_control_flow 03_control_flow.cpp)
+add_lesson_executable(conc_loops 04_loops.cpp)
+add_lesson_executable(conc_functions 05_functions.cpp)
+add_lesson_executable(conc_scope_lifetime 06_scope_lifetime.cpp)
+add_lesson_executable(conc_strings 07_strings.cpp)
+add_lesson_executable(conc_user_input 08_user_input.cpp)
