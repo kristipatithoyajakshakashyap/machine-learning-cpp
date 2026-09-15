@@ -1,0 +1,1 @@
+{"rmse":1.00449,"mae":0.806846,"popularity_rmse":1.00449,"recall_at_10":0.0841735,"ndcg_at_10":0.239156,"recall_standard_error":0.0185346,"popularity_recall_at_10":0.0841735,"popularity_ndcg_at_10":0.239156,"ranking_users":51,"cold_user_rows":2048,"cold_item_rows":36}

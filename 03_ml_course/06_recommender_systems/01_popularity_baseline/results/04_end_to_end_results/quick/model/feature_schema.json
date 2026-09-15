@@ -1,0 +1,1 @@
+{"input":["original_user_id","original_item_id"],"rating_range":[1,5],"relevant_rating_minimum":4,"ranking_k":10}
