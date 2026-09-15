@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Held-out rating RMSE</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.818" x2="616" y2="333.818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="277.344" x2="616" y2="277.344" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="220.871" x2="616" y2="220.871" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="164.397" x2="616" y2="164.397" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="107.923" x2="616" y2="107.923" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="51.4496" x2="616" y2="51.4496" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.318" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="280.844" text-anchor="end" font-size="10" fill="#333333">0.2</text>
+  <text x="58" y="224.371" text-anchor="end" font-size="10" fill="#333333">0.4</text>
+  <text x="58" y="167.897" text-anchor="end" font-size="10" fill="#333333">0.6</text>
+  <text x="58" y="111.423" text-anchor="end" font-size="10" fill="#333333">0.8</text>
+  <text x="58" y="54.9496" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="202" y="364" text-anchor="middle" font-size="10" fill="#333333">selected</text>
+  <rect x="126.1" y="57.5258" width="151.8" height="276.292" fill="#1f77b4" opacity="0.8"/>
+  <rect x="402.1" y="50.1818" width="151.8" height="283.636" fill="#1f77b4" opacity="0.8"/>
+</svg>

@@ -1,0 +1,5 @@
+# MovieLens recommendation
+
+Held-out RMSE: 0.978481; Recall@10: 0.0302735; NDCG@10: 0.0961499. Popularity baseline NDCG@10: 0.239156.
+
+Global chronological splits use approximately 60/20/20 percent with equal timestamps kept together. Validation RMSE chooses the parameter; final fit uses the first 80 percent. No future interactions enter similarities, biases, factors or item popularity. Ranking evaluates all users with at least one unseen test rating >=4; candidates are every training-catalog item not previously seen. Unseen test items remain in relevance denominators, so catalog cold-start costs are visible. Missing ratings are unknown, not verified dislikes; offline ranking is subject to exposure bias. Models fall back to item/global or known-user bias estimates for cold starts. The reported recall standard error summarizes variation across users and does not model temporal dependence. EDA describes final training interactions; user/item history counts are descriptive aggregates, not chronological prediction features.
