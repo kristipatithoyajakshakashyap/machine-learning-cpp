@@ -1,0 +1,12 @@
+# gradient boosting regressor
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 320; untouched test rows: 80. 5 folds selected parameter 0.2 using negative RMSE.
+
+Holdout RMSE: 75530. Bootstrap 95% percentile interval [57593.4, 93091.8]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":320,"n_test":80,"cv_score":-67200.719131995356,"rmse":75529.98700474322,"mae":54140.984874581758,"r2":0.60718420369381854,"baseline_rmse":120895.6632059918,"bootstrap_ci95":[57593.392053570788,93091.775957773978]}

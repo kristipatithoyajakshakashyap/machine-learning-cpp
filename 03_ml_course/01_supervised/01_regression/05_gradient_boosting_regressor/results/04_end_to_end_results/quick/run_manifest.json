@@ -1,0 +1,1 @@
+{"workflow":"gradient boosting regressor","dataset_fingerprint":"fnv1a64:4919efd63b51a8fd","seed":42,"cv_seed":123,"bootstrap_seed":2026,"quick":true,"raw_rows":20640,"used_rows":400}
