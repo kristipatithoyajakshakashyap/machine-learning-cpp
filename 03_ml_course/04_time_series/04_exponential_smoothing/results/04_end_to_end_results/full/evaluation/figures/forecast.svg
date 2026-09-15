@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">One-step forecasts with observed history</text>
+  <rect x="64" y="36" width="552" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="338.255" x2="616" y2="338.255" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="293.887" x2="616" y2="293.887" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="249.52" x2="616" y2="249.52" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="205.152" x2="616" y2="205.152" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="160.784" x2="616" y2="160.784" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="116.416" x2="616" y2="116.416" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="72.0486" x2="616" y2="72.0486" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="89.0909" y1="36" x2="89.0909" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="178.701" y1="36" x2="178.701" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="268.312" y1="36" x2="268.312" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="357.922" y1="36" x2="357.922" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="447.532" y1="36" x2="447.532" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="537.143" y1="36" x2="537.143" y2="348" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="616" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="341.755" text-anchor="end" font-size="10" fill="#333333">300</text>
+  <text x="58" y="297.387" text-anchor="end" font-size="10" fill="#333333">350</text>
+  <text x="58" y="253.02" text-anchor="end" font-size="10" fill="#333333">400</text>
+  <text x="58" y="208.652" text-anchor="end" font-size="10" fill="#333333">450</text>
+  <text x="58" y="164.284" text-anchor="end" font-size="10" fill="#333333">500</text>
+  <text x="58" y="119.916" text-anchor="end" font-size="10" fill="#333333">550</text>
+  <text x="58" y="75.5486" text-anchor="end" font-size="10" fill="#333333">600</text>
+  <text x="89.0909" y="364" text-anchor="middle" font-size="10" fill="#333333">115</text>
+  <text x="178.701" y="364" text-anchor="middle" font-size="10" fill="#333333">120</text>
+  <text x="268.312" y="364" text-anchor="middle" font-size="10" fill="#333333">125</text>
+  <text x="357.922" y="364" text-anchor="middle" font-size="10" fill="#333333">130</text>
+  <text x="447.532" y="364" text-anchor="middle" font-size="10" fill="#333333">135</text>
+  <text x="537.143" y="364" text-anchor="middle" font-size="10" fill="#333333">140</text>
+  <polyline points="89.0909,156.347 107.013,245.97 124.935,285.901 142.857,329.381 160.779,305.423 178.701,285.014 196.623,300.986 214.545,244.195 232.468,253.069 250.39,231.772 268.312,185.63 286.234,118.191 304.156,108.43 322.078,193.616 340,243.308 357.922,283.239 375.844,245.083 393.766,234.434 411.688,257.506 429.61,232.66 447.532,195.391 465.455,185.63 483.377,129.727 501.299,52.5268 519.221,66.7245 537.143,153.685 555.065,195.391 572.987,258.393 590.909,221.124" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,214.553 107.013,257.085 124.935,300.405 142.857,325.901 160.779,288.564 178.701,277.654 196.623,285.562 214.545,237.678 232.468,239.834 250.39,224.165 268.312,161.595 286.234,125.212 304.156,125.466 322.078,210.854 340,254.652 357.922,296.478 375.844,266.875 393.766,240.806 411.688,248.407 429.61,190.203 447.532,204.085 465.455,178.475 483.377,124.329 501.299,60.4799 519.221,50.1818 537.143,141.558 555.065,197.34 572.987,243.11 590.909,219.867" fill="none" stroke="#ff7f0e" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="89.0909,190.067 107.013,245.97 124.935,296.549 142.857,333.818 160.779,306.31 178.701,302.761 196.623,322.283 214.545,283.239 232.468,295.662 250.39,282.352 268.312,218.462 286.234,168.77 304.156,156.347 322.078,245.97 340,285.901 357.922,329.381 375.844,305.423 393.766,285.014 411.688,300.986 429.61,244.195 447.532,253.069 465.455,231.772 483.377,185.63 501.299,118.191 519.221,108.43 537.143,193.616 555.065,243.308 572.987,283.239 590.909,245.083" fill="none" stroke="#2ca02c" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="76" y="44" width="141" height="64" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="88" y1="59" x2="108" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="114" y="63" font-size="11" fill="#111111">actual</text>
+  <line x1="88" y1="75" x2="108" y2="75" stroke="#ff7f0e" stroke-width="2"/>
+  <text x="114" y="79" font-size="11" fill="#111111">forecast</text>
+  <line x1="88" y1="91" x2="108" y2="91" stroke="#2ca02c" stroke-width="2"/>
+  <text x="114" y="95" font-size="11" fill="#111111">seasonal naive</text>
+</svg>

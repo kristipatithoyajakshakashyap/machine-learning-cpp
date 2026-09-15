@@ -1,0 +1,1 @@
+{"dataset":"AirPassengers 1949-1960","holdout_start":115,"alpha":0.2,"beta":0.5,"gamma":0.8,"selection":"expanding training window","training_fingerprint":"fnv1a64:cb44e06cd6194b64"}
