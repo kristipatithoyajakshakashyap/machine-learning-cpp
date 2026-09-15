@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Welch t-test power, d = 0.5</text>
+<text x="367" y="384" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">n per group</text>
+<text x="52" y="202" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">power</text>
+<line x1="62" y1="333.883" x2="672" y2="333.883" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="337.883" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0.2</text>
+<line x1="62" y1="261.816" x2="672" y2="261.816" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="265.816" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0.4</text>
+<line x1="62" y1="189.749" x2="672" y2="189.749" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="193.749" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0.6</text>
+<line x1="62" y1="117.681" x2="672" y2="117.681" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="121.681" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0.8</text>
+<line x1="62" y1="45.6143" x2="672" y2="45.6143" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="49.6143" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">1</text>
+<line x1="62" y1="44" x2="62" y2="360" stroke="#5a5a5a" stroke-width="1"/>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#5a5a5a" stroke-width="1.5"/>
+<line x1="92.5" y1="360" x2="92.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="92.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">10</text>
+<line x1="153.5" y1="360" x2="153.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="153.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">20</text>
+<line x1="214.5" y1="360" x2="214.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="214.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">30</text>
+<line x1="275.5" y1="360" x2="275.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="275.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">40</text>
+<line x1="336.5" y1="360" x2="336.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="336.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">50</text>
+<line x1="397.5" y1="360" x2="397.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="397.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">60</text>
+<line x1="458.5" y1="360" x2="458.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="458.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">70</text>
+<line x1="519.5" y1="360" x2="519.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="519.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">80</text>
+<line x1="580.5" y1="360" x2="580.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="580.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">90</text>
+<line x1="641.5" y1="360" x2="641.5" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="641.5" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">100</text>
+<path d=" M92.5 338.207 L153.5 275.508 L214.5 222.899 L275.5 185.425 L336.5 147.229 L397.5 134.257 L458.5 114.078 L519.5 88.1339 L580.5 68.6758 L641.5 65.7931" fill="none" stroke="#4c78a8" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="92.5" cy="338.207" r="2.6" fill="#4c78a8"/>
+<circle cx="153.5" cy="275.508" r="2.6" fill="#4c78a8"/>
+<circle cx="214.5" cy="222.899" r="2.6" fill="#4c78a8"/>
+<circle cx="275.5" cy="185.425" r="2.6" fill="#4c78a8"/>
+<circle cx="336.5" cy="147.229" r="2.6" fill="#4c78a8"/>
+<circle cx="397.5" cy="134.257" r="2.6" fill="#4c78a8"/>
+<circle cx="458.5" cy="114.078" r="2.6" fill="#4c78a8"/>
+<circle cx="519.5" cy="88.1339" r="2.6" fill="#4c78a8"/>
+<circle cx="580.5" cy="68.6758" r="2.6" fill="#4c78a8"/>
+<circle cx="641.5" cy="65.7931" r="2.6" fill="#4c78a8"/>
+</svg>
