@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="470" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Permutation importance (out-of-fold macro F1 drop)</text>
+  <rect x="64" y="36" width="812" height="332" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="352.909" x2="876" y2="352.909" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="312.266" x2="876" y2="312.266" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="271.623" x2="876" y2="271.623" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="230.98" x2="876" y2="230.98" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="190.337" x2="876" y2="190.337" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="149.694" x2="876" y2="149.694" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="109.05" x2="876" y2="109.05" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="68.4073" x2="876" y2="68.4073" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="368" x2="876" y2="368" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="368" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="356.409" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="315.766" text-anchor="end" font-size="10" fill="#333333">0.01</text>
+  <text x="58" y="275.123" text-anchor="end" font-size="10" fill="#333333">0.02</text>
+  <text x="58" y="234.48" text-anchor="end" font-size="10" fill="#333333">0.03</text>
+  <text x="58" y="193.837" text-anchor="end" font-size="10" fill="#333333">0.04</text>
+  <text x="58" y="153.194" text-anchor="end" font-size="10" fill="#333333">0.05</text>
+  <text x="58" y="112.55" text-anchor="end" font-size="10" fill="#333333">0.06</text>
+  <text x="58" y="71.9073" text-anchor="end" font-size="10" fill="#333333">0.07</text>
+  <text x="93" y="384" text-anchor="middle" font-size="10" fill="#333333">color_intensity</text>
+  <text x="16" y="202" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 202)">mean drop</text>
+  <rect x="77.05" y="51.0909" width="31.9" height="301.818" fill="#1f77b4" opacity="0.8"/>
+  <rect x="135.05" y="126.944" width="31.9" height="225.965" fill="#1f77b4" opacity="0.8"/>
+  <rect x="193.05" y="179.896" width="31.9" height="173.013" fill="#1f77b4" opacity="0.8"/>
+  <rect x="251.05" y="193.19" width="31.9" height="159.719" fill="#1f77b4" opacity="0.8"/>
+  <rect x="309.05" y="307.349" width="31.9" height="45.5604" fill="#1f77b4" opacity="0.8"/>
+  <rect x="367.05" y="324.771" width="31.9" height="28.1386" fill="#1f77b4" opacity="0.8"/>
+  <rect x="425.05" y="325.661" width="31.9" height="27.2482" fill="#1f77b4" opacity="0.8"/>
+  <rect x="483.05" y="327.553" width="31.9" height="25.356" fill="#1f77b4" opacity="0.8"/>
+  <rect x="541.05" y="344.183" width="31.9" height="8.72638" fill="#1f77b4" opacity="0.8"/>
+  <rect x="599.05" y="344.615" width="31.9" height="8.2945" fill="#1f77b4" opacity="0.8"/>
+  <rect x="657.05" y="345.637" width="31.9" height="7.27198" fill="#1f77b4" opacity="0.8"/>
+  <rect x="715.05" y="346.586" width="31.9" height="6.32263" fill="#1f77b4" opacity="0.8"/>
+  <rect x="773.05" y="352.909" width="31.9" height="0" fill="#1f77b4" opacity="0.8"/>
+  <rect x="831.05" y="352.909" width="31.9" height="0" fill="#1f77b4" opacity="0.8"/>
+</svg>

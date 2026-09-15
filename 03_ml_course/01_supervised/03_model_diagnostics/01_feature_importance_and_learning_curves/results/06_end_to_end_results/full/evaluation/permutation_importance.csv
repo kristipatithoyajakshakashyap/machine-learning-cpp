@@ -1,0 +1,14 @@
+feature,mean_drop,std_drop
+"alcohol",0.0118003,0.00767046
+"malic_acid",0,0
+"ash",0,0
+"alcalinity",0,0
+"magnesium",0,0
+"total_phenols",0,0
+"flavanoids",0.0147894,0.00810016
+"nonflavanoid_phenols",0,0
+"proanthocyanins",0,0
+"color_intensity",0.0162454,0.00451169
+"hue",0,0
+"od280",0,0
+"proline",0.103659,0.0177557

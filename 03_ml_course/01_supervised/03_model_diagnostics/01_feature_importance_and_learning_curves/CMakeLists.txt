@@ -1,0 +1,15 @@
+# The forest is compiled once in ml_tree_models (helper/models/tree_models.cpp);
+# the diagnostics helpers are header-only, so no module library is needed.
+set(ML_MODULE_LIB ml_tree_models)
+set(ML_MODULE_RESULTS ${CMAKE_CURRENT_SOURCE_DIR}/results)
+add_lesson_executable(diag_theory 01_theory.cpp)
+add_lesson_executable(diag_math_intuition 02_math_intuition.cpp)
+add_lesson_executable(diag_implementation 03_implementation.cpp)
+add_lesson_executable(diag_04_permutation_importance 04_permutation_importance.cpp)
+add_lesson_executable(diag_05_learning_curve 05_learning_curve.cpp)
+add_lesson_executable(diag_end_to_end 06_end_to_end.cpp)
+add_lesson_executable(diag_predict predict.cpp)
+add_lesson_executable(diag_tests tests/model_test.cpp)
+add_test(NAME diag_numerical COMMAND diag_tests)
+add_test(NAME diag_workflow COMMAND diag_end_to_end --quick)
+set_tests_properties(diag_workflow PROPERTIES LABELS "integration")
