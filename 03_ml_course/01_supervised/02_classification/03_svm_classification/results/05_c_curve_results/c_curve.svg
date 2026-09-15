@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="0 0 600 380">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="320" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">SVM penalty C vs accuracy (breast cancer)</text>
+  <rect x="64" y="36" width="512" height="292" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="317.677" x2="576" y2="317.677" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="284.053" x2="576" y2="284.053" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="250.428" x2="576" y2="250.428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="216.804" x2="576" y2="216.804" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="183.18" x2="576" y2="183.18" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="149.556" x2="576" y2="149.556" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="115.931" x2="576" y2="115.931" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="82.3071" x2="576" y2="82.3071" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="48.6828" x2="576" y2="48.6828" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="87.2727" y1="36" x2="87.2727" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="180.364" y1="36" x2="180.364" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="273.455" y1="36" x2="273.455" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="366.545" y1="36" x2="366.545" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="459.636" y1="36" x2="459.636" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="552.727" y1="36" x2="552.727" y2="328" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="328" x2="576" y2="328" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="328" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="321.177" text-anchor="end" font-size="10" fill="#333333">0.85</text>
+  <text x="58" y="287.553" text-anchor="end" font-size="10" fill="#333333">0.86</text>
+  <text x="58" y="253.928" text-anchor="end" font-size="10" fill="#333333">0.87</text>
+  <text x="58" y="220.304" text-anchor="end" font-size="10" fill="#333333">0.88</text>
+  <text x="58" y="186.68" text-anchor="end" font-size="10" fill="#333333">0.89</text>
+  <text x="58" y="153.056" text-anchor="end" font-size="10" fill="#333333">0.9</text>
+  <text x="58" y="119.431" text-anchor="end" font-size="10" fill="#333333">0.91</text>
+  <text x="58" y="85.8071" text-anchor="end" font-size="10" fill="#333333">0.92</text>
+  <text x="58" y="52.1828" text-anchor="end" font-size="10" fill="#333333">0.93</text>
+  <text x="87.2727" y="344" text-anchor="middle" font-size="10" fill="#333333">-3</text>
+  <text x="180.364" y="344" text-anchor="middle" font-size="10" fill="#333333">-2</text>
+  <text x="273.455" y="344" text-anchor="middle" font-size="10" fill="#333333">-1</text>
+  <text x="366.545" y="344" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="459.636" y="344" text-anchor="middle" font-size="10" fill="#333333">1</text>
+  <text x="552.727" y="344" text-anchor="middle" font-size="10" fill="#333333">2</text>
+  <text x="320" y="370" text-anchor="middle" font-size="12" fill="#111111">log10(C)</text>
+  <text x="16" y="182" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 182)">accuracy</text>
+  <polyline points="87.2727,314.727 180.364,137.758 273.455,167.253 366.545,78.7677 459.636,137.758 552.727,49.2727" fill="none" stroke="#1f77b4" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="76" y="44" width="134.5" height="32" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <line x1="88" y1="59" x2="108" y2="59" stroke="#1f77b4" stroke-width="2"/>
+  <text x="114" y="63" font-size="11" fill="#111111">test accuracy</text>
+</svg>
