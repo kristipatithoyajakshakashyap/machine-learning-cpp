@@ -1,0 +1,2 @@
+add_executable(cpp_normalizer_tests normalizer.cpp)
+add_test(NAME cpp_normalizer COMMAND cpp_normalizer_tests)
