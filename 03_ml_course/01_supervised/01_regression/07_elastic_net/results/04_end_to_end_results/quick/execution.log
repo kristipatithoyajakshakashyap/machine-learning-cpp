@@ -1,0 +1,12 @@
+# end_to_end
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 320; untouched test rows: 80. 5 folds selected parameter 0.01 using negative RMSE.
+
+Holdout RMSE: 54.9372. Bootstrap 95% percentile interval [47.7173, 62.1648]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":320,"n_test":80,"cv_score":-55.030375816228037,"rmse":54.937166630553392,"mae":44.240528462478906,"r2":0.50866877133896171,"baseline_rmse":79.595599519638171,"bootstrap_ci95":[47.71728458254367,62.164829227610561]}
