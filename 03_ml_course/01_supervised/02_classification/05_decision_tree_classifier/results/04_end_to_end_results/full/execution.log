@@ -1,0 +1,12 @@
+# decision tree classifier
+
+Full supplied dataset run.
+
+Training rows: 454; untouched test rows: 115. 5 folds selected parameter 4 using macro F1.
+
+Holdout macro F1: 0.934022. Bootstrap 95% percentile interval [0.883603, 0.973398]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":454,"n_test":115,"cv_score":0.93818873065790653,"accuracy":0.93913043478260871,"macro_f1":0.93402180149168101,"baseline_macro_f1":0.38502673796791442,"roc_auc":0.92764857881136942,"log_loss":1.0482688016647681,"bootstrap_ci95":[0.8836032388663968,0.97339810316909547]}
