@@ -1,0 +1,12 @@
+# mlp regressor
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 320; untouched test rows: 80. 5 folds selected parameter 0.01 using negative RMSE.
+
+Holdout RMSE: 75726.3. Bootstrap 95% percentile interval [59084.3, 91513.1]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":320,"n_test":80,"cv_score":-67359.885524023557,"rmse":75726.250716340117,"mae":56615.53085344586,"r2":0.60514009763637344,"baseline_rmse":120895.6632059918,"bootstrap_ci95":[59084.300854192647,91513.052543990256]}

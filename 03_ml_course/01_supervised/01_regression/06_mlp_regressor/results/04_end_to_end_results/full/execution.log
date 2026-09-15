@@ -1,0 +1,12 @@
+# mlp regressor
+
+Full supplied dataset run.
+
+Training rows: 16512; untouched test rows: 4128. 5 folds selected parameter 0.01 using negative RMSE.
+
+Holdout RMSE: 64974.4. Bootstrap 95% percentile interval [62830.9, 67190.2]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":16512,"n_test":4128,"cv_score":-66139.060936796042,"rmse":64974.422058498145,"mae":47492.799125628619,"r2":0.68688007806030926,"baseline_rmse":116119.01171301052,"bootstrap_ci95":[62830.860879054409,67190.180351621064]}

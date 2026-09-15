@@ -1,0 +1,1 @@
+{"workflow":"mlp regressor","dataset_fingerprint":"fnv1a64:278a9e8dd8b723b8","seed":42,"cv_seed":123,"bootstrap_seed":2026,"quick":false,"raw_rows":20640,"used_rows":20640}
