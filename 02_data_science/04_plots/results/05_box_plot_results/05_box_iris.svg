@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Iris petal length by species</text>
+<text x="367" y="384" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c"></text>
+<text x="52" y="202" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Petal length (cm)</text>
+<line x1="62" y1="295.251" x2="672" y2="295.251" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="299.251" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">2</text>
+<line x1="62" y1="199.609" x2="672" y2="199.609" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="203.609" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">4</text>
+<line x1="62" y1="103.967" x2="672" y2="103.967" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="107.967" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">6</text>
+<line x1="62" y1="44" x2="62" y2="360" stroke="#5a5a5a" stroke-width="1"/>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#5a5a5a" stroke-width="1.5"/>
+<rect x="112.833" y="315.574" width="101.667" height="8.36864" fill="#7899bd"/>
+<line x1="112.833" y1="315.574" x2="214.5" y2="315.574" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="112.833" y1="323.943" x2="214.5" y2="323.943" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="110.833" y1="319.161" x2="216.5" y2="319.161" stroke="#4c78a8" stroke-width="2.2"/>
+<line x1="163.667" y1="303.021" x2="163.667" y2="323.943" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="159.667" y1="303.021" x2="167.667" y2="303.021" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="163.667" y1="315.574" x2="163.667" y2="336.496" stroke="#4c78a8" stroke-width="1.4"/>
+<line x1="159.667" y1="336.496" x2="167.667" y2="336.496" stroke="#4c78a8" stroke-width="1.4"/>
+<circle cx="163.667" cy="338.289" r="2.8" fill="#4c78a8"/>
+<circle cx="163.667" cy="343.071" r="2.8" fill="#4c78a8"/>
+<circle cx="163.667" cy="300.033" r="2.8" fill="#4c78a8"/>
+<circle cx="163.667" cy="300.033" r="2.8" fill="#4c78a8"/>
+<text x="163.667" y="376" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">setosa</text>
+<rect x="316.167" y="170.916" width="101.667" height="28.6925" fill="#f7a351"/>
+<line x1="316.167" y1="170.916" x2="417.833" y2="170.916" stroke="#f58518" stroke-width="1.4"/>
+<line x1="316.167" y1="199.609" x2="417.833" y2="199.609" stroke="#f58518" stroke-width="1.4"/>
+<line x1="314.167" y1="182.872" x2="419.833" y2="182.872" stroke="#f58518" stroke-width="2.2"/>
+<line x1="367" y1="147.006" x2="367" y2="199.609" stroke="#f58518" stroke-width="1.4"/>
+<line x1="363" y1="147.006" x2="371" y2="147.006" stroke="#f58518" stroke-width="1.4"/>
+<line x1="367" y1="170.916" x2="367" y2="242.648" stroke="#f58518" stroke-width="1.4"/>
+<line x1="363" y1="242.648" x2="371" y2="242.648" stroke="#f58518" stroke-width="1.4"/>
+<circle cx="367" cy="247.43" r="2.8" fill="#f58518"/>
+<text x="367" y="376" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">versicolor</text>
+<rect x="519.5" y="109.945" width="101.667" height="37.0611" fill="#ea8180"/>
+<line x1="519.5" y1="109.945" x2="621.167" y2="109.945" stroke="#e45756" stroke-width="1.4"/>
+<line x1="519.5" y1="147.006" x2="621.167" y2="147.006" stroke="#e45756" stroke-width="1.4"/>
+<line x1="517.5" y1="125.487" x2="623.167" y2="125.487" stroke="#e45756" stroke-width="2.2"/>
+<line x1="570.333" y1="60.9286" x2="570.333" y2="147.006" stroke="#e45756" stroke-width="1.4"/>
+<line x1="566.333" y1="60.9286" x2="574.333" y2="60.9286" stroke="#e45756" stroke-width="1.4"/>
+<line x1="570.333" y1="109.945" x2="570.333" y2="175.699" stroke="#e45756" stroke-width="1.4"/>
+<line x1="566.333" y1="175.699" x2="574.333" y2="175.699" stroke="#e45756" stroke-width="1.4"/>
+<text x="570.333" y="376" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">virginica</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Iris petal length</text>
+<text x="367" y="384" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Petal length (cm)</text>
+<text x="52" y="202" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Count</text>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="364" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0</text>
+<line x1="62" y1="276.842" x2="672" y2="276.842" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="280.842" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">10</text>
+<line x1="62" y1="193.684" x2="672" y2="193.684" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="197.684" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">20</text>
+<line x1="62" y1="110.526" x2="672" y2="110.526" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="114.526" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">30</text>
+<line x1="62" y1="44" x2="62" y2="360" stroke="#5a5a5a" stroke-width="1"/>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#5a5a5a" stroke-width="1.5"/>
+<rect x="62" y="52.3158" width="56.12" height="307.684" fill="#7899bd"/>
+<line x1="62" y1="360" x2="62" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="62" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">1</text>
+<rect x="123" y="251.895" width="56.12" height="108.105" fill="#7899bd"/>
+<line x1="123" y1="360" x2="123" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="123" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">1.59</text>
+<rect x="184" y="360" width="56.12" height="0" fill="#7899bd"/>
+<line x1="184" y1="360" x2="184" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="184" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">2.18</text>
+<rect x="245" y="335.053" width="56.12" height="24.9474" fill="#7899bd"/>
+<line x1="245" y1="360" x2="245" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="245" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">2.77</text>
+<rect x="306" y="293.474" width="56.12" height="66.5263" fill="#7899bd"/>
+<line x1="306" y1="360" x2="306" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="306" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">3.36</text>
+<rect x="367" y="143.789" width="56.12" height="216.211" fill="#7899bd"/>
+<line x1="367" y1="360" x2="367" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="367" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">3.95</text>
+<rect x="428" y="118.842" width="56.12" height="241.158" fill="#7899bd"/>
+<line x1="428" y1="360" x2="428" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="428" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">4.54</text>
+<rect x="489" y="210.316" width="56.12" height="149.684" fill="#7899bd"/>
+<line x1="489" y1="360" x2="489" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="489" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">5.13</text>
+<rect x="550" y="268.526" width="56.12" height="91.4737" fill="#7899bd"/>
+<line x1="550" y1="360" x2="550" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="550" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">5.72</text>
+<rect x="611" y="318.421" width="56.12" height="41.5789" fill="#7899bd"/>
+<line x1="611" y1="360" x2="611" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="611" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">6.31</text>
+<line x1="672" y1="360" x2="672" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="672" y="375" font-size="9" font-family="sans-serif" text-anchor="middle" fill="#5a5a5a">6.9</text>
+</svg>

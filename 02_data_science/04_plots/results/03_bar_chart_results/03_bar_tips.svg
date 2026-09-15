@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+<rect width="680" height="420" fill="white"/>
+<text x="367" y="32" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#1e1e1e">Average bill by day</text>
+<text x="367" y="384" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Day</text>
+<text x="52" y="202" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Average total bill ($)</text>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="364" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">0</text>
+<line x1="62" y1="291.669" x2="672" y2="291.669" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="295.669" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">5</text>
+<line x1="62" y1="223.338" x2="672" y2="223.338" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="227.338" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">10</text>
+<line x1="62" y1="155.008" x2="672" y2="155.008" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="159.008" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">15</text>
+<line x1="62" y1="86.6767" x2="672" y2="86.6767" stroke="#e6e6e6" stroke-width="1"/>
+<text x="56" y="90.6767" font-size="11" font-family="sans-serif" text-anchor="end" fill="#3c3c3c">20</text>
+<line x1="62" y1="44" x2="62" y2="360" stroke="#5a5a5a" stroke-width="1"/>
+<line x1="62" y1="360" x2="672" y2="360" stroke="#5a5a5a" stroke-width="1.5"/>
+<line x1="138.25" y1="360" x2="138.25" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="138.25" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Fri</text>
+<line x1="290.75" y1="360" x2="290.75" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="290.75" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Sat</text>
+<line x1="443.25" y1="360" x2="443.25" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="443.25" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Sun</text>
+<line x1="595.75" y1="360" x2="595.75" y2="365" stroke="#787878" stroke-width="1"/>
+<text x="595.75" y="377" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">Thur</text>
+<rect x="90.975" y="125.604" width="94.55" height="234.396" fill="#4c78a8"/>
+<text x="138.25" y="121.604" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">17.15158</text>
+<rect x="243.475" y="80.6447" width="94.55" height="279.355" fill="#f58518"/>
+<text x="290.75" y="76.6447" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">20.44138</text>
+<rect x="395.975" y="67.4074" width="94.55" height="292.593" fill="#e45756"/>
+<text x="443.25" y="63.4074" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">21.41</text>
+<rect x="548.475" y="118.345" width="94.55" height="241.655" fill="#72b7b2"/>
+<text x="595.75" y="114.345" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#3c3c3c">17.68274</text>
+</svg>
