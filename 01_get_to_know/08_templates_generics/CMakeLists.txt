@@ -1,0 +1,6 @@
+# 08_templates_generics - One definition, many types
+add_lesson_executable(conc_function_templates 01_function_templates.cpp)
+add_lesson_executable(conc_class_templates 02_class_templates.cpp)
+add_lesson_executable(conc_specialization 03_specialization.cpp)
+add_lesson_executable(conc_variadic_templates 04_variadic_templates.cpp)
+add_lesson_executable(conc_type_traits_sfinae 05_type_traits_sfinae.cpp)
