@@ -1,0 +1,12 @@
+# end_to_end
+
+Full supplied dataset run.
+
+Training rows: 454; untouched test rows: 115. 5 folds selected parameter 30 using macro F1.
+
+Holdout macro F1: 0.90623. Bootstrap 95% percentile interval [0.849967, 0.953782]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":454,"n_test":115,"cv_score":0.9621981730410184,"accuracy":0.91304347826086951,"macro_f1":0.90622961513372469,"baseline_macro_f1":0.38502673796791442,"roc_auc":0.97658268733850129,"log_loss":0.18762487965060809,"bootstrap_ci95":[0.84996738421395956,0.95378185033357443]}

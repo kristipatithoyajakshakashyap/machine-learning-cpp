@@ -1,0 +1,9 @@
+step,feature,name,cv_macro_f1
+1,20,"radius_worst",0.894728938
+2,27,"concave_points_worst",0.9459805904
+3,21,"texture_worst",0.964529391
+4,24,"smoothness_worst",0.9691790778
+5,19,"fractal_dimension_se",0.9669615942
+6,1,"texture_mean",0.9691770122
+7,9,"fractal_dimension_mean",0.9715232532
+8,26,"concavity_worst",0.9740437634

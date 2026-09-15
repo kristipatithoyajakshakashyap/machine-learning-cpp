@@ -1,0 +1,5 @@
+step,feature,name,cv_macro_f1
+1,23,"area_worst",0.9045201251
+2,29,"fractal_dimension_worst",0.9500632998
+3,27,"concave_points_worst",0.9623586129
+4,1,"texture_mean",0.9649053882

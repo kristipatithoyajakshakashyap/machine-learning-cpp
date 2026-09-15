@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="340" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Filter rank versus L1 rank (breast cancer, 30 features)</text>
+  <rect x="64" y="36" width="552" height="392" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="422.47" x2="616" y2="422.47" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="361.028" x2="616" y2="361.028" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="299.586" x2="616" y2="299.586" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="238.144" x2="616" y2="238.144" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="176.702" x2="616" y2="176.702" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="115.26" x2="616" y2="115.26" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="53.8182" x2="616" y2="53.8182" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="71.7868" y1="36" x2="71.7868" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="158.307" y1="36" x2="158.307" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="244.828" y1="36" x2="244.828" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="331.348" y1="36" x2="331.348" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="417.868" y1="36" x2="417.868" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="504.389" y1="36" x2="504.389" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590.909" y1="36" x2="590.909" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="428" x2="616" y2="428" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="428" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="425.97" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="364.528" text-anchor="end" font-size="10" fill="#333333">5</text>
+  <text x="58" y="303.086" text-anchor="end" font-size="10" fill="#333333">10</text>
+  <text x="58" y="241.644" text-anchor="end" font-size="10" fill="#333333">15</text>
+  <text x="58" y="180.202" text-anchor="end" font-size="10" fill="#333333">20</text>
+  <text x="58" y="118.76" text-anchor="end" font-size="10" fill="#333333">25</text>
+  <text x="58" y="57.3182" text-anchor="end" font-size="10" fill="#333333">30</text>
+  <text x="71.7868" y="444" text-anchor="middle" font-size="10" fill="#333333">0</text>
+  <text x="158.307" y="444" text-anchor="middle" font-size="10" fill="#333333">5</text>
+  <text x="244.828" y="444" text-anchor="middle" font-size="10" fill="#333333">10</text>
+  <text x="331.348" y="444" text-anchor="middle" font-size="10" fill="#333333">15</text>
+  <text x="417.868" y="444" text-anchor="middle" font-size="10" fill="#333333">20</text>
+  <text x="504.389" y="444" text-anchor="middle" font-size="10" fill="#333333">25</text>
+  <text x="590.909" y="444" text-anchor="middle" font-size="10" fill="#333333">30</text>
+  <text x="340" y="470" text-anchor="middle" font-size="12" fill="#111111">ANOVA F rank (1 = best)</text>
+  <text x="16" y="232" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 232)">lasso entry rank (1 = best)</text>
+  <circle cx="192.915" cy="90.6834" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="417.868" cy="299.586" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="158.307" cy="78.395" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="210.219" cy="127.549" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="435.172" cy="115.26" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="262.132" cy="164.414" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="227.524" cy="176.702" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="141.003" cy="361.028" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="452.476" cy="66.1066" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="590.909" cy="262.721" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="314.044" cy="348.74" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="556.301" cy="201.279" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="331.348" cy="102.972" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="296.74" cy="238.144" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="538.997" cy="311.875" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="487.085" cy="213.567" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="504.389" cy="275.009" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="400.564" cy="225.856" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="573.605" cy="152.125" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="521.693" cy="53.8182" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="123.699" cy="385.605" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="348.652" cy="373.317" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="106.395" cy="397.893" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="175.611" cy="188.991" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="383.26" cy="287.298" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="279.436" cy="139.837" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="244.828" cy="324.163" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="89.0909" cy="410.182" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="365.956" cy="336.451" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <circle cx="469.781" cy="250.433" r="4" fill="#1f77b4" fill-opacity="0.85" stroke="#ffffff" stroke-width="0.5"/>
+  <rect x="76" y="44" width="95.5" height="32" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <circle cx="95" cy="59" r="4" fill="#1f77b4" fill-opacity="0.85"/>
+  <text x="114" y="63" font-size="11" fill="#111111">feature</text>
+</svg>
