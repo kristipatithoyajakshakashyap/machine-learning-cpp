@@ -1,0 +1,12 @@
+# knn regression
+
+Quick verification uses a documented deterministic subset. Run without --quick for the full dataset.
+
+Training rows: 320; untouched test rows: 80. 5 folds selected parameter 3 using negative RMSE.
+
+Holdout RMSE: 90266.8. Bootstrap 95% percentile interval [73363.6, 105395]. These intervals describe sampling variation conditional on this fitted model, not repeated model-selection uncertainty.
+
+See evaluation/metrics.json for baseline comparison, evaluation/predictions.csv for every test prediction and eda/findings.md for data quality. Scaling and median imputation were fitted separately inside every fold. Test outcomes did not select parameters. Model and preprocessing reload reproduced predictions.
+
+Limitations: one holdout split; evaluate transfer to new populations before deployment. Correlations and feature relations are descriptive.
+{"n_train":320,"n_test":80,"cv_score":-75943.20151599322,"rmse":90266.78003773345,"mae":65159.633333333346,"r2":0.43894424006271093,"baseline_rmse":120895.6632059918,"bootstrap_ci95":[73363.641390640114,105395.0961835459]}
