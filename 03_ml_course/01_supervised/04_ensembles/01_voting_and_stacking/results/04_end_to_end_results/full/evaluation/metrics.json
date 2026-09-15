@@ -1,0 +1,1 @@
+{"n_train":141,"n_test":37,"cv_score":0.97880682097400362,"accuracy":1,"macro_f1":1,"baseline_macro_f1":0.19230769230769229,"bootstrap_ci95":[1,1]}

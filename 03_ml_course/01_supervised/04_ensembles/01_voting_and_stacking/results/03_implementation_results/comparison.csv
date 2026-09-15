@@ -1,0 +1,7 @@
+model,accuracy,macro_f1
+logistic,1,1
+knn5,0.972972973,0.9751724138
+forest50,0.972972973,0.9747545582
+hard_voting,1,1
+soft_voting,1,1
+stacking,0.9189189189,0.9108734403

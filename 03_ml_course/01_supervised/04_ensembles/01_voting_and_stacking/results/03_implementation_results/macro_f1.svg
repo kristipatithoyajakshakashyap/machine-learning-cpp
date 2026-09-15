@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="400" viewBox="0 0 720 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="380" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Holdout macro-F1: members versus ensembles (wine)</text>
+  <rect x="64" y="36" width="632" height="312" fill="none" stroke="#999999" stroke-width="1"/>
+  <line x1="64" y1="333.818" x2="696" y2="333.818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="277.091" x2="696" y2="277.091" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="220.364" x2="696" y2="220.364" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="163.636" x2="696" y2="163.636" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="106.909" x2="696" y2="106.909" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="50.1818" x2="696" y2="50.1818" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="64" y1="348" x2="696" y2="348" stroke="#111111" stroke-width="1"/>
+  <line x1="64" y1="36" x2="64" y2="348" stroke="#111111" stroke-width="1"/>
+  <text x="58" y="337.318" text-anchor="end" font-size="10" fill="#333333">0</text>
+  <text x="58" y="280.591" text-anchor="end" font-size="10" fill="#333333">0.2</text>
+  <text x="58" y="223.864" text-anchor="end" font-size="10" fill="#333333">0.4</text>
+  <text x="58" y="167.136" text-anchor="end" font-size="10" fill="#333333">0.6</text>
+  <text x="58" y="110.409" text-anchor="end" font-size="10" fill="#333333">0.8</text>
+  <text x="58" y="53.6818" text-anchor="end" font-size="10" fill="#333333">1</text>
+  <text x="116.667" y="364" text-anchor="middle" font-size="10" fill="#333333">logistic</text>
+  <text x="380" y="390" text-anchor="middle" font-size="12" fill="#111111">model</text>
+  <text x="16" y="192" text-anchor="middle" font-size="12" fill="#111111" transform="rotate(-90 16 192)">macro F1</text>
+  <rect x="87.7" y="50.1818" width="57.9333" height="283.636" fill="#1f77b4" opacity="0.8"/>
+  <rect x="193.033" y="57.2238" width="57.9333" height="276.594" fill="#1f77b4" opacity="0.8"/>
+  <rect x="298.367" y="57.3423" width="57.9333" height="276.476" fill="#1f77b4" opacity="0.8"/>
+  <rect x="403.7" y="50.1818" width="57.9333" height="283.636" fill="#1f77b4" opacity="0.8"/>
+  <rect x="509.033" y="50.1818" width="57.9333" height="283.636" fill="#1f77b4" opacity="0.8"/>
+  <rect x="614.367" y="75.4614" width="57.9333" height="258.357" fill="#1f77b4" opacity="0.8"/>
+  <rect x="582" y="44" width="102" height="32" fill="#ffffff" fill-opacity="0.88" stroke="#cccccc" stroke-width="1"/>
+  <rect x="594" y="54" width="14" height="10" fill="#1f77b4" opacity="0.8"/>
+  <text x="620" y="63" font-size="11" fill="#111111">macro_f1</text>
+</svg>
