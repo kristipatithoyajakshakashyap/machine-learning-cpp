@@ -1,17 +1,17 @@
 # Biased matrix factorization
 
-**Method.** Funk-SVD style explicit-feedback factorization. Every rating is
+Method. Funk-SVD style explicit-feedback factorization. Every rating is
 modelled as `mu + b_u + b_i + p_u . q_i` with 16-dimensional user and item
 factors. `MatrixFactorization::fit` runs 30 epochs of stochastic gradient
 descent over the observed ratings only (seeded shuffle, so runs are
 reproducible), penalising biases and factors with an L2 strength `lambda`
-(candidates 0.02 and 0.1). Ranking uses the unclamped score; rating
+(candidates 0.02 and 0.1). Ranking uses the unclamped score. Rating
 prediction clamps to [1, 5].
 
-**Core idea.** Instead of comparing items through co-raters, learn a short
+Core idea. Instead of comparing items through co-raters, learn a short
 vector for every user and item so that their dot product explains the
 observed ratings. Biases absorb "generous user" and "popular film" effects
-before the factors have to; missing ratings contribute no error term. This
+before the factors have to. Missing ratings contribute no error term. This
 is the workhorse of explicit-rating recommenders and the model the evaluation
 module analyses in depth.
 
@@ -75,7 +75,7 @@ Writes `results/predict_results/recommendations.csv` (`user,rank,item,score`).
   `execution.log`.
 - `results/predict_results/recommendations.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 
@@ -85,11 +85,11 @@ rejection, ranking-metric fixture) and `rec_mf_workflow`.
 
 ## Key takeaways
 
-- Read both factor vectors before updating either; the paired update must use
+- Read both factor vectors before updating either. The paired update must use
   the old values.
 - Regularise per observed rating, and tune `lambda` on a chronological
   validation period, not a random one.
-- Training RMSE keeps falling after validation RMSE stops; the epoch curve is
+- Training RMSE keeps falling after validation RMSE stops. The epoch curve is
   the overfitting diagnostic.
 
 ## Next module

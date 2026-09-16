@@ -3,8 +3,8 @@
 Four modules build explicit-feedback recommenders for MovieLens 100K from
 scratch: a popularity baseline, adjusted-cosine item neighbours, biased matrix
 factorization, and the chronological rating / ranking evaluation protocol that
-judges all of them. Everything is plain C++17 on top of the course helpers;
-there are no external ML libraries.
+judges all of them. Everything is plain C++17 on top of the course helpers.
+There are no external ML libraries.
 
 ## Modules (read in order)
 
@@ -42,7 +42,7 @@ and `tests/model_test.cpp`. Target names are `<prefix>_theory`,
 
 `data/u.data` - MovieLens 100K: 100,000 explicit ratings (1-5 stars) from 943
 users on 1,682 films, each with a timestamp. `data/README` and
-`data/PROVENANCE.md` carry the upstream attribution; the upstream MovieLens
+`data/PROVENANCE.md` carry the upstream attribution. The upstream MovieLens
 usage conditions remain applicable. It is small enough to train every model
 in seconds yet has real sparsity (about 6% of the user x item grid is
 observed), real popularity skew and timestamps that allow honest
@@ -51,7 +51,7 @@ chronological validation.
 ## Validation protocol
 
 Ratings are sorted by timestamp and split into train (first ~60%), validation
-(next ~20%) and test (last ~20%); no timestamp is split across a boundary. The
+(next ~20%) and test (last ~20%). No timestamp is split across a boundary. The
 model's single hyper-parameter is selected on validation RMSE, the winner is
 refitted on train + validation, and the test period is scored once for RMSE /
 MAE and for Recall@10 / NDCG@10 against a popularity baseline on the same
@@ -92,6 +92,6 @@ and `execution.log`. There is no `output.txt`.
 
 ## Tests
 
-`<prefix>_numerical` compiles the shared fixture once per module;
+`<prefix>_numerical` compiles the shared fixture once per module.
 `<prefix>_workflow` runs the `--quick` project. All of them are part of
 `ctest --preset course`.

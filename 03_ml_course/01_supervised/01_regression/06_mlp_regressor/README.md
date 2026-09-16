@@ -2,11 +2,11 @@
 
 ## Problem and core idea
 
-A multi-layer perceptron stacks affine maps and non-linear activations, and learns every weight by gradient descent on the training loss using backpropagation. With one hidden layer it can approximate any continuous function given enough units, but it needs standardised inputs, a sensible learning rate and enough epochs. It is the only model in this group whose training is itself an iterative optimisation with a seed.
+A multi-layer perceptron stacks affine maps and non-linear activations, and learns every weight by gradient descent on the training loss using backpropagation. With one hidden layer it approximates any continuous function given enough units, but it needs standardised inputs, a sensible learning rate and enough epochs. It is the only model in this group whose training is itself an iterative optimisation with a seed.
 
 ## Dataset and why
 
-California housing in both the lesson and the end-to-end project; the 8 continuous features standardise well and there are enough rows for a 16-8 network to learn something a linear model cannot. The learning-rate grid {0.001, 0.005, 0.01} shows how sensitive the optimiser is. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+California housing in both the lesson and the end-to-end project. The 8 continuous features standardise well and there are enough rows for a 16-8 network to learn something a linear model cannot. The learning-rate grid {0.001, 0.005, 0.01} shows how sensitive the optimiser is. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -24,9 +24,9 @@ California housing in both the lesson and the end-to-end project; the 8 continuo
 | `01_theory.cpp` | `rmlp_theory` | The multi-layer perceptron in one page | prints only |
 | `02_math_intuition.cpp` | `rmlp_math_intuition` | One backpropagation step, by hand | prints only |
 | `03_implementation.cpp` | `rmlp_implementation` | MLP versus ridge on a California subsample | `results/03_implementation_results/`: `s10_mlp.split` |
-| `04_end_to_end.cpp` | `rmlp_end_to_end` | Full project on California housing: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid learning rate in {0.001, 0.005, 0.01} (layers 16-8, 150 epochs) | `results/04_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `rmlp_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_rmlp (MLP.cpp)` | - |
+| `04_end_to_end.cpp` | `rmlp_end_to_end` | Full project on California housing: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid learning rate in {0.001, 0.005, 0.01} (layers 16-8, 150 epochs) | `results/04_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `rmlp_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. It wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_rmlp (MLP.cpp)` | - |
 
 ## Build and run
 
@@ -41,7 +41,7 @@ build\03_ml_course\01_supervised\01_regression\06_mlp_regressor\rmlp_end_to_end 
 build\03_ml_course\01_supervised\01_regression\06_mlp_regressor\rmlp_predict --predict results\04_end_to_end_results\full\data\holdout_features.csv --model results\04_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `rmlp_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `rmlp_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -60,17 +60,17 @@ results/04_end_to_end_results/
 results/predict_results/predictions.csv        (written by rmlp_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-This module registers no CTest entries, so `ctest --preset course -R rmlp` matches nothing. The smoke check is `rmlp_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails; the repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
+This module registers no CTest entries, so `ctest --preset course -R rmlp` matches nothing. The smoke check is `rmlp_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails. The repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
 
 ## Key takeaways
 
 - Standardisation is not optional for gradient-trained models.
 - Training loss going down does not mean the holdout score goes up: keep the validation curve in view.
-- The seed is part of the model; two runs with different seeds are two different models.
+- The seed is part of the model. Two runs with different seeds are two different models.
 
 ## Next module
 

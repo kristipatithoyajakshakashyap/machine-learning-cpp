@@ -1,77 +1,80 @@
-# Gaussian mixtures
+# Gaussian Mixture Model
 
-## Method and core idea
+## Problem and core idea
 
-A Gaussian mixture model (GMM) explains the data as a weighted sum of k Gaussian components,
-p(x) = sum_c w_c N(x | mu_c, Sigma_c). Unlike k-means it gives every row a *responsibility*, the
-posterior probability of belonging to each component, so memberships are soft and the model is a
-density, not just a partition. Expectation-Maximisation fits it: the E-step computes
-responsibilities from the current parameters, the M-step re-estimates weights, means and variances
-from the responsibilities, and the log-likelihood never decreases. This module uses diagonal
-covariances (axis-aligned ellipses), which keeps every step O(n k p) and avoids singular matrices;
-a small variance floor guards against a component collapsing onto one point. Because a mixture is a
-likelihood model, the number of components can be chosen with BIC, which penalises parameters.
+A Gaussian mixture models the data as a weighted sum of `k` Gaussians and assigns each row a soft responsibility, the probability that it came from each component. That is richer than a partition: one row contributes to every cluster with a weight. The parameters (means, covariances, mixing weights) are fit by expectation-maximization. A small variance floor on the covariance diagonals keeps the fit away from singular matrices. The number of components `k` is chosen with BIC, which trades a better fit against the number of free parameters.
 
 ## Dataset and why
 
-Palmer Penguins: the species overlap on some measurements, so soft memberships are more honest
-than hard labels, and the count of components is genuinely uncertain, which is what BIC is for. The
-implementation lesson uses a four-point fixture and a synthetic 2-D mixture of three components
-where the log-likelihood trajectory can be checked to be non-decreasing.
+Palmer Penguins (`helper/data/penguins.csv`, 344 rows, 4 numeric columns, 3 species) in the end-to-end project. The three species have genuinely different spreads, so soft responsibilities are informative, and BIC lands on or near `k = 3` when standardization and imputation are done right. The implementation lesson uses a 2-D fixture you inspect by eye. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
-`../01_kmeans/` (EM's M-step generalises the centroid update), Gaussian densities, logarithms.
-Read `theory.md`, `math_intuition.md` and `implementation.md`, then `exercises.md`.
+`01_kmeans` (the comparison model), multivariate Gaussians from `01_supervised/02_classification/11_lda`, and likelihood reasoning. Read `theory.md`, `math_intuition.md` and `implementation.md`, then run the numbered lessons in order.
 
 ## Files
 
-| File | Target | What it does | Outputs |
+| File | Target | Purpose | Outputs |
 |---|---|---|---|
-| `theory.md`, `math_intuition.md`, `implementation.md`, `exercises.md` | - | Reading material | - |
-| `GaussianMixture.hpp` | interface library `ml_gmm` | Header-only `ml::GaussianMixture`: EM with k, iterations, seed and variance floor; `predict_proba`, `predict`, `score`, `bic`, `aic`, `save`/`load` | - |
-| `01_theory.cpp` | `ugm_theory` | Prints the lesson text | prints only |
-| `02_math_intuition.cpp` | `ugm_math_intuition` | E- and M-step formulas on the four-point fixture | prints only |
-| `03_implementation.cpp` | `ugm_implementation` | Fixture, then a 3-component synthetic mixture; log-likelihood per iteration, responsibilities, BIC/AIC | `results/03_implementation_results/{log_likelihood.csv, responsibilities.csv, figures/log_likelihood.svg, figures/components_scatter.svg}` |
-| `04_end_to_end.cpp` | `ugm_end_to_end` | Full project: EDA, impute + standardize, k = 2..6 x 3 seeds selected by BIC, fit, evaluate hard labels, stability, snapshot, reload | `results/04_end_to_end_results/` |
-| `predict.cpp` | `ugm_predict` | Reloads the saved preprocessor and mixture and writes per-component probabilities for new rows | `results/predict_results/new_predictions.csv` |
+| `theory.md` | - | Assumptions and the conceptual picture | - |
+| `math_intuition.md` | - | One EM step and the responsibilities, by hand | - |
+| `implementation.md` | - | How the C++ code carries out the workflow | - |
+| `exercises.md` | - | Practice tasks and acceptance evidence | - |
+| `GaussianMixture.hpp` | interface library `ml_gmm` | Header-only `ml::GaussianMixture`: diagonal-covariance EM with a variance floor, `fit`, `predict_proba`, `predict`, `score`, `bic`, `aic`, save/load | - |
+| `01_theory.cpp` | `ugm_theory` | The mixture density, responsibilities, EM | prints only |
+| `02_math_intuition.cpp` | `ugm_math_intuition` | The update equations and BIC/AIC parameter counts, by hand | prints only |
+| `03_implementation.cpp` | `ugm_implementation` | Four points in two components, then three 2-D blobs of 60 points, k = 3: the EM log-likelihood trajectory over 40 refits, then responsibilities per row | `results/03_implementation_results/`: `log_likelihood.csv`, `responsibilities.csv`, `figures/log_likelihood.svg`, `figures/components_scatter.svg` |
+| `04_end_to_end.cpp` | `ugm_end_to_end` | Full project on penguins: impute, standardise, fit 15 EM runs (k in {2, 3, 4, 5, 6} x seeds 42, 43, 44, up to 200 iterations), pick `k` and seed by BIC, evaluate, stability and reload-check | `results/04_end_to_end_results/` (see below) |
+| `predict.cpp` | `ugm_predict` | Read a header-less numeric CSV, restore preprocessing and mixture, emit `output_0`..`output_{k-1}` as the responsibilities | `results/predict_results/new_predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Interface library `ml_gmm` headers only | - |
 
 ## Build and run
 
+From the repository root with the MinGW toolchain on PATH:
+
 ```powershell
+$env:PATH = 'D:\msys64\ucrt64\bin;' + $env:PATH
 cmake --preset course
 cmake --build --preset course --target ugm_end_to_end ugm_predict
-build\03_ml_course\02_unsupervised\05_gaussian_mixture\ugm_end_to_end.exe
-build\03_ml_course\02_unsupervised\05_gaussian_mixture\ugm_predict.exe new_rows.csv
+build\03_ml_course\02_unsupervised\05_gaussian_mixture\ugm_end_to_end            # full run, no --quick flag
+build\03_ml_course\02_unsupervised\05_gaussian_mixture\ugm_predict <numeric_csv> # reloads results\04_end_to_end_results\model
 ```
 
-No `--quick` flag. `ugm_predict <numeric_csv>` takes a header-less CSV in the order of
-`model/feature_schema.csv`, raw units, blanks/`NA`/`nan` allowed; the output columns
-`output_0..output_{k-1}` are responsibilities that sum to 1 per row. Use
-`../tests/penguin_inference.csv` as an example input.
+The end-to-end program has no `--quick` flag, because a full run on 344 rows takes seconds. `ugm_predict <numeric_csv>` expects a header-less CSV with the four features in the order of `results/04_end_to_end_results/model/feature_schema.csv`, in raw units. Blank, `NA` or `nan` fields are imputed with the saved training medians. The output columns `output_0`..`output_{k-1}` are the responsibilities, one per component. They sum to one per row, and the largest names the assigned cluster. `03_ml_course/02_unsupervised/tests/penguin_inference.csv` is a ready-made example. Every lesson target runs without arguments.
 
 ## Results layout
 
-`results/04_end_to_end_results/` contains `run_manifest.json`, `report.md`, `execution.log`,
-`data/`, `eda/`, `validation/{candidate_scores.csv, selected_parameters.json, stability.csv}`,
-`evaluation/{assignments.csv, metrics.json, cluster_profiles.csv, figures/*.svg}`,
-`model/{model_state.txt, preprocessing_state.txt, feature_schema.csv}` and
-`inference/reload_verification.json`. `ugm_predict` writes `results/predict_results/`; the reload
-test writes `results/verify_reload_results/fresh_process_verification.json`.
+Each executable owns `results/<source stem>_results/` inside this module. The project run writes:
+
+```
+results/04_end_to_end_results/
+  data/          row sources and preprocessing notes
+  eda/           per-feature summaries and figures
+  model/         model_state.txt, preprocessing_state.txt, feature_schema.csv
+  validation/    candidate_scores.csv, selected_parameters.json, stability.csv
+  evaluation/    metrics.json, responsibilities.csv, cluster_profiles.csv
+                 figures/ (silhouette, silhouette_distribution, clusters)
+  inference/     reload_verification.json
+  run_manifest.json, report.md, execution.log
+results/predict_results/new_predictions.csv       (written by ugm_predict)
+```
+
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-`ctest --preset course -R ugm` runs `ugm_workflow`, `ugm_fresh_reload` and `ugm_new_rows`.
-`ctest --preset course -R unsupervised_numerical` includes the mixture checks in
-`../tests/test_unsupervised.cpp`: responsibilities sum to 1, BIC is finite, save/load reproduces
-`predict`, and the variance floor keeps a degenerate (all-identical) fit finite.
+```powershell
+ctest --preset course -R ugm
+```
+
+`ugm_workflow` runs `ugm_end_to_end` and fails if any stage or the reload verification fails. `ugm_fresh_reload` starts a new process, loads the saved mixture and preprocessor, recomputes the arg-max labels and matches them against `evaluation/assignments.csv`. `ugm_new_rows` runs `ugm_predict` on `tests/penguin_inference.csv` and must exit cleanly. The unit checks in `../tests/test_unsupervised.cpp` run under `unsupervised_numerical`.
 
 ## Key takeaways
 
-- Soft memberships expose ambiguity that hard clustering hides.
-- EM is a local optimiser: run several seeds and keep the best likelihood.
-- BIC turns "how many clusters" into a model-comparison question with a defensible answer.
+- Responsibilities are the honest output. The argmax cluster is a lossy projection of them.
+- BIC chooses `k` without a target. Read `validation/candidate_scores.csv` for the components/seeds sweep.
+- The variance floor is what keeps EM from collapsing onto a single point.
 
-## Next
+## Next module
 
-`../06_pca/` moves from grouping rows to compressing columns.
+`06_pca`: compressing the features themselves.

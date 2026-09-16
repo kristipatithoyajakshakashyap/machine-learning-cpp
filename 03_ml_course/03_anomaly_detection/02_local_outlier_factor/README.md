@@ -2,13 +2,13 @@
 
 ## Method and core idea
 
-Local Outlier Factor (Breunig et al., 2000) asks whether a row is *less dense than its own
-neighbours*, not whether it is far from everything. For each row the k nearest neighbours are
-found; the reachability distance to a neighbour is the larger of the true distance and that
-neighbour's k-distance (which smooths out noise inside dense groups); the local reachability
-density (lrd) is the inverse of the mean reachability distance; and the factor is the mean ratio of
-the neighbours' lrd to the row's own lrd. A factor near 1 means "as dense as my neighbourhood",
-while a factor well above 1 marks an outlier, even if the row would look normal on a global
+Local Outlier Factor (Breunig et al., 2000) asks whether a row is less dense than its own
+neighbours, not whether it is far from everything. For each row the k nearest neighbours are
+found. The reachability distance to a neighbour is the larger of the true distance and that
+neighbour's k-distance (which smooths out noise inside dense groups). The local reachability
+density (lrd) is the inverse of the mean reachability distance. The factor is the mean ratio of
+the neighbours' lrd to the row's own lrd. A factor near 1 means "as dense as my neighbourhood".
+A factor well above 1 marks an outlier, even if the row would look normal on a global
 distance scale. This makes LOF the right tool when clusters have different spreads. In novelty
 mode the training rows and their densities are stored, and new rows are scored against them
 without changing the stored statistics. Cost is O(n^2 p) for the brute-force neighbour search
@@ -32,12 +32,12 @@ in `../01_isolation_forest/`. Read `theory.md`, `math_intuition.md` and `impleme
 | File | Target | What it does | Outputs |
 |---|---|---|---|
 | `theory.md`, `math_intuition.md`, `implementation.md`, `exercises.md` | - | Reading material | - |
-| `LocalOutlierFactor.hpp` | interface library `ml_local_outlier_factor` | Header-only `ml::LocalOutlierFactor`: k-distance, reachability, lrd, `fit`, `fitted_scores`, `score_samples` (novelty), `set_threshold`/`threshold`, `predict`, `save`/`load`; k is clamped to n - 1 | - |
+| `LocalOutlierFactor.hpp` | interface library `ml_local_outlier_factor` | Header-only `ml::LocalOutlierFactor`: k-distance, reachability, lrd, `fit`, `fitted_scores`, `score_samples` (novelty), `set_threshold`/`threshold`, `predict`, `save`/`load`. k is clamped to n - 1 | - |
 | `01_theory.cpp` | `ulof_theory` | Lesson text plus a 1-D demonstration with two groups of different density and one stray point | prints only |
 | `02_math_intuition.cpp` | `ulof_math_intuition` | k-distance, reachability, lrd and LOF worked by hand on four points (k = 2) and verified against the class to 1e-12 | prints only |
-| `03_implementation.cpp` | `ulof_implementation` | Two 2-D clusters of different spread plus three planted outliers; top factors, flags at LOF > 1.5, novelty scoring demo | `results/03_implementation_results/{scores.csv, figures/lof_scatter.svg, figures/lof_histogram.svg}` |
+| `03_implementation.cpp` | `ulof_implementation` | Two 2-D clusters of different spread plus three planted outliers. Top factors, flags at LOF > 1.5, novelty scoring demo | `results/03_implementation_results/{scores.csv, figures/lof_scatter.svg, figures/lof_histogram.svg}` |
 | `04_end_to_end.cpp` | `ulof_end_to_end` | Full project: 60/20/20 split, training-only EDA and preprocessing, fit (k = 20, novelty), validation-calibrated threshold, test scoring, snapshot, reload check | `results/04_end_to_end_results/` |
-| `predict.cpp` | `ulof_predict` | Reloads preprocessor, stored training rows and threshold; writes a factor and a flag per new row | `results/predict_results/new_predictions.csv` |
+| `predict.cpp` | `ulof_predict` | Reloads preprocessor, stored training rows and threshold. Writes a factor and a flag per new row | `results/predict_results/new_predictions.csv` |
 
 ## Build and run
 
@@ -74,7 +74,7 @@ scores, k is clamped to n - 1, and zero distances stay finite.
 ## Key takeaways
 
 - LOF is relative: the same distance is normal in a sparse group and anomalous in a tight one.
-- k sets the neighbourhood scale; too small is noisy, too large blurs local structure.
+- k sets the neighbourhood scale. Too small is noisy, too large blurs local structure.
 - Novelty mode freezes the training statistics, which is what makes `predict` reproducible.
 
 ## Next

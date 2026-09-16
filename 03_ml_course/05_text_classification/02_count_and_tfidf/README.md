@@ -1,16 +1,16 @@
 # Count and TF-IDF vectorization
 
-**Method.** `Model.hpp` implements `Vectorizer`: fit a capped vocabulary on the
+Method. `Model.hpp` implements `Vectorizer`. Fit a capped vocabulary on the
 training documents (sorted by document frequency, ties broken alphabetically),
 then encode each document as a sparse row of either raw counts or TF-IDF
 weights `count * (log((1 + N) / (1 + df)) + 1)`, L2-normalised per document.
 
-**Core idea.** Counts reward long messages and common words; TF-IDF discounts
+Core idea. Counts reward long messages and common words. TF-IDF discounts
 words that appear in many training documents so rare, discriminative terms
-carry more weight. Both the vocabulary and the IDF table are *learned*, so
-they must be fitted on training rows only - inside every cross-validation fold
-- or validation scores become optimistic. The project trains Multinomial NB on
-TF-IDF features so the result can be compared with the raw-count run of
+carry more weight. Both the vocabulary and the IDF table are learned, so
+they must be fitted on training rows only, inside every cross-validation fold.
+Otherwise validation scores become optimistic. The project trains Multinomial
+NB on TF-IDF features so the result compares with the raw-count run of
 `01_text_preprocessing`.
 
 ## Dataset
@@ -57,7 +57,7 @@ build/03_ml_course/05_text_classification/02_count_and_tfidf/text_tfidf_end_to_e
 text_tfidf_predict --predict ../data/inference_messages.txt --model results/04_end_to_end_results/full/model
 ```
 
-One message per line; output `results/predict_results/predictions.csv`
+One message per line. Output `results/predict_results/predictions.csv`
 (`row,p_spam,prediction`). The saved `preprocessing.txt` carries the fitted
 vocabulary and IDF, so unseen words are ignored exactly as during training.
 
@@ -70,7 +70,7 @@ vocabulary and IDF, so unseen words are ignored exactly as during training.
   `run_manifest.json`, `report.md`, `execution.log`.
 - `results/predict_results/predictions.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 
@@ -79,10 +79,10 @@ Re-running a target replaces its folder. There is no `output.txt`; read `report.
 
 ## Key takeaways
 
-- Vocabulary and IDF are fitted parameters; refit them in every fold.
+- Vocabulary and IDF are fitted parameters. Refit them in every fold.
 - L2 normalisation removes the message-length effect that raw counts carry.
 - A vocabulary cap (3000 terms here, 1000 in quick mode) bounds memory and
-  removes hapax noise without hurting spam recall much.
+  removes hapax noise without hurting spam recall.
 
 ## Next module
 

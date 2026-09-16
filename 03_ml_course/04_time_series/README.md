@@ -3,18 +3,18 @@
 ## What this track teaches
 
 Time-series forecasting predicts the next value of an ordered sequence from its own past. Order
-changes everything: rows cannot be shuffled, validation must only ever train on the past, and a
+changes everything: rows never get shuffled, validation must only ever train on the past, and a
 model must be judged against trivial references before it is believed. Five modules build up one
-consistent toolkit: seasonal-naive **baselines**, **lag-feature regression** (turn the series into a
-supervised table), **rolling-origin evaluation** (expanding-window model selection), additive
-**Holt-Winters** exponential smoothing (level, trend, season recursions) and a simplified
-**ARIMA** (difference, autoregress, moving average). Every model implements the same tiny
+consistent toolkit: seasonal-naive baselines, lag-feature regression (turn the series into a
+supervised table), rolling-origin evaluation (expanding-window model selection), additive
+Holt-Winters exponential smoothing (level, trend, season recursions) and a simplified
+ARIMA (difference, autoregress, moving average). Every model implements the same tiny
 interface: `fit(series)`, `next()` (one-step forecast), `observe(actual)` (advance the state
 without refitting), `save`/`load`.
 
 ## Dataset and why
 
-All modules use **AirPassengers** (`helper/data/air_passengers.csv`): 144 monthly totals of
+All modules use AirPassengers (`helper/data/air_passengers.csv`): 144 monthly totals of
 international airline passengers, 1949-1960, in thousands, the classic Box and Jenkins series
 (https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/AirPassengers.html). It has a clear
 upward trend and a strong yearly season, so each method's strengths and blind spots show up
@@ -54,7 +54,7 @@ build\03_ml_course\04_time_series\04_exponential_smoothing\forecast_hw_end_to_en
 build\03_ml_course\04_time_series\04_exponential_smoothing\forecast_hw_predict.exe --model 03_ml_course\04_time_series\04_exponential_smoothing\results\04_end_to_end_results\full\model\holt_winters_model.txt
 ```
 
-Replace `forecast_hw` by any prefix; the model file is `seasonal_model.txt` (baselines),
+Replace `forecast_hw` by any prefix. The model file is `seasonal_model.txt` (baselines),
 `lag_model.txt` (lag regression and rolling origin), `holt_winters_model.txt` or
 `arima_model.txt`. `--quick` uses the same data and writes the identical artifact set under
 `quick/` so CTest never overwrites a `full/` run. `predict --model <file>` reloads the archive
@@ -70,7 +70,7 @@ Every executable owns `results/<cpp-stem>_results/` inside its module. The proje
 `seasonal_model.txt` as references), `inference/reload_verification.json`,
 `evaluation/{predictions.csv, metrics.json, figures/forecast.svg, figures/residuals.svg}`,
 `run_manifest.json`, `report.md` and `execution.log`. Forecasts are one month ahead with the true
-history revealed after each step; no multi-step claim is made.
+history revealed after each step. No multi-step claim is made.
 
 ## Tests
 
@@ -81,10 +81,10 @@ ctest --preset course -R "forecast_.*_workflow"    # each 04_end_to_end --quick
 
 ## Key takeaways
 
-- Split chronologically and validate on rolling origins; random folds leak the future.
+- Split chronologically and validate on rolling origins. Random folds leak the future.
 - Always report the seasonal-naive and last-value references next to the model.
-- `observe()` lets a fitted model track a live series without refitting; the archive must carry
-  the history for this to work after a reload.
+- `observe()` lets you track a live series with a fitted model without refitting. The archive must
+  carry the history for this to work after a reload.
 
 ## Next
 

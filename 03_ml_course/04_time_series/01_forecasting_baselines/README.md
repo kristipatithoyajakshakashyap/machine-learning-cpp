@@ -3,11 +3,11 @@
 ## Method and core idea
 
 A forecast is only useful if it beats something trivial, so this module builds the references
-every later model is measured against. The *naive* forecast repeats the last observed value; the
-*expanding mean* averages all history and ignores dynamics; the *seasonal naive* forecast repeats
+every later model is measured against. The naive forecast repeats the last observed value. The
+expanding mean averages all history and ignores dynamics. The seasonal naive forecast repeats
 the value one season ago (yhat_t = y_{t-12} for monthly data), which already captures the yearly
-cycle of AirPassengers. `SeasonalNaive` keeps the whole history so `observe()` can extend it and
-`next()` always looks back exactly one period; with period 1 it degenerates to the naive forecast.
+cycle of AirPassengers. `SeasonalNaive` keeps the whole history so `observe()` extends it and
+`next()` always looks back exactly one period. With period 1 it degenerates to the naive forecast.
 The module also introduces MASE, the mean absolute error divided by the in-sample seasonal-naive
 MAE, so that "1.0" always means "no better than repeating last year".
 
@@ -60,15 +60,15 @@ figures/forecast.svg, figures/residuals.svg}`, `run_manifest.json`, `report.md` 
 
 `ctest --preset course -R forecast_baselines` runs `forecast_baselines_numerical`
 (`tests/model_test.cpp`: `SeasonalNaive(3)` fitted on {1,2,3} forecasts 1, then 2 after
-observing 4; lag features index y[t-1] and y[t-12]; an unregularised lag regression extrapolates a
-line to 106; save/load reproduces the forecast) and `forecast_baselines_workflow` (the project
+observing 4. Lag features index y[t-1] and y[t-12]. An unregularised lag regression extrapolates a
+line to 106. Save/load reproduces the forecast) and `forecast_baselines_workflow` (the project
 with `--quick`).
 
 ## Key takeaways
 
-- Seasonal naive is the reference that matters on seasonal data; report it next to every model.
+- Seasonal naive is the reference that matters on seasonal data: report it next to every model.
 - MASE makes errors comparable across series and models.
-- `observe()` is how a fitted forecaster follows a live series without refitting.
+- `observe()` is how you follow a live series with a fitted forecaster without refitting.
 
 ## Next
 

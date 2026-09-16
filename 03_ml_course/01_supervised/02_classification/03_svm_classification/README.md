@@ -6,7 +6,7 @@ A support vector machine chooses the linear boundary with the largest margin to 
 
 ## Dataset and why
 
-`breast_cancer` for the linear lessons and the end-to-end project (C in {0.1, 1, 10}); it is nearly linearly separable, so the margin picture is faithful. Lesson 4 uses two petal features of `iris` so the RBF boundary can be understood in 2-D. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+`breast_cancer` for the linear lessons and the end-to-end project (C in {0.1, 1, 10}). It is nearly linearly separable, so the margin picture is faithful. Lesson 4 uses two petal features of `iris` so the RBF boundary reads clearly in 2-D. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -26,9 +26,9 @@ A support vector machine chooses the linear boundary with the largest margin to 
 | `03_implementation.cpp` | `csvm_implementation` | Linear SVM on breast cancer with a seeded split | `results/03_implementation_results/`: `c05_svm.split` |
 | `04_rbf_kernel.cpp` | `csvm_04_rbf_kernel` | RBF SVM on two iris petal features | `results/04_rbf_kernel_results/`: `c06_svm.split` |
 | `05_c_curve.cpp` | `csvm_05_c_curve` | Test accuracy versus C on breast cancer | `results/05_c_curve_results/`: `c_curve.svg` |
-| `06_end_to_end.cpp` | `csvm_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid C in {0.1, 1, 10} (lr 0.01, 800 epochs) | `results/06_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `csvm_predict` | `#include`s `06_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_csvm (SVM.cpp)` | - |
+| `06_end_to_end.cpp` | `csvm_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid C in {0.1, 1, 10} (lr 0.01, 800 epochs) | `results/06_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `csvm_predict` | `#include`s `06_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. It wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_csvm (SVM.cpp)` | - |
 
 ## Build and run
 
@@ -43,7 +43,7 @@ build\03_ml_course\01_supervised\02_classification\03_svm_classification\csvm_en
 build\03_ml_course\01_supervised\02_classification\03_svm_classification\csvm_predict --predict results\06_end_to_end_results\full\data\holdout_features.csv --model results\06_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `csvm_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `csvm_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -62,17 +62,17 @@ results/06_end_to_end_results/
 results/predict_results/predictions.csv        (written by csvm_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-This module registers no CTest entries, so `ctest --preset course -R csvm` matches nothing. The smoke check is `csvm_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails; the repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
+This module registers no CTest entries, so `ctest --preset course -R csvm` matches nothing. The smoke check is `csvm_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails. The repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
 
 ## Key takeaways
 
 - Hinge loss is zero for confidently correct points, so most rows do not influence the final boundary.
-- C is a regulariser: small C, wide margin, more bias; the accuracy curve is flat over a wide range.
-- A linear SVM outputs a signed distance, not a probability; the pipeline's probability plots are approximate.
+- C is a regulariser: small C, wide margin, more bias. The accuracy curve is flat over a wide range.
+- A linear SVM outputs a signed distance, not a probability. The pipeline's probability plots are approximate.
 
 ## Next module
 

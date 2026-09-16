@@ -3,14 +3,14 @@
 ## Method and core idea
 
 The one-class support vector machine (Schoelkopf et al., 2001) learns a boundary around the
-*normal* data only. Rows are mapped into an RBF kernel feature space, where the algorithm finds the
+normal data only. Rows are mapped into an RBF kernel feature space, where the algorithm finds the
 hyperplane w . phi(x) = rho that separates the training rows from the origin with the largest
-margin. Two knobs control it: `nu` in (0, 1] is an upper bound on the fraction of training rows
+margin. Two knobs control it. `nu` in (0, 1] is an upper bound on the fraction of training rows
 that end up outside the boundary and a lower bound on the fraction of support vectors (a review
-budget, like the threshold in the other modules), and `gamma` is the RBF width (larger gamma =
+budget, like the threshold in the other modules). `gamma` is the RBF width (larger gamma =
 more wiggly boundary). The dual problem is a small quadratic programme solved here by a
 deterministic SMO-style pairwise descent. The decision value of a new row is
-sum_i a_i K(x_i, x) - rho: negative means outside the boundary, so the anomaly score used
+sum_i a_i K(x_i, x) - rho. Negative means outside the boundary, so the anomaly score used
 throughout the module is rho minus the raw kernel sum (higher = more anomalous). Cost is O(n^2)
 kernel evaluations per sweep of the solver.
 
@@ -37,7 +37,7 @@ anomaly protocol in `../01_isolation_forest/`. Read `theory.md`, `math_intuition
 | `02_math_intuition.cpp` | `uocsvm_math_intuition` | Primal, dual and decision function, then a two-point hand example (nu = 1, gamma = 1) verified against the class to 1e-12 | prints only |
 | `03_implementation.cpp` | `uocsvm_implementation` | One 2-D blob plus four planted outliers (nu = 0.1, gamma = 0.5): top scores, support vectors, training flag rate, decision grid | `results/03_implementation_results/{scores.csv, decision_grid.csv, figures/decision_boundary.svg, figures/scores_scatter.svg, figures/scores_histogram.svg}` |
 | `04_end_to_end.cpp` | `uocsvm_end_to_end` | Full project: 60/20/20 split, training-only EDA and preprocessing, fit, validation-calibrated threshold, test scoring, snapshot, reload check | `results/04_end_to_end_results/` |
-| `predict.cpp` | `uocsvm_predict` | Reloads preprocessor, support vectors, rho and threshold; writes a score and a flag per new row | `results/predict_results/new_predictions.csv` |
+| `predict.cpp` | `uocsvm_predict` | Reloads preprocessor, support vectors, rho and threshold. Writes a score and a flag per new row | `results/predict_results/new_predictions.csv` |
 
 ## Build and run
 
@@ -73,8 +73,8 @@ save/load reproduces parameters and scores, and invalid nu or a dimension mismat
 ## Key takeaways
 
 - nu is the budget: it bounds the training outlier fraction before you see any scores.
-- gamma trades a smooth envelope against one that hugs every training point; standardize first.
-- The saved model is just the support vectors and their coefficients, which is why it is small
+- gamma trades a smooth envelope against one that hugs every training point. Standardize first.
+- The saved model is the support vectors and their coefficients, which is why it is small
   and reloads exactly.
 
 ## Next

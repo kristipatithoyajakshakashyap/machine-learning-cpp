@@ -2,11 +2,11 @@
 
 ## Problem and core idea
 
-Gaussian naive Bayes assumes the features are conditionally independent given the class and each follows a class-specific normal distribution. Fitting is just per-class means, variances and priors; prediction applies Bayes' rule in log space to avoid underflow. The independence assumption is wrong for most data yet the classifier is often surprisingly good, fast and calibrated enough for a baseline. A variance smoothing term keeps near-constant features from producing infinite densities.
+Gaussian naive Bayes assumes the features are conditionally independent given the class and each follows a class-specific normal distribution. Fitting is only per-class means, variances and priors. Prediction applies Bayes' rule in log space to avoid underflow. The independence assumption is wrong for most data, yet the classifier remains accurate, fast and calibrated enough for a baseline. A variance smoothing term keeps near-constant features from producing infinite densities.
 
 ## Dataset and why
 
-`iris` and `wine` (3 classes each) in the lesson so the per-class Gaussians can be inspected. The end-to-end project uses `breast_cancer` with variance smoothing in {1e-9, 1e-5, 0.01}. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+`iris` and `wine` (3 classes each) in the lesson so the per-class Gaussians are inspected in 2-D. The end-to-end project uses `breast_cancer` with variance smoothing in {1e-9, 1e-5, 0.01}. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -24,9 +24,9 @@ Bayes' rule, the normal density, logarithms, and `01_logistic_regression` for th
 | `01_theory.cpp` | `cnb_theory` | Gaussian naive Bayes in one page | prints only |
 | `02_math_intuition.cpp` | `cnb_math_intuition` | Posteriors in log space, by hand | prints only |
 | `03_implementation.cpp` | `cnb_implementation` | Naive Bayes on iris and wine with seeded splits | `results/03_implementation_results/`: `c04_nb_iris.split`, `c04_nb_wine.split` |
-| `04_end_to_end.cpp` | `cnb_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid variance smoothing in {1e-9, 1e-5, 0.01} | `results/04_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `cnb_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_cnb (GaussianNB.cpp)` | - |
+| `04_end_to_end.cpp` | `cnb_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid variance smoothing in {1e-9, 1e-5, 0.01} | `results/04_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `cnb_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. It wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_cnb (GaussianNB.cpp)` | - |
 
 ## Build and run
 
@@ -41,7 +41,7 @@ build\03_ml_course\01_supervised\02_classification\04_naive_bayes\cnb_end_to_end
 build\03_ml_course\01_supervised\02_classification\04_naive_bayes\cnb_predict --predict results\04_end_to_end_results\full\data\holdout_features.csv --model results\04_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `cnb_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `cnb_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -60,15 +60,15 @@ results/04_end_to_end_results/
 results/predict_results/predictions.csv        (written by cnb_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-This module registers no CTest entries, so `ctest --preset course -R cnb` matches nothing. The smoke check is `cnb_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails; the repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
+This module registers no CTest entries, so `ctest --preset course -R cnb` matches nothing. The smoke check is `cnb_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails. The repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
 
 ## Key takeaways
 
-- Fitting is a single pass over the data; there is nothing to tune except smoothing.
+- Fitting is a single pass over the data. There is nothing to tune except smoothing.
 - Sum log-probabilities, never multiply probabilities: 30 features underflow a double.
 - Correlated features are double-counted, which makes the posteriors over-confident.
 

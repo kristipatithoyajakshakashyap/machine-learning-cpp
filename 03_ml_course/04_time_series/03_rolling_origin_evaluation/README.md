@@ -2,13 +2,13 @@
 
 ## Method and core idea
 
-Random cross-validation folds are wrong for a series: a fold could train on 1960 and validate on
+Random cross-validation folds are wrong for a series, where a fold trains on 1960 and validates on
 1950. Rolling-origin (expanding-window) evaluation fixes this by choosing origins o = 48, 60, 72,
 ... inside the training prefix, fitting each candidate on months [0, o) and scoring its one-step
 forecasts on [o, o + 12). Averaging the per-origin RMSE selects hyper-parameters using only the
 past, while the final 20% of the series stays untouched until the single held-out evaluation. The
 held-out months are then forecast one step ahead: predict month t, reveal y_t to the model with
-`observe()`, predict t + 1, so the reported error is "one month ahead with the true history", not
+`observe()`, predict t + 1. The reported error is "one month ahead with the true history", not
 a 29-month extrapolation. This module owns `Workflow.hpp`, the pipeline that every time-series
 module reuses.
 
@@ -30,7 +30,7 @@ to see the error drift as the level grows, which is exactly what a single split 
 | `Workflow.hpp` | header (linked via `ml_core`) | The shared pipeline: `read_passengers`, `Forecast` adapter, candidate grids (`KindSpec`), `workflow(root, csv, kind, argc, argv)` with `--quick` and `--model` | - |
 | `01_theory.cpp` | `forecast_rolling_theory` | Why random splits scramble a forecasting problem | prints only |
 | `02_math_intuition.cpp` | `forecast_rolling_math_intuition` | Origin windows, RMSE and how one-step evaluation reveals y_t only after forecasting it | prints only |
-| `03_implementation.cpp` | `forecast_rolling_implementation` | Seasonal naive and the three-alpha lag grid refitted at every origin; RMSE per origin | `results/03_implementation_results/{per_origin_errors.csv, figures/rmse_per_origin.svg}` |
+| `03_implementation.cpp` | `forecast_rolling_implementation` | Seasonal naive and the three-alpha lag grid refitted at every origin. RMSE per origin | `results/03_implementation_results/{per_origin_errors.csv, figures/rmse_per_origin.svg}` |
 | `04_end_to_end.cpp` | `forecast_rolling_end_to_end` | Full project via `Workflow.hpp` with `LagRegression` | `results/04_end_to_end_results/full/` or `quick/` |
 | `predict.cpp` | `forecast_rolling_predict` | Same program compiled for `--model` inference | `results/predict_results/next_forecast.csv` |
 | `tests/model_test.cpp` | `forecast_rolling_tests` | Seasonal lookup, lag indexing, trend extrapolation, exact reload | prints only |
@@ -47,12 +47,12 @@ build\03_ml_course\04_time_series\03_rolling_origin_evaluation\forecast_rolling_
 
 ## Pipeline stages (Workflow.hpp)
 
-1. Parse flags; with `--model <file>` reload the archive, write `next_forecast.csv` and stop.
-2. Read the series; the first 80% is training, the rest is the holdout.
+1. Parse flags. With `--model <file>`, reload the archive, write `next_forecast.csv` and stop.
+2. Read the series. The first 80% is training, the rest is the holdout.
 3. EDA on the lag-feature view of the training window.
 4. Rolling-origin selection of the candidate grid (`validation/candidate_scores.csv`).
 5. Final fit on the whole training window plus the seasonal-naive and last-value references.
-6. Save the model and reload it; the first held-out forecast must agree to 1e-12.
+6. Save the model and reload it. The first held-out forecast must agree to 1e-12.
 7. One-step holdout with `observe()` after every month.
 8. RMSE, MAE, MASE and the reference RMSEs (`evaluation/metrics.json`), figures, autocorrelation.
 9. `feature_schema.json`, `run_manifest.json`, `report.md`, `execution.log`.
@@ -75,7 +75,7 @@ exact reload) and `forecast_rolling_workflow` (`--quick` project).
 
 - Select on expanding origins, evaluate once on the chronological tail.
 - One-step-ahead error with revealed history is a different (easier) quantity than multi-step
-  error; say which one you report.
+  error. Say which one you report.
 - A shared workflow makes every model comparable: same split, same origins, same metrics.
 
 ## Next

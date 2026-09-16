@@ -6,16 +6,17 @@ Forecasting becomes ordinary regression once each month t is described by featur
 already known before t: the previous value (lag 1), the one before (lag 2), the same month last
 year (lag 12), the time index for the trend, and a sine/cosine pair of the month position so
 December and January sit next to each other. `LagRegression` standardizes those six features and
-fits a ridge regression (`ElasticNet` with l1 ratio 0 from the supervised track); the L2 penalty
+fits a ridge regression (`ElasticNet` with l1 ratio 0 from the supervised track). The L2 penalty
 `alpha` keeps the correlated lags from producing unstable coefficients. After fitting, the
-coefficients and the scaler are frozen: `observe()` only appends to the history, so every held-out
-forecast uses fresh lag values with the same model. Nothing at or after t may enter row t; that
-leakage rule is the whole difficulty of the method.
+coefficients and the scaler are frozen and `observe()` only appends to the history, so every
+held-out forecast uses fresh lag values with the same model. Nothing at or after t enters row t.
+That leakage rule is the whole difficulty of the method.
 
 ## Dataset and why
 
-AirPassengers: lag 12 captures the season, the time index the trend, and 144 points leave 120
-usable rows after the 12 warm-up months and 24 required for fitting. See `../README.md`.
+AirPassengers: lag 12 captures the season, the time index the trend. Building the lag features
+needs the 12 warm-up months, fitting needs two years (24 points) of history, and the last 20 %
+(29 months) is the one-step holdout. See `../README.md`.
 
 ## Prerequisites
 
@@ -61,15 +62,15 @@ figures/forecast.svg, figures/residuals.svg}`, `run_manifest.json`, `report.md` 
 ## Tests
 
 `ctest --preset course -R forecast_lag` runs `forecast_lag_numerical` (`tests/model_test.cpp`:
-`features(y, 24)[0] == y[23]` and `[2] == y[12]`; alpha = 0 on y_t = 2t + 10 forecasts 106 within
-0.1; save/load reproduces `next()` to 1e-12; plus the seasonal-naive checks) and
+`features(y, 24)[0] == y[23]` and `[2] == y[12]`. Alpha = 0 on y_t = 2t + 10 forecasts 106 within
+0.1. Save/load reproduces `next()` to 1e-12, plus the seasonal-naive checks) and
 `forecast_lag_workflow` (`--quick` project).
 
 ## Key takeaways
 
-- Build features only from the past; the time index and lag 12 carry trend and season.
+- Build features only from the past. The time index and lag 12 carry trend and season.
 - Regularise: lags are highly correlated and an unpenalised fit is fragile.
-- Freeze coefficients at fit time and let `observe()` supply new lags; that is honest one-step
+- Freeze coefficients at fit time and let `observe()` supply new lags. That is honest one-step
   evaluation.
 
 ## Next

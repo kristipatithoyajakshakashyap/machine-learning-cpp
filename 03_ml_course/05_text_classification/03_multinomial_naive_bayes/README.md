@@ -1,11 +1,11 @@
 # Multinomial Naive Bayes
 
-**Method.** A generative text classifier. For each class `c` estimate a token
+Method. A generative text classifier. For each class `c` estimate a token
 distribution `P(t|c) = (count(t,c) + alpha) / (tokens(c) + alpha * V)` and a
-prior `P(c)`; score a document by `log P(c) + sum_t count(t) * log P(t|c)` and
+prior `P(c)`. Score a document by `log P(c) + sum_t count(t) * log P(t|c)` and
 normalise the two log scores with a stable log-sum-exp to get `p(spam)`.
 
-**Core idea.** Naive Bayes assumes tokens are conditionally independent given
+Core idea. Naive Bayes assumes tokens are conditionally independent given
 the class. The assumption is false, yet the model is a strong, fast baseline
 because spam and ham use visibly different vocabularies. Laplace smoothing
 (`alpha`) keeps a single unseen word from zeroing out a whole class.
@@ -54,7 +54,7 @@ build/03_ml_course/05_text_classification/03_multinomial_naive_bayes/text_nb_end
 text_nb_predict --predict ../data/inference_messages.txt --model results/04_end_to_end_results/full/model
 ```
 
-One message per line; output `results/predict_results/predictions.csv`
+One message per line. Output `results/predict_results/predictions.csv`
 (`row,p_spam,prediction`, threshold 0.5).
 
 ## Results layout
@@ -66,7 +66,7 @@ One message per line; output `results/predict_results/predictions.csv`
   `inference/reload_verification.json`, `run_manifest.json`, `report.md`, `execution.log`.
 - `results/predict_results/predictions.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 
@@ -76,9 +76,9 @@ vectorizer and archive checks) and `text_nb_workflow`.
 
 ## Key takeaways
 
-- Work in log space; products of thousands of probabilities underflow.
-- `alpha` trades bias for robustness to unseen words; tune it by CV.
-- NB probabilities are well ranked but poorly calibrated - look at
+- Work in log space. Products of thousands of probabilities underflow.
+- `alpha` trades bias for robustness to unseen words. Tune it by CV.
+- NB probabilities are well ranked but poorly calibrated. Look at
   `evaluation/calibration.csv` before trusting them as risks.
 
 ## Next module

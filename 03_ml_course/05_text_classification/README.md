@@ -3,7 +3,7 @@
 Four modules build a spam filter for the UCI SMS Spam Collection from scratch:
 tokenization, sparse count/TF-IDF features, Multinomial Naive Bayes and
 L2-regularised logistic regression. Everything is plain C++17 on top of the
-course helpers; there are no external ML libraries.
+course helpers. There are no external ML libraries.
 
 ## Modules (read in order)
 
@@ -39,8 +39,8 @@ punctuation and digits that make preprocessing choices matter.
 
 ## Validation protocol
 
-Exact duplicates are removed first. A stratified 20% holdout is reserved;
-the remaining rows go through 5-fold stratified cross-validation where the
+Exact duplicates are removed first. A stratified 20% holdout is reserved.
+The remaining rows go through 5-fold stratified cross-validation where the
 vocabulary and IDF table are refitted inside every fold. The best candidate of
 the model's single hyper-parameter is refitted on all training rows and
 evaluated on the holdout once. The archive is reloaded and its probabilities
@@ -78,6 +78,6 @@ in, so the working directory does not matter. A run contains `data/`, `eda/`,
 
 ## Tests
 
-`text_<prefix>_numerical` compiles the shared fixture once per module;
+`text_<prefix>_numerical` compiles the shared fixture once per module.
 `text_<prefix>_workflow` runs the `--quick` project. All of them are part of
 `ctest --preset course`.

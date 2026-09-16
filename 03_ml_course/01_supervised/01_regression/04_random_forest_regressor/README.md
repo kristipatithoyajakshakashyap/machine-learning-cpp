@@ -2,11 +2,11 @@
 
 ## Problem and core idea
 
-A random forest averages many decision trees, each grown on a bootstrap sample of the rows and restricted to a random subset of features at every split. Averaging reduces the variance of a single deep tree without adding bias, and the feature subsampling decorrelates the trees so the averaging actually helps. The number of trees only needs to be 'large enough'; depth and leaf size still control each tree's capacity.
+A random forest averages many decision trees, each grown on a bootstrap sample of the rows and restricted to a random subset of features at every split. Averaging reduces the variance of a single deep tree without adding bias, and the feature subsampling decorrelates the trees so the averaging helps. The number of trees only needs to be `'large enough'`. Depth and leaf size still control each tree's capacity.
 
 ## Dataset and why
 
-California housing throughout (subsampled to 4,000 rows in the lessons for speed, full 20,640 rows in the end-to-end project). It has enough rows and enough non-linear structure for a forest to beat the linear baseline clearly. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+California housing throughout (subsampled to 4,000 rows in the lessons for speed, full 20,640 rows in the end-to-end project). It has enough rows and enough non-linear structure for a forest to beat the linear baseline clearly. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -25,9 +25,9 @@ California housing throughout (subsampled to 4,000 rows in the lessons for speed
 | `02_math_intuition.cpp` | `rrf_math_intuition` | What a bootstrap sample contains (about 63% unique rows) | prints only |
 | `03_implementation.cpp` | `rrf_implementation` | Forest on a California subsample versus a single tree | `results/03_implementation_results/`: `s08_forest.split` |
 | `04_n_estimators.cpp` | `rrf_04_n_estimators` | Test R2 versus number of trees | `results/04_n_estimators_results/`: `n_estimators.svg` |
-| `05_end_to_end.cpp` | `rrf_end_to_end` | Full project on California housing: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid max_depth in {4, 8, 12} with 40 trees | `results/05_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `rrf_predict` | `#include`s `05_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_rrf (RandomForest.cpp)` | - |
+| `05_end_to_end.cpp` | `rrf_end_to_end` | Full project on California housing: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid max_depth in {4, 8, 12} with 40 trees | `results/05_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `rrf_predict` | `#include`s `05_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. It wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_rrf (RandomForest.cpp)` | - |
 
 ## Build and run
 
@@ -42,7 +42,7 @@ build\03_ml_course\01_supervised\01_regression\04_random_forest_regressor\rrf_en
 build\03_ml_course\01_supervised\01_regression\04_random_forest_regressor\rrf_predict --predict results\05_end_to_end_results\full\data\holdout_features.csv --model results\05_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `rrf_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `rrf_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -61,15 +61,15 @@ results/05_end_to_end_results/
 results/predict_results/predictions.csv        (written by rrf_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-This module registers no CTest entries, so `ctest --preset course -R rrf` matches nothing. The smoke check is `rrf_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails; the repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
+This module registers no CTest entries, so `ctest --preset course -R rrf` matches nothing. The smoke check is `rrf_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails. The repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
 
 ## Key takeaways
 
-- More trees never hurt accuracy, they only cost time; the curve flattens quickly.
+- More trees never hurt accuracy, they only cost time. The curve flattens quickly.
 - Feature subsampling is what makes averaging work: identical trees average to the same tree.
 - Forests are hard to overfit with `n_estimators` but still overfit through depth.
 

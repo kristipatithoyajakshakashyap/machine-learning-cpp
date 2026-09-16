@@ -6,7 +6,7 @@ Logistic regression models the probability of the positive class as a sigmoid of
 
 ## Dataset and why
 
-`breast_cancer` (569 rows, 30 features, 2 classes) is the binary workhorse of this group: linearly separable enough for a strong baseline, with enough rows for meaningful ROC and calibration plots. Lesson 4 uses `wine` (178 x 13, 3 classes) for the multiclass variants. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+`breast_cancer` (569 rows, 30 features, 2 classes) is the binary workhorse of this group: linearly separable enough for a strong baseline, with enough rows for meaningful ROC and calibration plots. Lesson 4 uses `wine` (178 x 13, 3 classes) for the multiclass variants. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -25,9 +25,9 @@ Logistic regression models the probability of the positive class as a sigmoid of
 | `02_math_intuition.cpp` | `clog_math_intuition` | The sigmoid and one gradient step, by hand | prints only |
 | `03_implementation.cpp` | `clog_implementation` | Binary model on breast cancer with a seeded split | `results/03_implementation_results/`: `c01_logistic.split` |
 | `04_multiclass_and_softmax.cpp` | `clog_04_multiclass_and_softmax` | One-vs-rest versus softmax on wine | `results/04_multiclass_and_softmax_results/`: `c11_multiclass.split` |
-| `05_end_to_end.cpp` | `clog_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid L2 penalty in {0.1, 1, 10, 100} (lr 0.03, 600 epochs) | `results/05_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `clog_predict` | `#include`s `05_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_clog (LogisticRegression.cpp)` | - |
+| `05_end_to_end.cpp` | `clog_end_to_end` | Full project on breast cancer: `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid L2 penalty in {0.1, 1, 10, 100} (lr 0.03, 600 epochs) | `results/05_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `clog_predict` | `#include`s `05_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. It wraps it in a `main` that refuses to run without `--predict` | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_clog (LogisticRegression.cpp)` | - |
 
 ## Build and run
 
@@ -42,7 +42,7 @@ build\03_ml_course\01_supervised\02_classification\01_logistic_regression\clog_e
 build\03_ml_course\01_supervised\02_classification\01_logistic_regression\clog_predict --predict results\05_end_to_end_results\full\data\holdout_features.csv --model results\05_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `clog_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `clog_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -61,17 +61,17 @@ results/05_end_to_end_results/
 results/predict_results/predictions.csv        (written by clog_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-This module registers no CTest entries, so `ctest --preset course -R clog` matches nothing. The smoke check is `clog_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails; the repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
+This module registers no CTest entries, so `ctest --preset course -R clog` matches nothing. The smoke check is `clog_end_to_end --quick`, which exits non-zero if any stage or the reload verification fails. The repository-wide numerical tests under `03_ml_course/tests/` cover the shared helpers it uses.
 
 ## Key takeaways
 
-- Log-loss is convex, so gradient descent finds the global optimum; the learning rate only affects speed.
-- Probabilities, not just labels, are the output: read `evaluation/figures/calibration.svg`.
-- Softmax shares one normaliser across classes; one-vs-rest trains independent binary models.
+- Log-loss is convex, so gradient descent finds the global optimum. The learning rate only affects speed.
+- The output is probabilities, not plain labels. Read `evaluation/figures/calibration.svg`.
+- Softmax shares one normaliser across classes. One-vs-rest trains independent binary models.
 
 ## Next module
 

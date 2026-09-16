@@ -1,15 +1,15 @@
 # Linear text classification
 
-**Method.** L2-regularised binary logistic regression on sparse TF-IDF rows:
+Method. L2-regularised binary logistic regression on sparse TF-IDF rows.
 `p(spam|x) = sigmoid(w . x + b)`, trained by full-batch gradient descent on
 mean cross-entropy plus `lambda * ||w||^2 / 2`. The step size is the reciprocal
 of a Hessian upper bound, so no learning-rate tuning is needed and training is
 deterministic.
 
-**Core idea.** Unlike Naive Bayes, a discriminative model learns the label
-boundary directly and can give a token a weight that contradicts its raw
+Core idea. Unlike Naive Bayes, a discriminative model learns the label
+boundary directly and gives a token a weight that contradicts its raw
 frequency. Regularisation `lambda` controls how much rare but decisive spam
-words may pull the boundary; too much shrinkage underfits them.
+words pull the boundary. Too much shrinkage underfits them.
 
 ## Dataset
 
@@ -56,7 +56,7 @@ build/03_ml_course/05_text_classification/04_linear_text_classifier/text_linear_
 text_linear_predict --predict ../data/inference_messages.txt --model results/04_end_to_end_results/full/model
 ```
 
-One message per line; output `results/predict_results/predictions.csv`
+One message per line. Output `results/predict_results/predictions.csv`
 (`row,p_spam,prediction`).
 
 ## Results layout
@@ -67,7 +67,7 @@ One message per line; output `results/predict_results/predictions.csv`
   `report.md`, `execution.log` (same layout as the other text projects).
 - `results/predict_results/predictions.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 
@@ -77,9 +77,9 @@ logistic fixture must separate the two toy documents) and `text_linear_workflow`
 ## Key takeaways
 
 - With a Lipschitz-bounded step, batch gradient descent converges without a
-  learning-rate search; the loss curve in `03_implementation` is monotone.
-- The bias is not penalised; penalising it would shift the decision threshold.
-- Compare `evaluation/metrics.json` with the NB run: the linear model usually
+  learning-rate search. The loss curve in `03_implementation` is monotone.
+- The bias is not penalised. Penalising it would shift the decision threshold.
+- Compare `evaluation/metrics.json` with the NB run. The linear model usually
   wins on log loss and calibration, NB on training speed.
 
 ## Next module

@@ -1,14 +1,14 @@
 # Popularity recommendation
 
-**Method.** The simplest recommender that must be beaten. `Popularity` learns
+Method. The simplest recommender that must be beaten. `Popularity` learns
 the global mean, per-item rating counts and shrunken item means
 `(sum_i + 10 * global_mean) / (count_i + 10)`. Rating prediction returns the
-shrunken item mean (the global mean for an item never seen in training);
-ranking scores an item by how many people rated it. The user is ignored.
+shrunken item mean (the global mean for an item never seen in training).
+Ranking scores an item by how many people rated it. The user is ignored.
 
-**Core idea.** Rating accuracy and recommendation quality are different
-objectives: the most-rated film is rarely the best-rated one. A non-personalised
-baseline that ignores the user entirely is surprisingly hard to beat on
+Core idea. Rating accuracy and recommendation quality are different
+objectives. The most-rated film is rarely the best-rated one. A
+non-personalised baseline that ignores the user entirely is hard to beat on
 Recall@10, so every later module reports its numbers next to this one.
 `Model.hpp` also defines the `Rating` record, the MovieLens loader and the
 model contract that ItemCF and matrix factorization inherit.
@@ -16,9 +16,9 @@ model contract that ItemCF and matrix factorization inherit.
 ## Dataset
 
 MovieLens 100K, checked in as `../data/u.data` (100,000 explicit 1-5 star
-ratings by 943 users of 1,682 films, each with a timestamp; provenance and
+ratings by 943 users of 1,682 films, each with a timestamp, provenance and
 usage conditions in `../data/PROVENANCE.md` and `../data/README`). Timestamps
-allow honest chronological splits; the long-tailed item popularity makes the
+allow honest chronological splits. The long-tailed item popularity makes the
 baseline meaningful.
 
 ## Prerequisites
@@ -36,7 +36,7 @@ Vectors and sparse data, means and shrinkage, basic probability.
 | `Model.hpp` | (header) | `Rating`, `read_ratings`, `Popularity`, model contract. | - |
 | `01_theory.cpp` | `rec_popularity_theory` | Lesson text and `recommend()` on a toy set. | prints only |
 | `02_math_intuition.cpp` | `rec_popularity_math_intuition` | Shrinkage arithmetic on a toy set. | prints only |
-| `03_implementation.cpp` | `rec_popularity_implementation` | Fits on all ratings; 20 most-rated items with counts and shrunken means. | `results/03_implementation_results/` |
+| `03_implementation.cpp` | `rec_popularity_implementation` | Fits on all ratings. 20 most-rated items with counts and shrunken means. | `results/03_implementation_results/` |
 | `04_end_to_end.cpp` | `rec_popularity_end_to_end` | Full project: chronological split, rating error and top-10 ranking. | `results/04_end_to_end_results/{full,quick}/` |
 | `predict.cpp` | `rec_popularity_predict` | Reloads a saved model and lists ten unseen items for one user. | `results/predict_results/recommendations.csv` |
 | `tests/model_test.cpp` | `rec_popularity_tests` | Numerical fixture for the shared recommender stack. | prints only |
@@ -75,7 +75,7 @@ catalog items the user has not rated in training (`user,rank,item,score`).
   `run_manifest.json`, `report.md`, `execution.log`.
 - `results/predict_results/recommendations.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 

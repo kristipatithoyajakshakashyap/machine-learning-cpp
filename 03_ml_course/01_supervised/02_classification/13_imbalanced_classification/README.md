@@ -6,7 +6,7 @@ When one class is rare, accuracy is dominated by the majority class and a model 
 
 ## Dataset and why
 
-The course has no naturally imbalanced tabular set, so `ml::make_imbalanced(load_breast_cancer, 1.0, 30, 42)` keeps all 357 benign rows and a seeded subset of 30 malignant rows: 387 rows with 7.8% positives, original row ids preserved. Seed 42 makes the subset reproducible; the exercises change it. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`; the build passes their folder as `DATA_DIR`.
+The course has no naturally imbalanced tabular set, so `ml::make_imbalanced(load_breast_cancer, 1.0, 30, 42)` keeps all 357 benign rows and a seeded subset of 30 malignant rows: 387 rows with 7.8% positives, original row ids preserved. Seed 42 makes the subset reproducible. The exercises change it. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
@@ -24,10 +24,10 @@ The course has no naturally imbalanced tabular set, so `ml::make_imbalanced(load
 | `tests/model_test.cpp` | `cimb_tests` | fixture test: unweighted fit separates two clusters, `predict_proba` rows sum to one, w = 8 never lowers positive recall versus w = 1, the weight survives save/load | prints only |
 | `01_theory.cpp` | `cimb_theory` | Why accuracy misleads when one class is rare | prints only |
 | `02_math_intuition.cpp` | `cimb_math_intuition` | The weighted log-loss gradient on one hand example | prints only |
-| `03_implementation.cpp` | `cimb_implementation` | Sweep w in {1, 2, 4, 8} on one fixed split; recall against weight | `results/03_implementation_results/`: `weight_sweep.csv`, `recall_vs_weight.svg` |
-| `04_end_to_end.cpp` | `cimb_end_to_end` | Full project on imbalanced breast cancer (387 rows, 7.8% positive): `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check; parameter grid positive weight w in {1, 2, 4, 8} | `results/04_end_to_end_results/full/` or `quick/` (see below) |
-| `predict.cpp` | `cimb_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`; the `--predict`/`--model` pair switches that `main` to inference mode, so always pass both | `results/predict_results/predictions.csv` |
-| `CMakeLists.txt` | - | Registers the targets above; module library `ml_cimb (Model.cpp)` | - |
+| `03_implementation.cpp` | `cimb_implementation` | Sweep w in {1, 2, 4, 8} on one fixed split, with recall against weight | `results/03_implementation_results/`: `weight_sweep.csv`, `recall_vs_weight.svg` |
+| `04_end_to_end.cpp` | `cimb_end_to_end` | Full project on imbalanced breast cancer (387 rows, 7.8% positive): `ml::run_supervised` (helper/pipeline/supervised.hpp): stratified/seeded 80/20 holdout, EDA on training rows, training-only k-fold cross-validation over the parameter grid, final fit, holdout evaluation with bootstrap intervals, model persistence and reload check. Parameter grid positive weight w in {1, 2, 4, 8} | `results/04_end_to_end_results/full/` or `quick/` (see below) |
+| `predict.cpp` | `cimb_predict` | `#include`s `04_end_to_end.cpp` so the same code serves inference, compiled with its own `RUN_OUTPUT_DIR`. The `--predict`/`--model` pair switches that `main` to inference mode, so always pass both | `results/predict_results/predictions.csv` |
+| `CMakeLists.txt` | - | Registers the targets above. Module library `ml_cimb (Model.cpp)` | - |
 
 ## Build and run
 
@@ -42,7 +42,7 @@ build\03_ml_course\01_supervised\02_classification\13_imbalanced_classification\
 build\03_ml_course\01_supervised\02_classification\13_imbalanced_classification\cimb_predict --predict results\04_end_to_end_results\full\data\holdout_features.csv --model results\04_end_to_end_results\full\model
 ```
 
-`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds; run without it for the real numbers. `cimb_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
+`--quick` keeps a seeded random subset of at most 400 rows so the whole workflow finishes in seconds. Run without it for the real numbers. `cimb_predict` reads any CSV that contains the feature columns named in `model/features.txt` (the pipeline's own `data/holdout_features.csv` is the ready-made example), restores the model, preprocessing and target transform from `<run>/model`, and writes `row_id,prediction` rows. Every other lesson target runs without arguments.
 
 ## Results layout
 
@@ -61,7 +61,7 @@ results/04_end_to_end_results/
 results/predict_results/predictions.csv        (written by cimb_predict)
 ```
 
-`results/` folders are generated and can be deleted at any time; nothing in the build depends on them.
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
@@ -69,13 +69,13 @@ results/predict_results/predictions.csv        (written by cimb_predict)
 ctest --preset course -R cimb
 ```
 
-`cimb_numerical` runs `tests/model_test.cpp` (the fixture checks listed in the table; any failed check throws, so the exit code is non-zero). `cimb_workflow` runs `cimb_end_to_end --quick` and fails if the pipeline or its reload verification fails.
+`cimb_numerical` runs `tests/model_test.cpp`. The fixture checks are listed in the table. Any failed check throws, so the exit code is non-zero. `cimb_workflow` runs `cimb_end_to_end --quick`. It fails if the pipeline or its reload verification fails.
 
 ## Key takeaways
 
-- Accuracy is high for every w; read macro F1 and `evaluation/per_class.csv` instead.
-- Class weights move the threshold implicitly; `evaluation/pr_curve.csv` shows the whole trade-off.
-- Stratify every split, or a fold may contain no positives at all.
+- Accuracy is high for every w. Read macro F1 and `evaluation/per_class.csv` instead.
+- Class weights move the threshold implicitly. `evaluation/pr_curve.csv` shows the whole trade-off.
+- Stratify every split. Otherwise a fold contains no positives at all.
 
 ## Next module
 

@@ -2,14 +2,14 @@
 
 ## Method and core idea
 
-An Isolation Forest (Liu, Ting and Zhou, 2008) grows many random binary trees: each node picks a
+An Isolation Forest (Liu, Ting and Zhou, 2008) grows many random binary trees. Each node picks a
 random feature and a random cut between that feature's minimum and maximum in the node, until every
-row is alone or the depth limit is reached. Rows that are far from the bulk get isolated after very
-few splits, so a *short* average path length across the trees signals an anomaly. The path length is
+row is alone or the depth limit is reached. Rows that are far from the bulk get isolated after a few
+splits, so a short average path length across the trees signals an anomaly. The path length is
 normalised by the expected path length of a random binary search tree of the subsample size, giving
 a score in (0, 1) where values near 1 are anomalous and values around 0.5 or lower are ordinary. No
 distances or densities are computed, which makes the method cheap (O(trees x sample x log sample))
-and robust to irrelevant features; the default here is 100 trees on 256-row subsamples, seed 42.
+and robust to irrelevant features. The default here is 100 trees on 256-row subsamples, seed 42.
 
 ## Dataset and why
 
@@ -33,9 +33,9 @@ workflow (`../../02_unsupervised/`). Read `theory.md`, `math_intuition.md` and
 | `IsolationForest.hpp` | interface library `ml_isolation_forest` | Header-only `ml::IsolationForest`: random trees, path-length `correction`, `score_samples`, `set_threshold`/`threshold`, `predict` (0/1 flags), `save`/`load` | - |
 | `01_theory.cpp` | `uif_theory` | Prints the lesson text | prints only |
 | `02_math_intuition.cpp` | `uif_math_intuition` | Expected path length c(n) and the score formula worked by hand | prints only |
-| `03_implementation.cpp` | `uif_implementation` | 1-D sanity check, then two 2-D Gaussian clusters plus three planted outliers; top scores printed | `results/03_implementation_results/{scores.csv, figures/isolation_scatter.svg, figures/isolation_histogram.svg}` |
+| `03_implementation.cpp` | `uif_implementation` | 1-D sanity check, then two 2-D Gaussian clusters plus three planted outliers. Top scores printed | `results/03_implementation_results/{scores.csv, figures/isolation_scatter.svg, figures/isolation_histogram.svg}` |
 | `04_end_to_end.cpp` | `uif_end_to_end` | Full project: 60/20/20 split, training-only EDA and preprocessing, fit, validation-calibrated threshold, test scoring, snapshot, reload check | `results/04_end_to_end_results/` |
-| `predict.cpp` | `uif_predict` | Reloads preprocessor, forest and threshold; writes a score and a flag per new row | `results/predict_results/new_predictions.csv` |
+| `predict.cpp` | `uif_predict` | Reloads preprocessor, forest and threshold. Writes a score and a flag per new row | `results/predict_results/new_predictions.csv` |
 
 ## Build and run
 

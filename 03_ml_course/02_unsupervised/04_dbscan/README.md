@@ -1,81 +1,80 @@
 # DBSCAN
 
-## Method and core idea
+## Problem and core idea
 
-DBSCAN (Ester et al., 1996) clusters by density instead of by distance to a centre. A row is a
-*core* point if at least `min_samples` rows (itself included) lie within radius `eps`; core points
-whose neighbourhoods overlap are chained into one cluster, non-core rows inside a core
-neighbourhood become *border* members, and everything else is *noise* (label -1). Consequently the
-number of clusters is not chosen up front, clusters can have any shape, and outliers are excluded
-rather than forced into a group. The price is two knobs that interact: a small `eps` fragments the
-data into noise, a large one merges everything.
+DBSCAN finds clusters as dense regions separated by sparse ones. Two hyper-parameters: a radius `eps` and a minimum point count `min_pts`. A point with at least `min_pts` neighbours within `eps` is a core point. Points inside `eps` of a core point belong to its cluster. The rest are noise. You do not choose the number of clusters up front, and clusters have any shape. The implementation is header-only: it finds every `eps`-neighbourhood with an all-pairs Euclidean scan, then flood-fills from each unvisited core point to assemble the clusters. Border points that touch two components resolve by input order.
 
 ## Dataset and why
 
-Palmer Penguins, median-imputed and standardized: `eps` is a single radius applied to every feature
-at once, so unequal units would make it meaningless. The implementation lesson uses a 1-D line that
-can be checked by hand and a 2-D set of two dense blobs on uniform background noise, where the
-noise label is obviously correct.
+Palmer Penguins (`helper/data/penguins.csv`, 344 rows, 4 numeric columns, 3 species) in the end-to-end project. Two species overlap in feature space, so the selected radius tends to keep them in one cluster and label part of the third species as noise, which shows you exactly what DBSCAN does when the density assumption fails. The implementation lesson starts with a hand-checkable 1-D line, then a 2-D synthetic set of two blobs plus background noise. Datasets are CSV files under `03_ml_course/helper/data/` and are loaded through `helper/data/datasets.hpp`. The build passes their folder as `DATA_DIR`.
 
 ## Prerequisites
 
-`../01_kmeans/` and `../03_cluster_evaluation/` (silhouette, stability). Read `theory.md`,
-`math_intuition.md` and `implementation.md`, then `exercises.md`.
+C++17 (sets, union-find or lambdas), Euclidean distance, and `01_kmeans` (you compare the two algorithms side by side). Read `theory.md`, `math_intuition.md` and `implementation.md`, then run the numbered lessons in order.
 
 ## Files
 
-| File | Target | What it does | Outputs |
+| File | Target | Purpose | Outputs |
 |---|---|---|---|
-| `theory.md`, `math_intuition.md`, `implementation.md`, `exercises.md` | - | Reading material | - |
-| `DBSCAN.hpp` | interface library `ml_dbscan` | Header-only `ml::DBSCAN`: neighbourhood search, core/border/noise labelling, `labels()`, `core_samples()`, `save`/`load` | - |
-| `01_theory.cpp` | `udb_theory` | Prints the lesson text | prints only |
-| `02_math_intuition.cpp` | `udb_math_intuition` | Core/border/noise on the points 0, 2, 8, 10 (+30) with eps 2.1 | prints only |
-| `03_implementation.cpp` | `udb_implementation` | 1-D sanity check, 2-D blobs plus noise, and an eps x min_samples sweep | `results/03_implementation_results/{labels.csv, sweep.csv, figures/dbscan_scatter.svg}` |
-| `04_end_to_end.cpp` | `udb_end_to_end` | Full project: EDA, impute + standardize, 4 eps x 3 min_samples scored by silhouette with an 80% coverage floor, fit, evaluate (noise excluded), stability, snapshot, reload | `results/04_end_to_end_results/` |
-
-## Build and run
-
-```powershell
-cmake --preset course
-cmake --build --preset course --target udb_end_to_end udb_implementation
-build\03_ml_course\02_unsupervised\04_dbscan\udb_implementation.exe
-build\03_ml_course\02_unsupervised\04_dbscan\udb_end_to_end.exe
-```
-
-No `--quick` flag; runs take seconds.
+| `theory.md` | - | Assumptions and the conceptual picture | - |
+| `math_intuition.md` | - | Worked formulas and numeric examples | - |
+| `implementation.md` | - | How the C++ code carries out the workflow | - |
+| `exercises.md` | - | Practice tasks and acceptance evidence | - |
+| `DBSCAN.hpp` | interface library `ml_dbscan` | Header-only `ml::DBSCAN`: all-pairs Euclidean neighbourhood search, flood-fill clustering, noise label -1, `fit`, `labels`, `core_samples`, save/load | - |
+| `01_theory.cpp` | `udb_theory` | Density, the `eps`-neighbourhood, core/border/noise | prints only |
+| `02_math_intuition.cpp` | `udb_math_intuition` | Neighbourhood sizes by hand, core connectivity, border ties | prints only |
+| `03_implementation.cpp` | `udb_implementation` | Four points on a line, then a 2-D synthetic set. An `eps` x `min_samples` sweep | `results/03_implementation_results/`: `labels.csv`, `sweep.csv`, `figures/dbscan_scatter.svg` |
+| `04_end_to_end.cpp` | `udb_end_to_end` | Full project on penguins: impute, standardise, grid 4 `eps` x 3 `min_samples` = 12 candidates scored by the silhouette of their non-noise rows with a >= 80% coverage floor (there is no `--quick` flag) | `results/04_end_to_end_results/` (see below) |
+| `CMakeLists.txt` | - | Registers the targets above. Interface library `ml_dbscan` headers only | - |
 
 ### Why there is no `udb_predict`
 
-DBSCAN labels are a property of the whole neighbourhood graph. A new row could be called "noise" or
-"member of cluster c" only by re-running the density reachability with that row inserted, which can
-turn other rows from noise into border points and even merge clusters. The method therefore has no
-stable single-row prediction; the project saves the fitted rows, labels and core flags, and the
-`udb_fresh_reload` test checks in a separate process that the reloaded object returns the same
-labels. For scoring new rows by "how far from dense regions", see `../../03_anomaly_detection/`.
+A new row would need a rule for reaching an existing cluster, and DBSCAN has none that is stable: labels depend on the whole neighbourhood structure. So this module has no `predict` target. Reassigning new rows is left to `01_kmeans`, `05_gaussian_mixture` and `06_pca`.
+
+## Build and run
+
+From the repository root with the MinGW toolchain on PATH:
+
+```powershell
+$env:PATH = 'D:\msys64\ucrt64\bin;' + $env:PATH
+cmake --preset course
+cmake --build --preset course --target udb_end_to_end
+build\03_ml_course\02_unsupervised\04_dbscan\udb_end_to_end            # full run, no --quick flag
+```
+
+The end-to-end program has no `--quick` flag, because a full run on 344 rows takes seconds. Every other lesson target runs without arguments.
 
 ## Results layout
 
-`results/04_end_to_end_results/` contains `run_manifest.json`, `report.md`, `execution.log`,
-`data/`, `eda/`, `validation/{candidate_scores.csv, selected_parameters.json, stability.csv}`,
-`evaluation/{assignments.csv, metrics.json, cluster_profiles.csv, figures/*.svg}` (noise rows are
-excluded from the silhouette and the noise share is reported in `metrics.json`),
-`model/{model_state.txt, preprocessing_state.txt, feature_schema.csv}` and
-`inference/reload_verification.json`.
+Each executable owns `results/<source stem>_results/` inside this module. The project run writes:
+
+```
+results/04_end_to_end_results/
+  data/          row sources and preprocessing notes
+  eda/           per-feature summaries and figures
+  model/         model_state.txt, preprocessing_state.txt, feature_schema.csv
+  validation/    candidate_scores.csv, selected_parameters.json, stability.csv
+  evaluation/    metrics.json, assignments.csv, cluster_profiles.csv, figures/
+  inference/     reload_verification.json
+  run_manifest.json, report.md, execution.log
+```
+
+`results/` folders are generated. Delete them at any time. Nothing in the build depends on them.
 
 ## Tests
 
-`ctest --preset course -R udb` runs `udb_workflow` and `udb_fresh_reload`.
-`ctest --preset course -R unsupervised_numerical` includes the DBSCAN checks in
-`../tests/test_unsupervised.cpp`: the fixture plus a far point gives the expected density labels
-with the far point marked noise and not core.
+```powershell
+ctest --preset course -R udb
+```
+
+`udb_workflow` runs `udb_end_to_end` and fails if any stage or the reload verification fails. `udb_fresh_reload` starts a new process, loads the saved model and preprocessor, recomputes the labels and matches them against `evaluation/assignments.csv`. The unit checks in `../tests/test_unsupervised.cpp` run under `unsupervised_numerical`. There is no `udb_new_rows` CTest entry, because the module has no `predict` target.
 
 ## Key takeaways
 
-- `eps` only makes sense after standardization; sweep it and watch the noise fraction.
-- Noise is a first-class answer. Excluding it from the silhouette is required for a fair score.
-- No native prediction for new rows, by construction of the method.
+- `eps` and `min_pts` encode a density. The same pair gives worse results on uneven densities.
+- Noise is a first-class label. A model that refuses rows is a feature, not a failure.
+- Compare the silhouette of DBSCAN with k-means on the same data to see what density buys you.
 
-## Next
+## Next module
 
-`../05_gaussian_mixture/` gives soft, probabilistic memberships and a principled way (BIC) to pick
-the number of components.
+`05_gaussian_mixture`: soft clusters with probabilities and a principled `k`.

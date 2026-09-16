@@ -1,13 +1,13 @@
 # Item-based collaborative filtering
 
-**Method.** `ItemCF` centres every rating by its user's training mean, computes
+Method. `ItemCF` centres every rating by its user's training mean, computes
 adjusted-cosine similarity between item columns, shrinks it by
 `overlap / (overlap + 10)` and keeps the `k` most similar positive neighbours
 per item. A rating is predicted as
 `user_mean + sum(sim * centred_rating) / sum(sim)` over the neighbours the
 user has rated, falling back to the shrunken item mean when none apply.
 
-**Core idea.** Users who rated the same items similarly provide indirect
+Core idea. Users who rated the same items similarly provide indirect
 evidence about an unrated item. Working with item-item rather than user-user
 similarities keeps the table small (items are fewer and more stable than
 users) and makes recommendations explainable: "because you liked X". The
@@ -74,7 +74,7 @@ with the ten best unseen catalog items for that user.
   `run_manifest.json`, `report.md`, `execution.log`.
 - `results/predict_results/recommendations.csv`.
 
-Re-running a target replaces its folder. There is no `output.txt`; read `report.md`.
+Re-running a target replaces its folder. There is no `output.txt`. Read `report.md`.
 
 ## Tests
 
@@ -85,7 +85,7 @@ ranking-metric fixture) and `rec_itemcf_workflow` (the `--quick` project).
 ## Key takeaways
 
 - Centre by user mean before measuring similarity or generous raters dominate.
-- Shrink similarities computed from few co-raters; two shared ratings are not
+- Shrink similarities computed from few co-raters. Two shared ratings are not
   evidence.
 - Keep only positive neighbours: negative similarity is noise at this
   overlap level.

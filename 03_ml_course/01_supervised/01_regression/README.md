@@ -6,7 +6,7 @@ Predict a continuous target. Every module in this group follows the same shape: 
 |---|---|---|
 | [`01_linear_regression`](01_linear_regression/README.md) | `lin_*` | OLS, ridge, lasso and polynomial features (closed form and gradient descent) |
 | [`02_knn_regression`](02_knn_regression/README.md) | `rknn_*` | Distance-weighted averaging of the k closest rows |
-| [`03_decision_tree_regressor`](03_decision_tree_regressor/README.md) | `rdtr_*` | CART splits by variance reduction; the depth curve |
+| [`03_decision_tree_regressor`](03_decision_tree_regressor/README.md) | `rdtr_*` | CART splits by variance reduction and the depth curve |
 | [`04_random_forest_regressor`](04_random_forest_regressor/README.md) | `rrf_*` | Bagged trees with feature subsampling |
 | [`05_gradient_boosting_regressor`](05_gradient_boosting_regressor/README.md) | `rgbr_*` | Sequential trees fitted to residuals with shrinkage |
 | [`06_mlp_regressor`](06_mlp_regressor/README.md) | `rmlp_*` | Feed-forward network trained by backpropagation |
@@ -25,7 +25,7 @@ build\03_ml_course\01_supervised\01_regression\<module>\<prefix>_end_to_end --qu
 build\03_ml_course\01_supervised\01_regression\<module>\<prefix>_predict --predict <holdout_features.csv> --model <run>/model
 ```
 
-Every executable writes into `results/<source stem>_results/` inside its own module; the project run adds `full/` or `quick/` below that. Modules with a `tests/` folder register `<prefix>_numerical` and `<prefix>_workflow` in CTest (`ctest --preset course -R <prefix>`). Each module README lists its files, outputs, tests and takeaways.
+Every executable writes into `results/<source stem>_results/` inside its own module. The project run adds `full/` or `quick/` below that. Modules with a `tests/` folder register `<prefix>_numerical` and `<prefix>_workflow` in CTest (`ctest --preset course -R <prefix>`). Each module README lists its files, outputs, tests and takeaways.
 
 ## Next group
 
