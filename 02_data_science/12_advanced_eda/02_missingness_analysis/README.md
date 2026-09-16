@@ -1,7 +1,7 @@
 # Missingness analysis
 
 ## Purpose
-Asks whether Age is missing at random by comparing the missing rate between Sex groups. Unequal rates are evidence against missing-completely-at-random; the lesson explains why the reverse cannot be proven from observed data alone.
+Asks whether Age is missing at random by comparing the missing rate between Sex groups. Unequal rates are evidence against missing-completely-at-random. The lesson explains why observed data alone does not prove the reverse.
 
 ## Prerequisites
 Modules 03_eda, 07_statistics_tests and 08_train_test. All Titanic analysis
@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_02` | missing-rate comparison across groups, MCAR/MAR/MNAR vocabulary | `age_missing_by_sex.csv`, `missingness.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -32,7 +32,7 @@ The lesson links the `dsts` static library, reads its dataset from
 `RUN_OUTPUT_DIR`). It is registered as ctest `s12_eda_02`.
 
 ## dsts functions used
-`read_csv`, `stratified_split`, `DataFrame::strings`, `DataFrame::series`.
+`read_csv`, `stratified_split`, `DataFrame::numeric`, `DataFrame::strings`.
 
 ## Exercise
 Rerun with a different training seed, compare effect sizes and sample counts,
@@ -44,4 +44,4 @@ outcome to select preprocessing would invalidate later evaluation.
 - Fit imputers on the training partition only.
 
 ## Next module
-Continue with **03_outliers_and_distributions**.
+Continue with 03_outliers_and_distributions.

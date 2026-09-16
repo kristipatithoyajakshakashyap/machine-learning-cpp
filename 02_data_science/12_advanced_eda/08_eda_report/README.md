@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_08` | assembling all stages into a reproducible report | all stage-1..7 files plus `report.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -32,7 +32,7 @@ The lesson links the `dsts` static library, reads its dataset from
 `RUN_OUTPUT_DIR`). It is registered as ctest `s12_eda_08`.
 
 ## dsts functions used
-everything used by stages 1-7: `read_csv`, `stratified_split`, `duplicated`, `outlier_mask`, `chi2_independence`, `correlation_matrix`, `pearson`, `spearman`, `group_mean`, `write_svg_histogram`, `write_svg_heatmap`, `write_svg_line`.
+Everything used by stages 1-7: `read_csv`, `stratified_split`, `duplicated`, `outlier_mask`, `chi2_independence`, `correlation_matrix`, `pearson`, `spearman`, `group_mean`, `write_svg_histogram`, `write_svg_heatmap`, `write_svg_line`.
 
 ## Exercise
 Rerun with a different training seed, compare effect sizes and sample counts,
@@ -44,4 +44,4 @@ outcome to select preprocessing would invalidate later evaluation.
 - Every number in the report comes from the training partition only.
 
 ## Next module
-Continue with **11_final_pipeline** (the Titanic capstone).
+Continue with 11_final_pipeline (the Titanic capstone).

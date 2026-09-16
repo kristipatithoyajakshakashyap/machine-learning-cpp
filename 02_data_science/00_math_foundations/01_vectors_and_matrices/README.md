@@ -26,28 +26,28 @@ cmake --build --preset course --target s00_math_01
 The lesson links the `dsts` static library and writes its output file to
 `results/01_worked_example_results/` next to its source (injected by CMake as
 `RUN_OUTPUT_DIR`, created on first run). It is also registered as the ctest
-`s00_math_01`: a nonzero exit code means a numerical acceptance check failed.
+`s00_math_01`. A nonzero exit code means a numerical acceptance check failed.
 
 ## dsts functions used
-None; plain `std::vector<double>` and the standard library only.
+None. Plain `std::vector<double>` and the standard library only.
 
 ## Theory
-A row represents an observation and a column a feature. Dot products combine aligned features; dimension checks prevent accidental broadcasting.
+A row represents an observation and a column a feature. Dot products combine aligned features. Dimension checks prevent accidental broadcasting.
 
 ## Math intuition
 For x=(1,2,3), w=(2,-1,4), x dot w=12. Matrix-vector multiplication applies this weighted sum independently to each observation.
 
 ## Implementation
 Read `01_worked_example.cpp`, trace each operation against the equations above,
-then run it. Every invariant is asserted in code; a nonzero exit means the
+then run it. Every invariant is asserted in code. A nonzero exit means the
 mathematical invariant failed.
 
 ## Exercise
 Add checked matrix multiplication and test incompatible dimensions.
 
 ## Key takeaways
-- A dot product is a weighted sum; a matrix-vector product is one dot product per row.
-- Always check dimensions before multiplying; silent broadcasting hides bugs.
+- A dot product is a weighted sum. A matrix-vector product is one dot product per row.
+- Always check dimensions before multiplying. Silent broadcasting hides bugs.
 
 ## Next module
-Continue with **02_linear_algebra** (projection and orthogonality).
+Continue with 02_linear_algebra (projection and orthogonality).

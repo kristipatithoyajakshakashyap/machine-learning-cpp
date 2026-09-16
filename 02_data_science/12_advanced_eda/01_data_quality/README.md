@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_01` | per-column type and missing fraction, duplicate detection, range checks | `quality.csv`, `quality.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -44,4 +44,4 @@ outcome to select preprocessing would invalidate later evaluation.
 - Fail fast on impossible values instead of silently imputing them.
 
 ## Next module
-Continue with **02_missingness_analysis**.
+Continue with 02_missingness_analysis.

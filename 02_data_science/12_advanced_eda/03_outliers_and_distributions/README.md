@@ -1,7 +1,7 @@
 # Outliers and distributions
 
 ## Purpose
-Computes the five-number summary and IQR outlier count for Age and Fare and draws one histogram per feature. Fare is strongly right-skewed, which motivates comparing median to mean before choosing a transformation.
+Computes the five-number profile and IQR outlier count for Age and Fare and draws one histogram per feature. Fare is strongly right-skewed, which motivates comparing median to mean before choosing a transformation.
 
 ## Prerequisites
 Modules 03_eda, 07_statistics_tests and 08_train_test. All Titanic analysis
@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_03` | quantiles, IQR fences, histograms, skew | `quantiles_outliers.csv`, `Age.svg`, `Fare.svg`, `outliers.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -40,8 +40,8 @@ and identify which conclusions remain stable. Explain why using a held-out
 outcome to select preprocessing would invalidate later evaluation.
 
 ## Key takeaways
-- IQR fences flag unusual values, not errors; investigate before deleting.
+- IQR fences flag unusual values, not errors. Investigate before deleting.
 - Skewed features often need a log or rank transform.
 
 ## Next module
-Continue with **04_categorical_relationships**.
+Continue with 04_categorical_relationships.

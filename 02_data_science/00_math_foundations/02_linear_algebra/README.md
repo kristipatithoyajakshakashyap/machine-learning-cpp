@@ -26,28 +26,28 @@ cmake --build --preset course --target s00_math_02
 The lesson links the `dsts` static library and writes its output file to
 `results/01_worked_example_results/` next to its source (injected by CMake as
 `RUN_OUTPUT_DIR`, created on first run). It is also registered as the ctest
-`s00_math_02`: a nonzero exit code means a numerical acceptance check failed.
+`s00_math_02`. A nonzero exit code means a numerical acceptance check failed.
 
 ## dsts functions used
 `dsts::pca`, `dsts::pca_transform` (from `include/dsts/pca.hpp`).
 
 ## Theory
-Orthogonal directions separate independent coordinates. A projection keeps the component parallel to an axis; residuals are perpendicular. PCA extends this to covariance eigenvectors.
+Orthogonal directions separate independent coordinates. A projection keeps the component parallel to an axis. Residuals are perpendicular. PCA extends this to covariance eigenvectors.
 
 ## Math intuition
 Projection of x onto unit u is (x dot u)u. For x=(3,4), u=(1,0), projection=(3,0) and residual=(0,4). The Pythagorean identity gives 25=9+16.
 
 ## Implementation
 Read `01_worked_example.cpp`, trace each operation against the equations above,
-then run it. Every invariant is asserted in code; a nonzero exit means the
+then run it. Every invariant is asserted in code. A nonzero exit means the
 mathematical invariant failed.
 
 ## Exercise
 Derive the covariance matrix by hand and verify its leading eigenvector up to sign.
 
 ## Key takeaways
-- Projection = (x dot u) u for a unit vector u; the residual is orthogonal to u.
-- PCA picks the axes that keep the most variance; eigenvectors are only defined up to sign.
+- Projection = (x dot u) u for a unit vector u. The residual is orthogonal to u.
+- PCA picks the axes that keep the most variance. Eigenvectors are only defined up to sign.
 
 ## Next module
-Continue with **03_probability** (conditional probability and Bayes rule).
+Continue with 03_probability (conditional probability and Bayes rule).

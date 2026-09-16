@@ -26,10 +26,10 @@ cmake --build --preset course --target s00_math_05
 The lesson links the `dsts` static library and writes its output file to
 `results/01_worked_example_results/` next to its source (injected by CMake as
 `RUN_OUTPUT_DIR`, created on first run). It is also registered as the ctest
-`s00_math_05`: a nonzero exit code means a numerical acceptance check failed.
+`s00_math_05`. A nonzero exit code means a numerical acceptance check failed.
 
 ## dsts functions used
-None; standard library only.
+None. Standard library only.
 
 ## Theory
 A derivative is local sensitivity. A gradient stacks partial derivatives and points toward greatest local increase. Central differences independently check an analytic derivative.
@@ -39,15 +39,15 @@ For f(w)=(w-3)^2, df/dw=2(w-3). At w=1 the derivative is -4. The central differe
 
 ## Implementation
 Read `01_worked_example.cpp`, trace each operation against the equations above,
-then run it. Every invariant is asserted in code; a nonzero exit means the
+then run it. Every invariant is asserted in code. A nonzero exit means the
 mathematical invariant failed.
 
 ## Exercise
 Sweep h from 1e-1 to 1e-16 and explain cancellation versus truncation error.
 
 ## Key takeaways
-- A central difference has O(h^2) error; too small an h reintroduces rounding error.
+- A central difference has O(h^2) error. Too small an h reintroduces rounding error.
 - Compare analytic and numerical gradients before trusting an optimiser.
 
 ## Next module
-Continue with **06_optimization** (gradient descent and regularisation).
+Continue with 06_optimization (gradient descent and regularisation).

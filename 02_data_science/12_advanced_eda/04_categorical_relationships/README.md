@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_04` | contingency tables, chi-square test of independence, Cramer's V | `sex_by_class.csv`, `categorical.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -40,8 +40,8 @@ and identify which conclusions remain stable. Explain why using a held-out
 outcome to select preprocessing would invalidate later evaluation.
 
 ## Key takeaways
-- A small p-value says the association is unlikely to be chance; Cramer's V says how strong it is.
+- A small p-value says the association is unlikely to be chance. Cramer's V says how strong it is.
 - Report both, and the cell counts they came from.
 
 ## Next module
-Continue with **05_multivariate_analysis**.
+Continue with 05_multivariate_analysis.

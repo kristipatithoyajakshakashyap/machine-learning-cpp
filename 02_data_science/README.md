@@ -52,10 +52,10 @@ output files to a module-local `results/<source stem>_results/` directory
 `results/04_csv_io_results/`), created on first run.
 
 ## Library notes
-`PcaResult.mean` stores fitted centering; `pca_transform` applies those training
+`PcaResult.mean` stores fitted centering. `pca_transform` applies those training
 axes to new rows. CSV serialization escapes quotes/newlines, retains numeric
 precision and writes missing numeric values as empty cells. Schema inference
-infers all-numeric text as numbers; use an explicit `DataFrame` schema where a
+infers all-numeric text as numbers. Use an explicit `DataFrame` schema where a
 numeric-looking identifier must remain text.
 
 Tests (`tests/regression.cpp`, ctest `dsts_regression`) exercise C++ numerical
@@ -67,7 +67,7 @@ fixtures, CSV round-trip, preprocessing isolation and model reload. See
   the whole pandas workflow.
 - Every learned quantity (median, mean, scale, PCA axis) is fitted on training
   rows and applied to the rest.
-- Outputs are files you can diff; tests assert numbers, not screenshots.
+- Outputs are files you diff. Tests assert numbers, not screenshots.
 
 ## Next track
-Continue with **03_ml_course**.
+Continue with 03_ml_course.

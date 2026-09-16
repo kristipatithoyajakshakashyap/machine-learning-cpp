@@ -1,4 +1,4 @@
-# Module 11 — Connected Titanic pipeline (capstone)
+# Module 11: Connected Titanic pipeline (capstone)
 
 ## Purpose
 A five-stage, fully reproducible pipeline on the Titanic passenger table:
@@ -16,10 +16,10 @@ Modules 01 through 10 and 12_advanced_eda. Also read `theory.md`,
 
 | File | Target | What it teaches | What it writes (under `results/<stem>_results/`) |
 |------|--------|-----------------|--------------------------------------------------|
-| `01_data_clean.cpp` | `s11_01_clean` | split raw passengers before learning medians; impute Age and Fare from training medians | `train_features.csv`, `test_features.csv`, `row_assignments.csv`, `report.md` |
+| `01_data_clean.cpp` | `s11_01_clean` | split raw passengers before learning medians, impute Age and Fare from training medians | `train_features.csv`, `test_features.csv`, `row_assignments.csv`, `report.md` |
 | `02_feature_table.cpp` | `s11_02_feat` | family size, child indicator, cabin availability and sex encoding applied identically to both partitions | same files as stage 1 (stage 2 report) |
 | `03_eda_summary.cpp` | `s11_03_eda` | summarise and plot training data before interpreting test performance | adds `age.svg`, `fare_by_sex.svg` |
-| `04_split_pca.cpp` | `s11_04_pca` | fit scaling and PCA on training; transform hold-out with stored means and loadings | adds `pca_scores.csv` |
+| `04_split_pca.cpp` | `s11_04_pca` | fit scaling and PCA on training, transform hold-out with stored means and loadings | adds `pca_scores.csv` |
 | `05_eval_model.cpp` | `s11_05_eval` | PC1 class-mean threshold classifier, majority baseline, confusion counts, save/reload check | adds `predictions.csv`, `metrics.json`, `model_state.txt`, `reload_verification.json` |
 | `predict.cpp` | `s11_predict` | fresh-process inference: reload `model_state.txt`, predict a CSV and verify against expected predictions (argv: model, input CSV, expected CSV) | `predictions.csv`, `reload_verification.json` under `results/predict_results/` |
 
@@ -43,15 +43,15 @@ and `dsts_capstone_reload`.
 `DataFrame::numeric/strings/series/rows`.
 
 ## Key takeaways
-- Split first; learn medians, scaling and PCA axes on training rows only.
+- Split first. Learn medians, scaling and PCA axes on training rows only.
 - Engineer features with one shared function so train and test never drift.
 - Compare against the majority baseline before celebrating an accuracy number.
 - Save the fitted state and prove that a reloaded model reproduces predictions.
 
 This transparent teaching classifier is not logistic regression. The supervised
 ML track supplies tuned classifiers and more extensive evaluation. No test-set
-tuning occurs here. Family members may cross the educational stratified split;
-grouped validation is appropriate before deployment claims.
+tuning occurs here. Family members are not kept together by the educational
+stratified split. Grouped validation is appropriate before deployment claims.
 
 ## Next module
-You have completed the data-science track. Continue with **03_ml_course**.
+You have completed the data-science track. Continue with 03_ml_course.

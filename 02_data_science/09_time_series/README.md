@@ -1,10 +1,10 @@
-# Module 09 — Time series
+# Module 09: Time series
 
 ## Purpose
 Ordered data needs ordered thinking: trend, seasonality, and the baseline
 forecasts that every real model has to beat. Toolkit added this module:
-`include/dsts/timeseries.hpp` — `rolling_mean()`, `autocorr()`, `diff()` and
-`rmse()`. Every number was checked against pandas/numpy.scipy.
+`include/dsts/timeseries.hpp`. It provides `rolling_mean()`, `autocorr()`,
+`diff()` and `rmse()`. Every number was checked against pandas/numpy.scipy.
 
 ## Prerequisites
 
@@ -14,11 +14,11 @@ Module 03_eda (correlation) and 06_feature_engineering (log transform).
 
 | File | Target | What it teaches | Python equivalent | What it writes |
 |------|--------|-----------------|-------------------|----------------|
-| `01_components.cpp` | `s09_01_components` | Series + 12-month moving average; data: air_passengers.csv (real data, 144 monthly totals, 1949-1960) | `s.rolling(12).mean()` | `m09_01_passengers.svg` under `results/01_components_results/` |
-| `02_seasonality.cpp` | `s09_02_seasonality` | Month-of-year profile vs overall; data: air_passengers.csv (real data, 144 monthly totals, 1949-1960) | `s.groupby(month).mean()` | prints only |
-| `03_forecast_benchmark.cpp` | `s09_03_bench` | Naive vs mean vs seasonal-naive RMSE; data: air_passengers.csv (real data, 144 monthly totals) | `shift()` + `mean_squared_error` | prints only |
-| `04_trend_linreg.cpp` | `s09_04_trend` | Least-squares trend, R2 = corr^2; data: air_passengers.csv (real data, 144 monthly totals) | `numpy.polyfit(t, y, 1)` | prints only |
-| `05_acf.cpp` | `s09_05_acf` | Autocorrelation across lags; data: air_passengers.csv (real data, 144 monthly totals) | `Series.autocorr(lag)` | prints only |
+| `01_components.cpp` | `s09_01_components` | Series + 12-month moving average. Data: air_passengers.csv (real data, 144 monthly totals, 1949-1960) | `s.rolling(12).mean()` | `m09_01_passengers.svg` under `results/01_components_results/` |
+| `02_seasonality.cpp` | `s09_02_seasonality` | Month-of-year profile vs overall. Data: air_passengers.csv (real data, 144 monthly totals, 1949-1960) | `s.groupby(month).mean()` | prints only |
+| `03_forecast_benchmark.cpp` | `s09_03_bench` | Naive vs mean vs seasonal-naive RMSE. Data: air_passengers.csv (real data, 144 monthly totals) | `shift()` + `mean_squared_error` | prints only |
+| `04_trend_linreg.cpp` | `s09_04_trend` | Least-squares trend, R2 = corr^2. Data: air_passengers.csv (real data, 144 monthly totals) | `numpy.polyfit(t, y, 1)` | prints only |
+| `05_acf.cpp` | `s09_05_acf` | Autocorrelation across lags. Data: air_passengers.csv (real data, 144 monthly totals) | `Series.autocorr(lag)` | prints only |
 
 ## Build and run
 
@@ -47,13 +47,13 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::Series`.
 - `05_acf.cpp`: `autocorr`, `fmt`, `read_csv`
 
 ## Key ideas
-- **Trend vs noise** — passengers quadrupled over 12 years (112 -> 417) while
+- Trend vs noise. Passengers more than tripled over 12 years (112 -> 417) while
   the 12-month average rises smoothly from ~126 to ~476.
-- **Seasonality is a 12-month fingerprint** — July/August run ~71 above the
+- Seasonality is a 12-month fingerprint. July/August run ~71 above the
   yearly mean, November ~47 below.
-- **Always benchmark** — the seasonal naive (49.99 RMSE) crushes the flat
+- Always benchmark. The seasonal naive (49.99 RMSE) crushes the flat
   mean (219.44) and the plain naive (137.33) on the held-out 24 months.
-- **The ACF says it in one glance** — autocorr peaks at lag 12 (0.991),
+- The ACF says it in one glance. Autocorr peaks at lag 12 (0.991),
   proving the annual cycle dominates.
 
 ## Key takeaways
@@ -63,4 +63,4 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::Series`.
 
 ## Next module
 
-**10_dimensionality** - PCA: explained variance, projection, reconstruction, loadings.
+10_dimensionality - PCA: explained variance, projection, reconstruction, loadings.

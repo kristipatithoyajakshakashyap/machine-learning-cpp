@@ -1,4 +1,4 @@
-# Module 06 — Feature engineering
+# Module 06: Feature engineering
 
 ## Purpose
 Turning raw columns into better inputs for analysis and models. The helpers:
@@ -12,11 +12,11 @@ Modules 02_cleaning and 03_eda (scaling, correlation).
 
 | File | Target | What it teaches | Python equivalent | What it writes |
 |------|--------|-----------------|-------------------|----------------|
-| `01_derived_columns.cpp` | `s06_01_derived` | Ratios/percentages from elementwise Series arithmetic; data: tips.csv (real data, 244 restaurant tips) | `df.a / df.b` | prints only |
-| `02_binning.cpp` | `s06_02_binning` | `cut()` with explicit edges; `qcut_edges()` equal-count bins; data: titanic.csv (real data) and tips.csv (real data) | `pd.cut`, `pd.qcut` | prints only |
-| `03_log_transform.cpp` | `s06_03_log` | `log1p()` linearises exponential growth; data: flights.csv (real data, 144 monthly values) | `numpy.log1p` | prints only |
-| `04_indicator_features.cpp` | `s06_04_indicators` | Presence, child and family-size flags vs survival; data: titanic.csv (real data, 891 passengers) | `.notna().astype(int)` | prints only |
-| `05_feature_correlation.cpp` | `s06_05_corr` | Rank features by correlation with the target; data: titanic.csv (real data, 891 passengers) | `df.corr()["Survived"]` | prints only |
+| `01_derived_columns.cpp` | `s06_01_derived` | Ratios/percentages from elementwise Series arithmetic. Data: tips.csv (real data, 244 restaurant tips) | `df.a / df.b` | prints only |
+| `02_binning.cpp` | `s06_02_binning` | `cut()` with explicit edges and `qcut_edges()` equal-count bins. Data: titanic.csv (real data) and tips.csv (real data) | `pd.cut`, `pd.qcut` | prints only |
+| `03_log_transform.cpp` | `s06_03_log` | `log1p()` linearises exponential growth. Data: flights.csv (real data, 144 monthly values) | `numpy.log1p` | prints only |
+| `04_indicator_features.cpp` | `s06_04_indicators` | Presence, child and family-size flags vs survival. Data: titanic.csv (real data, 891 passengers) | `.notna().astype(int)` | prints only |
+| `05_feature_correlation.cpp` | `s06_05_corr` | Rank features by correlation with the target. Data: titanic.csv (real data, 891 passengers) | `df.corr()["Survived"]` | prints only |
 
 ## Build and run
 
@@ -45,12 +45,12 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::Series`.
 - `05_feature_correlation.cpp`: `fmt`, `pearson`, `read_csv`
 
 ## Key ideas
-- **Binning turns scale into buckets** — ages into child/teen/adult/senior are
-  easier to reason about than raw years; wrong edges, wrong story, so choose
-  them deliberately.
-- **Log transforms tame right tails** and make multiplicative growth additive
-  (lesson 3: correlation with time rises to ~0.95 after `log1p`).
-- **Every engineered feature must be checked** — `has_cabin` alone separates
+- Binning turns scale into buckets. Ages into child/teen/adult/senior are
+  easier to reason about than raw years. Wrong edges give the wrong story.
+  Choose them deliberately.
+- Log transforms tame right tails and make multiplicative growth additive.
+  In lesson 3, correlation with time rises to ~0.95 after `log1p`.
+- Every engineered feature must be checked. `has_cabin` alone separates
   survivors (0.67 vs 0.30), showing why wealth/booking signals matter.
 
 ## Key takeaways
@@ -60,4 +60,4 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::Series`.
 
 ## Next module
 
-**07_statistics_tests** - confidence intervals, t/chi-square/KS tests, bootstrap, ANOVA, Bayes.
+07_statistics_tests - confidence intervals, t/chi-square/KS tests, bootstrap, ANOVA, Bayes.

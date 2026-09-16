@@ -1,4 +1,4 @@
-# Module 00 — Mathematical bridge
+# Module 00: Mathematical bridge
 
 ## Purpose
 Seven short, self-checking lessons that cover the mathematics the data-science
@@ -8,7 +8,7 @@ computes a worked example, asserts the numerical result and saves it locally.
 
 ## Prerequisites
 Track 01_get_to_know (C++ basics, `std::vector`, functions). No dsts knowledge
-is required; a few lessons call `dsts::pca`, `dsts::bootstrap_mean`,
+is required. A few lessons call `dsts::pca`, `dsts::bootstrap_mean`,
 `dsts::symmetric_eigen` and `dsts::svd_thin`.
 
 ## Lessons
@@ -35,7 +35,7 @@ cmake --build --preset course --target s00_math_01
 .\build\02_data_science\00_math_foundations\01_vectors_and_matrices\s00_math_01.exe
 ```
 
-Each target is also a ctest (`ctest --test-dir build -R s00_math`); a nonzero
+Each target is also a ctest (`ctest --test-dir build -R s00_math`). A nonzero
 exit code means one of the asserted invariants failed.
 
 ## Key takeaways
@@ -44,4 +44,4 @@ exit code means one of the asserted invariants failed.
   and catch most implementation mistakes.
 
 ## Next module
-Continue with **01_series_dataframe**.
+Continue with 01_series_dataframe.

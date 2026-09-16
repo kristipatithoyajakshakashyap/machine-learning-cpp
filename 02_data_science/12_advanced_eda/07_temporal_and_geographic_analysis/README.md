@@ -1,7 +1,7 @@
 # Temporal and geographic analysis
 
 ## Purpose
-Switches to the AirPassengers series to show chronological diagnostics: lag-12 differences and ratios reveal trend and growing seasonal amplitude. No geographic dataset is fabricated; the lesson explains when spatial analysis applies and how it must be validated.
+Switches to the AirPassengers series to show chronological diagnostics: lag-12 differences and ratios reveal trend and growing seasonal amplitude. No geographic dataset is fabricated. The lesson explains when spatial analysis applies and how it must be validated.
 
 ## Prerequisites
 Modules 03_eda, 07_statistics_tests and 08_train_test. All Titanic analysis
@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_07` | lag-12 differences and ratios, seasonality, why time series must not be shuffled | `temporal_diagnostics.csv`, `passengers.svg`, `temporal.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -44,4 +44,4 @@ outcome to select preprocessing would invalidate later evaluation.
 - Growing seasonal amplitude suggests ratios or log differences.
 
 ## Next module
-Continue with **08_eda_report**.
+Continue with 08_eda_report.

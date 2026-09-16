@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_06` | group means of a binary target, Wilson score interval | `survival_by_sex.csv`, `target.md` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -41,7 +41,7 @@ outcome to select preprocessing would invalidate later evaluation.
 
 ## Key takeaways
 - A rate without an interval hides its sample size.
-- Family dependence between passengers can make intervals too narrow.
+- Family dependence between passengers makes intervals too narrow.
 
 ## Next module
-Continue with **07_temporal_and_geographic_analysis**.
+Continue with 07_temporal_and_geographic_analysis.

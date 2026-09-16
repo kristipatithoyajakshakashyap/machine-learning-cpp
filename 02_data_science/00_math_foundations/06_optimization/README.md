@@ -26,10 +26,10 @@ cmake --build --preset course --target s00_math_06
 The lesson links the `dsts` static library and writes its output file to
 `results/01_worked_example_results/` next to its source (injected by CMake as
 `RUN_OUTPUT_DIR`, created on first run). It is also registered as the ctest
-`s00_math_06`: a nonzero exit code means a numerical acceptance check failed.
+`s00_math_06`. A nonzero exit code means a numerical acceptance check failed.
 
 ## dsts functions used
-None; standard library only.
+None. Standard library only.
 
 ## Theory
 Gradient descent subtracts learning_rate times the gradient. Regularization changes the objective and its derivative. Convergence depends on step size and curvature.
@@ -39,15 +39,15 @@ Minimize L=(w-3)^2+lambda*w^2. The gradient is 2(w-3)+2*lambda*w, and the exact 
 
 ## Implementation
 Read `01_worked_example.cpp`, trace each operation against the equations above,
-then run it. Every invariant is asserted in code; a nonzero exit means the
+then run it. Every invariant is asserted in code. A nonzero exit means the
 mathematical invariant failed.
 
 ## Exercise
 Demonstrate divergence with a too-large step and compare early stopping with regularization.
 
 ## Key takeaways
-- Gradient descent: w <- w - lr * dL/dw; the step size must respect the curvature.
+- Gradient descent: w <- w - lr * dL/dw. The step size must respect the curvature.
 - L2 regularisation shrinks the optimum toward zero by a factor 1/(1+lambda).
 
 ## Next module
-Continue with **07_eigen_svd**.
+Continue with 07_eigen_svd.

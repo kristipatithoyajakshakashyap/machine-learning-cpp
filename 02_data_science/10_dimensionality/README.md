@@ -1,4 +1,4 @@
-# Module 10 — Dimensionality reduction (PCA)
+# Module 10: Dimensionality reduction (PCA)
 
 ## Purpose
 The iris dataset has 4 axes. PCA finds the 4 axes that maximally spread
@@ -14,11 +14,11 @@ Module 02_cleaning (scaling) and 00_math_foundations/07_eigen_svd.
 
 | File | Target | What it teaches | Python equivalent | What it writes |
 |------|--------|-----------------|-------------------|----------------|
-| `01_explained_variance.cpp` | `s10_01_eigval` | Scree: explained ratios + cumulative %; data: iris.csv (real measurements, 150 flowers, 4 traits) | `PCA().explained_variance_ratio_` | `m10_01_scree.svg` under `results/01_explained_variance_results/` |
-| `02_projection.cpp` | `s10_02_proj` | First 6 rows in PC1-PC2; SVG scatter by species; data: iris.csv (real measurements, 150 flowers) | `fit_transform` | `m10_02_pca_scatter.svg` under `results/02_projection_results/` |
-| `03_reconstruction.cpp` | `s10_03_reconstruct` | Loss from 1 to 4 kept PCs (RMSE on original scale); data: iris.csv (real measurements, 150 flowers, 4 traits) | `inverse_transform` | prints only |
-| `04_loadings.cpp` | `s10_04_loadings` | Variable weights per PC; data: iris.csv (real measurements, 150 flowers) | `PCA().components_` | prints only |
-| `05_standardize.cpp` | `s10_05_standardize` | Raw PCA vs z-scored PCA; data: iris.csv (real measurements, 150 flowers; all four traits are in mm) | `StandardScaler().fit_transform` then PCA | prints only |
+| `01_explained_variance.cpp` | `s10_01_eigval` | Scree: explained ratios + cumulative %. Data: iris.csv (real measurements, 150 flowers, 4 traits) | `PCA().explained_variance_ratio_` | `m10_01_scree.svg` under `results/01_explained_variance_results/` |
+| `02_projection.cpp` | `s10_02_proj` | First 6 rows in PC1-PC2 and an SVG scatter by species. Data: iris.csv (real measurements, 150 flowers) | `fit_transform` | `m10_02_pca_scatter.svg` under `results/02_projection_results/` |
+| `03_reconstruction.cpp` | `s10_03_reconstruct` | Loss from 1 to 4 kept PCs (RMSE on original scale). Data: iris.csv (real measurements, 150 flowers, 4 traits) | `inverse_transform` | prints only |
+| `04_loadings.cpp` | `s10_04_loadings` | Variable weights per PC. Data: iris.csv (real measurements, 150 flowers) | `PCA().components_` | prints only |
+| `05_standardize.cpp` | `s10_05_standardize` | Raw PCA vs z-scored PCA. Data: iris.csv (real measurements, 150 flowers, all four traits are in cm) | `StandardScaler().fit_transform` then PCA | prints only |
 
 ## Build and run
 
@@ -47,13 +47,13 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::PcaResult`, `dsts::Series`.
 - `05_standardize.cpp`: `fmt`, `pca`, `read_csv`
 
 ## Key ideas
-- **First two PCs keep 97.8% of the variance** — iris really lives on a 2D
+- First two PCs keep 97.8% of the variance. Iris lives on a 2D
   plane dominated by petal traits.
-- **Loadings say what matters** — PC1 is petal-heavy (0.857 on petal_length);
-  PC2 adds sepal-width in the opposite direction (-0.730 vs +0.657).
-- **The reconstruction shows what was lost** — k=1 recovers 0.29 RMSE;
+- Loadings say what matters. PC1 is petal-heavy (0.857 on petal_length).
+  PC2 separates on the sepals instead, loading +0.730 on sepal_width and +0.657 on sepal_length.
+- The reconstruction shows what was lost. k=1 recovers 0.29 RMSE.
   k=3 drops to 0.08, almost exact. k=4 is machine-zero.
-- **Raw vs standardized** — scaling removes the petal-length dominance; PC1
+- Raw vs standardized. Scaling removes the petal-length dominance. PC1
   drops from 92.5% to 73.0%, giving all traits an equal voice.
 
 ## Key takeaways
@@ -63,4 +63,4 @@ Types: `dsts::DataFrame`, `dsts::OptD`, `dsts::PcaResult`, `dsts::Series`.
 
 ## Next module
 
-**12_advanced_eda** (recommended before the capstone), then **11_final_pipeline**.
+12_advanced_eda (recommended before the capstone), then 11_final_pipeline.

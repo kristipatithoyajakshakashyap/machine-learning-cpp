@@ -1,4 +1,4 @@
-# Module 05 — Joins and reshaping
+# Module 05: Joins and reshaping
 
 ## Purpose
 Relational joins and long/wide reshaping on top of the DataFrame. The helpers:
@@ -12,11 +12,11 @@ Module 01_series_dataframe (DataFrame columns and row selection).
 
 | File | Target | What it teaches | Python equivalent | What it writes |
 |------|--------|-----------------|-------------------|----------------|
-| `01_merge_join.cpp` | `s05_01_merge` | Left join attaching a day-level lookup table to every tip; data: tips.csv (real data, 244 restaurant tips) | `pd.merge(...)` | prints only |
-| `02_inner_vs_left.cpp` | `s05_02_inner` | Inner vs left semantics; NA fill for unmatched rows; data: titanic.csv (real data, 891 passengers) | `pd.merge(how=...)` | prints only |
-| `03_concat.cpp` | `s05_03_concat` | Vertical stacking of frames with identical columns; data: iris.csv (real data, 150 flowers) | `pd.concat(axis=0)` | prints only |
-| `04_pivot.cpp` | `s05_04_pivot` | Mean grid: index × columns of a numeric value; data: penguins.csv (real data, 344 penguins) and tips.csv (244 tips) | `df.pivot_table(...)` | prints only |
-| `05_melt.cpp` | `s05_05_melt` | Long form: variable/value pairs from wide columns; data: iris.csv (real data, 150 flowers) | `df.melt()` | prints only |
+| `01_merge_join.cpp` | `s05_01_merge` | Left join attaching a day-level lookup table to every tip. Data: tips.csv (real data, 244 restaurant tips) | `pd.merge(...)` | prints only |
+| `02_inner_vs_left.cpp` | `s05_02_inner` | Inner vs left semantics and NA fill for unmatched rows. Data: titanic.csv (real data, 891 passengers) | `pd.merge(how=...)` | prints only |
+| `03_concat.cpp` | `s05_03_concat` | Vertical stacking of frames with identical columns. Data: iris.csv (real data, 150 flowers) | `pd.concat(axis=0)` | prints only |
+| `04_pivot.cpp` | `s05_04_pivot` | Mean grid: index � columns of a numeric value. Data: penguins.csv (real data, 344 penguins) and tips.csv (244 tips) | `df.pivot_table(...)` | prints only |
+| `05_melt.cpp` | `s05_05_melt` | Long form: variable/value pairs from wide columns. Data: iris.csv (real data, 150 flowers) | `df.melt()` | prints only |
 
 ## Build and run
 
@@ -45,20 +45,20 @@ Types: `dsts::DataFrame`, `dsts::OptD`.
 - `05_melt.cpp`: `fmt`, `melt`, `read_csv`
 
 ## Key ideas
-- **Merge keys must line up** — in `merge()` the right frame's key values must be
-  unique, exactly like a primary key in a database. Key order does not matter:
-  the match is looked up, not assumed.
-- **Inner vs left** — inner joins answer "which rows exist on both sides";
-  left joins answer "everything on the left, enriched where possible", with NA
-  wherever there is no match.
-- **Pivot and melt are inverses** — wide grids are easy to read; long rows are
+- Merge keys must line up. In `merge()` the right frame's key values must be
+  unique, exactly like a primary key in a database. Key order does not matter.
+  The match is looked up, not assumed.
+- Inner vs left. Inner joins answer which rows exist on both sides. Left joins
+  answer everything on the left, enriched where possible, with NA wherever
+  there is no match.
+- Pivot and melt are inverses. Wide grids are easy to read. Long rows are
   easy to group and plot. Most plotting helpers prefer long form.
 
 ## Key takeaways
-- `merge()` looks keys up; the right-hand key must be unique like a database primary key.
-- Inner keeps matches only; left keeps every left row and fills NA where nothing matches.
+- `merge()` looks keys up. The right-hand key must be unique like a database primary key.
+- Inner keeps matches only. Left keeps every left row and fills NA where nothing matches.
 - `pivot` and `melt` are inverses: wide for reading, long for grouping and plotting.
 
 ## Next module
 
-**06_feature_engineering** - derived columns, binning, log transforms, indicator features.
+06_feature_engineering - derived columns, binning, log transforms, indicator features.

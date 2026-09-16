@@ -1,7 +1,7 @@
 # Multivariate analysis
 
 ## Purpose
-Looks at all numeric predictors at once: a Pearson correlation heat map plus a pairwise table with complete-pair counts, Pearson and Spearman coefficients, so rank-based and linear association can be compared.
+Looks at all numeric predictors at once. It produces a Pearson correlation heat map and a pairwise table with complete-pair counts, Pearson and Spearman coefficients, letting you compare rank-based and linear association.
 
 ## Prerequisites
 Modules 03_eda, 07_statistics_tests and 08_train_test. All Titanic analysis
@@ -14,7 +14,7 @@ uses only the seeded 80% training partition (`dsts::stratified_split` on
 |------|--------|-----------------|----------------|
 | `01_analysis.cpp` | `s12_eda_05` | correlation matrix, heat map, Pearson vs Spearman, complete-pair counts | `correlation.svg`, `pairwise_association.csv` under `results/01_analysis_results/` |
 
-`01_analysis.cpp` is a one-line driver; the worked implementation is the
+`01_analysis.cpp` is a one-line driver. The worked implementation is the
 corresponding stage function in `../eda_workflow.hpp`, which also documents
 every output file.
 
@@ -40,8 +40,8 @@ and identify which conclusions remain stable. Explain why using a held-out
 outcome to select preprocessing would invalidate later evaluation.
 
 ## Key takeaways
-- Pearson measures linear association; Spearman measures monotone association.
+- Pearson measures linear association. Spearman measures monotone association.
 - Always note how many complete pairs a coefficient is based on.
 
 ## Next module
-Continue with **06_target_relationships**.
+Continue with 06_target_relationships.

@@ -1,12 +1,12 @@
-# Module 12 — Advanced exploratory analysis
+# Module 12: Advanced exploratory analysis
 
 ## Purpose
 Eight runnable lessons that turn exploratory analysis into a disciplined,
 reproducible workflow: data quality, missingness, outliers, categorical and
 multivariate association, target relationships and temporal structure, with a
 final report combining their tables and figures. Titanic analysis uses training
-rows only; AirPassengers demonstrates chronological structure. No geographic
-dataset is fabricated; that lesson explains applicability and spatial validation.
+rows only. AirPassengers demonstrates chronological structure. No geographic
+dataset is fabricated. That lesson explains applicability and spatial validation.
 
 ## Prerequisites
 Modules 03_eda, 07_statistics_tests and 08_train_test.
@@ -14,7 +14,7 @@ Modules 03_eda, 07_statistics_tests and 08_train_test.
 ## Lessons
 
 Every lesson's `01_analysis.cpp` is a one-line driver calling
-`advanced_eda::run(stage)`; the shared implementation lives in
+`advanced_eda::run(stage)`. The shared implementation lives in
 `eda_workflow.hpp`. Outputs go to `results/01_analysis_results/` inside each
 lesson folder.
 
@@ -53,4 +53,4 @@ plus `DataFrame::series/numeric/strings/select_columns` and `Series::quantile`.
 - End exploration with concrete, testable preprocessing decisions.
 
 ## Next module
-Continue with **11_final_pipeline**, which applies these decisions end to end.
+Continue with 11_final_pipeline, which applies these decisions end to end.

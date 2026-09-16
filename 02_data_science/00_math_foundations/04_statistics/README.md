@@ -26,28 +26,28 @@ cmake --build --preset course --target s00_math_04
 The lesson links the `dsts` static library and writes its output file to
 `results/01_worked_example_results/` next to its source (injected by CMake as
 `RUN_OUTPUT_DIR`, created on first run). It is also registered as the ctest
-`s00_math_04`: a nonzero exit code means a numerical acceptance check failed.
+`s00_math_04`. A nonzero exit code means a numerical acceptance check failed.
 
 ## dsts functions used
 `dsts::Series`, `dsts::bootstrap_mean` (from `include/dsts/stats.hpp`).
 
 ## Theory
-Sample variability is not uncertainty in the mean. Standard deviation describes observations; standard error approximately scales as s/sqrt(n). Bootstrap resampling approximates estimator variability under an IID assumption.
+Sample variability is not uncertainty in the mean. Standard deviation describes observations. Standard error approximately scales as s/sqrt(n). Bootstrap resampling approximates estimator variability under an IID assumption.
 
 ## Math intuition
 For (2,4,6), mean=4, sample variance=((2-4)^2+0+(6-4)^2)/(3-1)=4. Standard error=2/sqrt(3).
 
 ## Implementation
 Read `01_worked_example.cpp`, trace each operation against the equations above,
-then run it. Every invariant is asserted in code; a nonzero exit means the
+then run it. Every invariant is asserted in code. A nonzero exit means the
 mathematical invariant failed.
 
 ## Exercise
-Compare bootstrap spread for n=3 and n=30; explain why time series violate IID resampling.
+Compare bootstrap spread for n=3 and n=30. Explain why time series violate IID resampling.
 
 ## Key takeaways
-- Standard deviation describes the data; standard error describes the estimate.
+- Standard deviation describes the data. Standard error describes the estimate.
 - The bootstrap only works when resampled rows are exchangeable (IID).
 
 ## Next module
-Continue with **05_derivatives_and_gradients**.
+Continue with 05_derivatives_and_gradients.
