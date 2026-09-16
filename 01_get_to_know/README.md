@@ -1,4 +1,4 @@
-# 01_get_to_know — Zero-to-Advanced C++ for Machine Learning
+# 01_get_to_know: Zero-to-Advanced C++ for Machine Learning
 
 ## Purpose
 This track builds the C++ foundation used by the data-science and
@@ -6,11 +6,11 @@ machine-learning tracks that follow. It starts from "hello world" and ramps
 up to templates, move semantics, threads, project layout, contracts and
 floating-point numerics. Every lesson is a standalone `.cpp` that compiles
 with `-Wall -Wextra -Werror -pedantic` (zero warnings allowed) and prints its
-expected output in a header comment, so you can always check yourself.
+expected output in a header comment, so you always check yourself.
 
-- Standard: **C++17**
-- Compiler: the course uses MinGW g++ (`D:/msys64/ucrt64/bin/g++.exe`);
-  any C++17-capable GCC/Clang works
+- Standard: C++17
+- Compiler: the course uses MinGW g++ (`D:/msys64/ucrt64/bin/g++.exe`).
+  Any C++17-capable GCC/Clang works
 - Build system: CMake 3.16+ driven by the `course` preset in
   `CMakePresets.json` at the repository root
 
@@ -54,7 +54,7 @@ cmake --build --preset course --target conc_variables_types  # or just one
 ```
 
 Lesson targets are named `conc_<topic>` for modules 00-11 (plus `hello` in
-00_setup) and `c12_*` / `c13_*` for the last two modules; the exact names are
+00_setup) and `c12_*` / `c13_*` for the last two modules. The exact names are
 in each module's `CMakeLists.txt` and README.
 
 ### Runtime artifacts
@@ -79,13 +79,13 @@ lessons are teaching examples, not an assertion that every historical program
 was re-executed in the current revision.
 
 ## Key takeaways
-- Compile clean under `-Werror`; warnings are bugs you have not met yet.
+- Compile clean under `-Werror`. Warnings are bugs you have not met yet.
 - Ownership is explicit: references and smart pointers over raw `new`/`delete`.
 - Errors are values or exceptions, never silently ignored return codes.
 - Split declarations from definitions once a program outgrows one file.
-- Tests must fail through their exit code; `assert` disappears in Release.
+- Tests must fail through their exit code. `assert` disappears in Release.
 
 ## Next
-Continue with the sibling **02_data_science** track (the `dsts` library and
-its lessons) and then **03_ml_course**. See `../docs/learning_path.md` for the
+Continue with the sibling 02_data_science track (the `dsts` library and
+its lessons) and then 03_ml_course. See `../docs/learning_path.md` for the
 study order.

@@ -1,10 +1,10 @@
-# 12_debugging_and_testing — Contracts, Sanitizers and a Test Harness
+# 12_debugging_and_testing: Contracts, Sanitizers and a Test Harness
 
 ## Purpose
 Correct programs need more than a clean compile. This module shows how to
-state what a function requires (its *contract*), how to make violations loud
+state what a function requires (its contract), how to make violations loud
 instead of silent, how to run the code under a debugger and under sanitizers,
-and how to write a tiny test framework whose exit code CTest can trust.
+and how to write a tiny test framework whose exit code CTest trusts.
 Every lesson here is also registered as a CTest test, so `ctest` re-runs the
 same checks you read in the source.
 
@@ -40,34 +40,34 @@ Executables live under `build/01_get_to_know/12_debugging_and_testing/`.
 
 ## How to work through it
 
-1. **Debugger.** Build `c12_contracts` in a Debug configuration, set a
+1. Debugger. Build `c12_contracts` in a Debug configuration, set a
    breakpoint in `checked_mean`, inspect the vector and step through the
    incremental mean update. Step into the empty-input case and watch the
-   exception being thrown; then run CTest to reproduce the same behaviour
+   exception being thrown. Then run CTest to reproduce the same behaviour
    without the debugger.
-2. **What to test.** Test normal behaviour, boundaries, rejected input and
+2. What to test. Test normal behaviour, boundaries, rejected input and
    mathematical properties. Tests must return non-zero on failure in Release
-   too; `assert` alone disappears under `NDEBUG`. Translation invariance
+   too. `assert` alone disappears under `NDEBUG`. Translation invariance
    (shifting every input shifts the mean by the same amount) is a useful
    property beyond a single hard-coded expected output. Floating-point
    comparisons need a tolerance (`EXPECT_NEAR`).
-3. **Complexity.** One traversal gives O(n) time and O(1) extra storage.
-4. **Sanitizers.** With GCC/Clang on supported platforms, build a separate
+3. Complexity. One traversal gives O(n) time and O(1) extra storage.
+4. Sanitizers. With GCC/Clang on supported platforms, build a separate
    diagnostic configuration with `-fsanitize=address,undefined` and
-   `-fno-omit-frame-pointer`; do not claim sanitizer coverage until it has
-   actually run. Lesson 02 prints the exact commands.
+   `-fno-omit-frame-pointer`. Do not claim sanitizer coverage until it has
+   run. Lesson 02 prints the exact commands.
 
 Exercises: add non-finite rejection tests, compare a two-pass mean with the
 incremental one, and investigate overflow at extreme magnitudes.
 
 ## Key takeaways
-- A contract violation should throw (or abort) - never return a plausible
+- A contract violation should throw (or abort). Never return a plausible
   wrong number.
-- `assert` vanishes in Release builds; tests must fail through their exit code.
-- A test framework is a registry of functions plus a few `EXPECT_*` macros;
-  you do not need a library to get file:line failure reports.
+- `assert` vanishes in Release builds. Tests must fail through their exit code.
+- A test framework is a registry of functions plus a few `EXPECT_*` macros.
+  You do not need a library to get file:line failure reports.
 - Sanitizers and a debugger find the bugs tests only hint at.
 
 ## Next module
-**13_numerical_computing** - floating-point precision, compensated summation
+13_numerical_computing - floating-point precision, compensated summation
 and tolerance-based comparison.
